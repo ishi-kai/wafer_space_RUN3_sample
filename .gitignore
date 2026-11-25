@@ -1,0 +1,32 @@
+# Logs & simulation waveforms / scratch
+*.log
+*.raw
+*.tr0
+*.vcd
+*.fst
+*.out
+sim/
+sim_build*/
+__pycache__/
+*.pyc
+
+# PDK & LibreLane/Precheck intermediate runs (regenerated via make)
+chip/gf180mcu/
+chip/precheck_q/
+chip/librelane/runs/
+chip/macros/*/runs/
+chip/sim_build*/
+
+# Uncompressed >100 MB GDS (committed as chip/final/gds/chip_top.gds.gz; restore with gunzip -k)
+chip/final/gds/chip_top.gds
+chip/final/klayout_gds/
+chip/final/mag_gds/
+chip/final/odb/
+
+# Local archives & snapshots
+archive/
+snap/
+*.tar
+*.tar.gz
+*.tar.xz
+*.tgz

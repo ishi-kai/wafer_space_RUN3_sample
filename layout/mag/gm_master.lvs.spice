@@ -1,0 +1,438 @@
+* NGSPICE file created from gm_master.ext - technology: gf180mcuD
+
+.subckt gm_master_GMCM_MP2B vcm VDD
+X0 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VDD vcm vcm VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X2 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 VDD vcm vcm VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_GMCM_MP1B vcm VDD
+X0 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VDD vcm vcm VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X2 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 VDD vcm vcm VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_GMCM_MP1A vcm VDD
+X0 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VDD vcm vcm VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X2 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 VDD vcm vcm VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_NB_MP1 NB_n1 ckb VDD
+X0 NB_n1 ckb VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_MABWK BWK atlo VSS
+X0 BWK atlo VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_NB_MP2 NB_n1 b1 p1b VDD
+X0 b1 p1b NB_n1 VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_GMREP_MP1B_GMREP_MP2A gn gp VDD
+X0 VDD gp gp VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X1 gn gp VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X2 VDD gp gp VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 gn gp VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X4 VDD gp gn VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X5 gp gp VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X6 gp gp VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X7 VDD gp gn VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_MEM1_MEM2 eot eo1 VTN gp sp VDD
+X0 eot sp VTN VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X1 eo1 gp eot VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X2 VTN sp eot VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 eot gp eo1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt gm_master_MPB0 pb0 VDD
+X0 pb0 pb0 VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=2u
+.ends
+
+.subckt gm_master_NB_MN1 b1 ckb VSS
+X0 b1 ckb VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_CRNN cn1 cnn
+X0 cn1 cnn cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u
+.ends
+
+.subckt gm_master_MSNP_MSNN cnp cnn bwnb VSS
+X0 VSS bwnb cnp VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 cnp bwnb VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 VSS bwnb cnn VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X3 cnn bwnb VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt gm_master_MPB1 nb0 pb0 VDD
+X0 nb0 pb0 VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=2u
+.ends
+
+.subckt gm_master_NB_MN2 b1 p1b VSS
+X0 b1 p1b VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_MABWN BWN atlo VSS
+X0 BWN atlo VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_MND0 nb0 VSS
+X0 nb0 nb0 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=2u
+.ends
+
+.subckt gm_master_CRNP cp1 cnp
+X0 cp1 cnp cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u
+.ends
+
+.subckt gm_master_MEL1_MEL2 eo1 VTN VSS
+X0 eo1 eo1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VSS eo1 VTN VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X2 VTN eo1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 VSS eo1 eo1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_MPSC sp pb0 VDD
+X0 sp pb0 VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=2u
+.ends
+
+.subckt gm_master_CINT VTN VSS
+X0 VTN VSS cap_mim_2f0_m4m5_noshield c_width=70.71u c_length=70.71u
+.ends
+
+.subckt gm_master_GMREP_MP1A_GMREP_MP2B gn gp VDD
+X0 VDD gn gp VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X1 gn gn VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X2 VDD gn gp VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 gn gn VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X4 VDD gn gn VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X5 gp gn VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X6 gp gn VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X7 VDD gn gn VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_A2_MN p1b a2 VSS
+X0 p1b a2 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_MNB0 pb0 NB VSS
+X0 pb0 NB VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=4u
+.ends
+
+.subckt gm_master_SW1PN cp1 sp p1 VSS
+X0 sp p1 cp1 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_B3_MN p2 p2b VSS
+X0 p2 p2b VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_SW1PP cp1 sp p1b VDD
+X0 sp p1b cp1 VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_A2_MP p1b a2 VDD
+X0 p1b a2 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_SW1NN cn1 sn p1 VSS
+X0 sn p1 cn1 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_MNSC sn nb0 VSS
+X0 sn nb0 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=2u
+.ends
+
+.subckt gm_master_GMREP_M1_GMREP_M2 GMREP_t gn gp VSS
+X0 GMREP_t gn gn VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=1u
+X1 gn gn GMREP_t VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=1u
+X2 gp gp GMREP_t VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=1u
+X3 GMREP_t gp gp VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=1u
+.ends
+
+.subckt gm_master_CSN sn vcm
+X0 sn vcm cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+.ends
+
+.subckt gm_master_SW1NP cn1 sn p1b VDD
+X0 sn p1b cn1 VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_B3_MP p2 p2b VDD
+X0 p2 p2b VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_CSP sp vcm
+X0 sp vcm cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+.ends
+
+.subckt gm_master_NA_MP1 NA_n1 REFCK VDD
+X0 NA_n1 REFCK VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_NA_MP2 NA_n1 a1 p2b VDD
+X0 a1 p2b NA_n1 VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_NA_MN2 a1 p2b VSS
+X0 a1 p2b VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_NA_MN1 a1 REFCK VSS
+X0 a1 REFCK VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_GMCM_M1 GMCM_t vcm VSS
+X0 vcm vcm GMCM_t VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=1u
+X1 GMCM_t vcm vcm VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=1u
+.ends
+
+.subckt gm_master_MEM3_MEM4 eot eo1 VTN sn gn VDD
+X0 eot gn VTN VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X1 eo1 sn eot VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X2 VTN gn eot VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 eot sn eo1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt gm_master_A3_MN p1 p1b VSS
+X0 p1 p1b VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_GMCM_M2 GMCM_t vcm VSS
+X0 vcm vcm GMCM_t VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=1u
+X1 GMCM_t vcm vcm VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=1u
+.ends
+
+.subckt gm_master_MSWP_MSWN cwp cwn bww VSS
+X0 VSS bww cwp VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 cwp bww VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 VSS bww cwn VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X3 cwn bww VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt gm_master_B1_MN b2 b1 VSS
+X0 b2 b1 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_MATHI athi atx VDD
+X0 athi atx VDD VDD pfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_B1_MP b2 b1 VDD
+X0 b2 b1 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_A3_MP p1 p1b VDD
+X0 p1 p1b VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_GMCM_MT_GMREP_MT GMCM_t GMREP_t VTN VSS
+X0 GMCM_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X1 VSS VTN GMCM_t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X2 VSS VTN GMCM_t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 GMCM_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X4 GMCM_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X5 GMREP_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X6 VSS VTN GMREP_t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X7 VSS VTN GMREP_t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X8 GMREP_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X9 GMREP_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X10 VSS VTN GMREP_t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X11 GMCM_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X12 VSS VTN GMCM_t VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X13 GMREP_t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X14 VSS VTN GMREP_t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X15 VSS VTN GMCM_t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt gm_master_MATLO atlo athi VSS
+X0 atlo athi VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_SW2PN vcm cp1 p2 VSS
+X0 cp1 p2 vcm VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_CCM vcm VSS
+X0 vcm VSS cap_mim_2f0_m4m5_noshield c_width=30u c_length=30u
+.ends
+
+.subckt gm_master_SW2PP vcm cp1 p2b VDD
+X0 cp1 p2b vcm VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_SW2NN vcm cn1 p2 VSS
+X0 cn1 p2 vcm VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_MEOT eot PB VDD
+X0 eot PB VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VDD PB eot VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_MPGM gp pb0 VDD
+X0 gp pb0 VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VDD pb0 gp VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X2 gp pb0 VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 VDD pb0 gp VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_SW2NP vcm cn1 p2b VDD
+X0 cn1 p2b vcm VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt gm_master_CREFN cn1 VSS
+X0 cn1 VSS cap_mim_2f0_m4m5_noshield c_width=40u c_length=40u
+.ends
+
+.subckt gm_master_IBWK_MN bww BWK VSS
+X0 bww BWK VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_CREFP cp1 VSS
+X0 cp1 VSS cap_mim_2f0_m4m5_noshield c_width=40u c_length=40u
+.ends
+
+.subckt gm_master_A1_MN a2 a1 VSS
+X0 a2 a1 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_IBWN_MN bwnb BWN VSS
+X0 bwnb BWN VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_MNGM gn nb0 VSS
+X0 gn nb0 VSS VSS nfet_03v3 ad=0.53p pd=2.53u as=0.89p ps=4.89u w=2u l=2u
+X1 VSS nb0 gn VSS nfet_03v3 ad=0.89p pd=4.89u as=0.53p ps=2.53u w=2u l=2u
+X2 gn nb0 VSS VSS nfet_03v3 ad=0.53p pd=2.53u as=0.53p ps=2.53u w=2u l=2u
+X3 VSS nb0 gn VSS nfet_03v3 ad=0.53p pd=2.53u as=0.53p ps=2.53u w=2u l=2u
+.ends
+
+.subckt gm_master_CRWN cn1 cwn
+X0 cn1 cwn cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u
+.ends
+
+.subckt gm_master_B2_MN p2b b2 VSS
+X0 p2b b2 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_MATX atx VSS
+X0 atx atx VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_IBWK_MP bww BWK VDD
+X0 bww BWK VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_CRWP cp1 cwp
+X0 cp1 cwp cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u
+.ends
+
+.subckt gm_master_C0_MN ckb REFCK VSS
+X0 ckb REFCK VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt gm_master_A1_MP a2 a1 VDD
+X0 a2 a1 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_IBWN_MP bwnb BWN VDD
+X0 bwnb BWN VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_B2_MP p2b b2 VDD
+X0 p2b b2 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master_GMCM_MP2A vcm VDD
+X0 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VDD vcm vcm VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X2 vcm vcm VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 VDD vcm vcm VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_master_C0_MP ckb REFCK VDD
+X0 ckb REFCK VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt gm_master VSS VDD REFCK NB PB BWK BWN VTN
+XXGMCM_MP2B XCSP/vcm VDD gm_master_GMCM_MP2B
+XXGMCM_MP1B XCSP/vcm VDD gm_master_GMCM_MP1B
+XXGMCM_MP1A XCSP/vcm VDD gm_master_GMCM_MP1A
+XXNB_MP1 XNB_MP2/NB_n1 XC0_MP/ckb VDD gm_master_NB_MP1
+XXMABWK BWK XMATLO/atlo VSS gm_master_MABWK
+XXNB_MP2 XNB_MP2/NB_n1 XB1_MP/b1 XSW1PP/p1b VDD gm_master_NB_MP2
+XXGMREP_MP1B_GMREP_MP2A XMNGM/gn XMPGM/gp VDD gm_master_GMREP_MP1B_GMREP_MP2A
+XXMEM1_MEM2 XMEOT/eot XMEM3_MEM4/eo1 VTN XMPGM/gp XCSP/sp VDD gm_master_MEM1_MEM2
+XXMPB0 XMPSC/pb0 VDD gm_master_MPB0
+XXNB_MN1 XB1_MP/b1 XC0_MP/ckb VSS gm_master_NB_MN1
+XXCRNN XCRWN/cn1 XCRNN/cnn gm_master_CRNN
+XXMSNP_MSNN XCRNP/cnp XCRNN/cnn XIBWN_MP/bwnb VSS gm_master_MSNP_MSNN
+XXMPB1 XMPB1/nb0 XMPSC/pb0 VDD gm_master_MPB1
+XXNB_MN2 XB1_MP/b1 XSW1PP/p1b VSS gm_master_NB_MN2
+XXMABWN BWN XMATLO/atlo VSS gm_master_MABWN
+XXMND0 XMPB1/nb0 VSS gm_master_MND0
+XXCRNP XCRWP/cp1 XCRNP/cnp gm_master_CRNP
+XXMEL1_MEL2 XMEM3_MEM4/eo1 VTN VSS gm_master_MEL1_MEL2
+XXMPSC XCSP/sp XMPSC/pb0 VDD gm_master_MPSC
+XXCINT VTN VSS gm_master_CINT
+XXGMREP_MP1A_GMREP_MP2B XMNGM/gn XMPGM/gp VDD gm_master_GMREP_MP1A_GMREP_MP2B
+XXA2_MN XSW1PP/p1b XA2_MP/a2 VSS gm_master_A2_MN
+XXMNB0 XMPSC/pb0 NB VSS gm_master_MNB0
+XXSW1PN XCRWP/cp1 XCSP/sp XSW1PN/p1 VSS gm_master_SW1PN
+XXB3_MN XSW2PN/p2 XSW2PP/p2b VSS gm_master_B3_MN
+XXSW1PP XCRWP/cp1 XCSP/sp XSW1PP/p1b VDD gm_master_SW1PP
+XXA2_MP XSW1PP/p1b XA2_MP/a2 VDD gm_master_A2_MP
+XXSW1NN XCRWN/cn1 XCSN/sn XSW1PN/p1 VSS gm_master_SW1NN
+XXMNSC XCSN/sn XMPB1/nb0 VSS gm_master_MNSC
+XXGMREP_M1_GMREP_M2 XGMCM_MT_GMREP_MT/GMREP_t XMNGM/gn XMPGM/gp VSS gm_master_GMREP_M1_GMREP_M2
+XXCSN XCSN/sn XCSP/vcm gm_master_CSN
+XXSW1NP XCRWN/cn1 XCSN/sn XSW1PP/p1b VDD gm_master_SW1NP
+XXB3_MP XSW2PN/p2 XSW2PP/p2b VDD gm_master_B3_MP
+XXCSP XCSP/sp XCSP/vcm gm_master_CSP
+XXNA_MP1 XNA_MP2/NA_n1 REFCK VDD gm_master_NA_MP1
+XXNA_MP2 XNA_MP2/NA_n1 XA1_MP/a1 XSW2PP/p2b VDD gm_master_NA_MP2
+XXNA_MN2 XA1_MP/a1 XSW2PP/p2b VSS gm_master_NA_MN2
+XXNA_MN1 XA1_MP/a1 REFCK VSS gm_master_NA_MN1
+XXGMCM_M1 XGMCM_M2/GMCM_t XCSP/vcm VSS gm_master_GMCM_M1
+XXMEM3_MEM4 XMEOT/eot XMEM3_MEM4/eo1 VTN XCSN/sn XMNGM/gn VDD gm_master_MEM3_MEM4
+XXA3_MN XSW1PN/p1 XSW1PP/p1b VSS gm_master_A3_MN
+XXGMCM_M2 XGMCM_M2/GMCM_t XCSP/vcm VSS gm_master_GMCM_M2
+XXMSWP_MSWN XCRWP/cwp XCRWN/cwn XIBWK_MP/bww VSS gm_master_MSWP_MSWN
+XXB1_MN XB2_MP/b2 XB1_MP/b1 VSS gm_master_B1_MN
+XXMATHI XMATLO/athi XMATX/atx VDD gm_master_MATHI
+XXB1_MP XB2_MP/b2 XB1_MP/b1 VDD gm_master_B1_MP
+XXA3_MP XSW1PN/p1 XSW1PP/p1b VDD gm_master_A3_MP
+XXGMCM_MT_GMREP_MT XGMCM_M2/GMCM_t XGMCM_MT_GMREP_MT/GMREP_t VTN VSS gm_master_GMCM_MT_GMREP_MT
+XXMATLO XMATLO/atlo XMATLO/athi VSS gm_master_MATLO
+XXSW2PN XCSP/vcm XCRWP/cp1 XSW2PN/p2 VSS gm_master_SW2PN
+XXCCM XCSP/vcm VSS gm_master_CCM
+XXSW2PP XCSP/vcm XCRWP/cp1 XSW2PP/p2b VDD gm_master_SW2PP
+XXSW2NN XCSP/vcm XCRWN/cn1 XSW2PN/p2 VSS gm_master_SW2NN
+XXMEOT XMEOT/eot PB VDD gm_master_MEOT
+XXMPGM XMPGM/gp XMPSC/pb0 VDD gm_master_MPGM
+XXSW2NP XCSP/vcm XCRWN/cn1 XSW2PP/p2b VDD gm_master_SW2NP
+XXCREFN XCRWN/cn1 VSS gm_master_CREFN
+XXIBWK_MN XIBWK_MP/bww BWK VSS gm_master_IBWK_MN
+XXCREFP XCRWP/cp1 VSS gm_master_CREFP
+XXA1_MN XA2_MP/a2 XA1_MP/a1 VSS gm_master_A1_MN
+XXIBWN_MN XIBWN_MP/bwnb BWN VSS gm_master_IBWN_MN
+XXMNGM XMNGM/gn XMPB1/nb0 VSS gm_master_MNGM
+XXCRWN XCRWN/cn1 XCRWN/cwn gm_master_CRWN
+XXB2_MN XSW2PP/p2b XB2_MP/b2 VSS gm_master_B2_MN
+XXMATX XMATX/atx VSS gm_master_MATX
+XXIBWK_MP XIBWK_MP/bww BWK VDD gm_master_IBWK_MP
+XXCRWP XCRWP/cp1 XCRWP/cwp gm_master_CRWP
+XXC0_MN XC0_MP/ckb REFCK VSS gm_master_C0_MN
+XXA1_MP XA2_MP/a2 XA1_MP/a1 VDD gm_master_A1_MP
+XXIBWN_MP XIBWN_MP/bwnb BWN VDD gm_master_IBWN_MP
+XXB2_MP XSW2PP/p2b XB2_MP/b2 VDD gm_master_B2_MP
+XXGMCM_MP2A XCSP/vcm VDD gm_master_GMCM_MP2A
+XXC0_MP XC0_MP/ckb REFCK VDD gm_master_C0_MP
+.ends
+

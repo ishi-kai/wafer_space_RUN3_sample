@@ -1,0 +1,194 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+Flattening unmatched subcell div48_D5_F1_T3N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_N_MP2 in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_M1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_T4P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_T2N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_N_MN1 in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_FB1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_M1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_M2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_T1N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_N_MN2 in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_T3P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_M1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_T2P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_S1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_M2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_M1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_T1P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_S1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_M1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_S1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T4N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_S1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T3N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_S1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_S2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T4P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T2N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_M1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_S1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_CK2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T1N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T3P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_S2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_S1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_CK1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_M1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T2P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T4N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_M2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_CK2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_CK1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T3N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_S1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_M2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T4N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_T1P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_FB2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_CK1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T4P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T2N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_M2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T3N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T4N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_CK1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T3P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_M2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T1N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T2N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T4P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_FB2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_S1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T3N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T2P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_M2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T3P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T1N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T2N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_CK1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T4P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_T1P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T2P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_M2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_S1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T3P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T1N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_S2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_M2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_T1P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_CK1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T2P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_CK1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_S2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_M2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_T1P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_S2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_CK1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_S2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_S2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_M2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_S2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_CK1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_S2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_CK2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_M2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_CK2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_S2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_CK1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_CK2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T4N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_CK2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T3N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_M1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_S2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T4P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T2N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_CK2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T1N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T3P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_M1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_S2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T2P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_CK2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_CK2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_T1P in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F2_CK2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_S1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_CK1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D3_F_S1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_CK2_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_M1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D1_F_CK1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_M1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_F1_T4N in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D5_N_MP1 in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D2_F_CK2_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_FB1_MN in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div48_D6_F_M1_MP in circuit div48 (0)(1 instance)
+Flattening unmatched subcell div2 in circuit div48 (1)(4 instances)
+Flattening unmatched subcell dff_st in circuit div48 (1)(4 instances)
+Flattening unmatched subcell inv_lo1 in circuit div48 (1)(21 instances)
+Flattening unmatched subcell inv_dig in circuit div48 (1)(4 instances)
+Flattening unmatched subcell div3 in circuit div48 (1)(1 instance)
+Flattening unmatched subcell dff_st in circuit div48 (1)(2 instances)
+Flattening unmatched subcell inv_lo1 in circuit div48 (1)(10 instances)
+Flattening unmatched subcell inv_dig in circuit div48 (1)(2 instances)
+Flattening unmatched subcell nor2 in circuit div48 (1)(1 instance)
+Flattening unmatched subcell inv_lo2 in circuit div48 (1)(1 instance)
+
+Class div48 (0):  Merged 4 parallel devices.
+Subcircuit summary:
+Circuit 1: div48                           |Circuit 2: div48                           
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (65->64)                         |nfet_03v3 (64)                             
+pfet_03v3 (67->64)                         |pfet_03v3 (64)                             
+Number of devices: 128                     |Number of devices: 128                     
+Number of nets: 55                         |Number of nets: 55                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: div48                           |Circuit 2: div48                           
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+CK                                         |CK                                         
+FS                                         |FS                                         
+VSS                                        |VSS                                        
+FB                                         |FB                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes div48 and div48 are equivalent.
+
+Final result: Circuits match uniquely.
+.

@@ -1,0 +1,22 @@
+* NGSPICE file created from bias_if.ext - technology: gf180mcuD
+
+.subckt bias_if_MPR PBV VDD
+X0 PBV PBV VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=0.56u
+X1 VDD PBV PBV VDD pfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=0.56u
+.ends
+
+.subckt bias_if_CPBV PBV VDD
+X0 PBV VDD cap_mim_2f0_m4m5_noshield c_width=40u c_length=40u
+.ends
+
+.subckt bias_if_MTR PBV NB VSS
+X0 PBV NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X1 VSS NB PBV VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt bias_if VSS VDD NB PBV
+XXMPR PBV VDD bias_if_MPR
+XXCPBV PBV VDD bias_if_CPBV
+XXMTR PBV NB VSS bias_if_MTR
+.ends
+

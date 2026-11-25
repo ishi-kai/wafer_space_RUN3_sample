@@ -1,0 +1,1851 @@
+* NGSPICE file created from mixer_iq_flat.ext - technology: gf180mcuD
+
+.subckt mixer_iq_flat VSS VDD L1P L1N L4P L4N L2P L2N L3P L3N RFP RFN NB IFIP IFIN
++ IFQP IFQN
+X0 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 a_67800_22406# a_2980_20404# VSS ppolyf_u_1k r_width=1u r_length=9.4u
+X5 a_42005_15279# a_9700_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 IFIP.t2 a_4549_16329# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 a_12605_15279# a_8440_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X10 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X12 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X15 VSS NB.t82 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X16 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X17 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X18 a_27961_20220# NB.t87 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X19 a_12605_15279# a_8440_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X20 a_22729_15279# a_7180_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X21 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X22 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X23 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X24 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X25 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X26 a_41860_15279# a_9700_20404# a_42005_15279# VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X27 VSS NB.t34 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X28 IFIN.t2 a_4549_16329# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X29 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X30 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X31 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X32 a_42329_15279# a_6760_20404# IFQN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X33 a_12600_20459# NB.t51 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X34 a_67800_22406# a_68220_20404# VSS ppolyf_u_1k r_width=1u r_length=9.4u
+X35 a_22405_15279# a_4549_16329# IFIP.t4 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X36 a_71580_22393# a_2980_20404# VSS ppolyf_u_1k r_width=1u r_length=9.335u
+X37 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X38 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X39 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X40 VSS NB.t102 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X41 a_41860_15279# a_9700_20404# a_42005_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X42 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X43 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X44 a_9280_22526# a_9700_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X45 a_12600_20459# NB.t1 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X46 a_74100_22383# a_74520_20404# VSS ppolyf_u_1k r_width=1u r_length=9.285u
+X47 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X48 a_22405_15279# a_1749_16189# IFIN.t6 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X49 VSS NB.t8 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X50 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X51 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X52 VSS a_9700_20404# VSS VSS nfet_03v3 ad=0.73425p pd=4.19u as=0.36762n ps=1.49888m w=1.65u l=2u
+X53 a_42329_15279# a_8860_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X54 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X55 VSS NB.t20 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X56 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X57 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X58 a_12600_20459# NB.t25 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X59 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X60 IFIN.t2 a_4549_16329# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X61 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X62 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X63 a_27961_20220# NB.t79 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X64 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X65 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X66 a_27961_20220# NB.t37 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X67 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X68 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X69 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X70 a_2980_22526# a_2980_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X71 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X72 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X73 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X74 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X75 a_27961_20220# NB.t75 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X76 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X77 VSS a_7180_20404# VSS VSS nfet_03v3 ad=0.36935p pd=2.55u as=0 ps=0 w=0.83u l=2u
+X78 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X79 a_13069_20459# a_7180_20404# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X80 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X81 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X82 VSS NB.t40 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X83 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X84 a_41860_15279# a_9700_20404# a_42005_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X85 a_42005_15279# a_9700_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X86 VSS NB.t94 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X87 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X88 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X89 a_27961_20220# NB.t57 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X90 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X91 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X92 a_12600_20459# NB.t111 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X93 IFQP a_5500_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X94 IFIN.t6 a_1749_16189# a_22405_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X95 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X96 VSS NB.t90 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X97 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X98 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X99 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X100 a_42329_15279# a_8860_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X101 IFIN.t5 a_1749_16189# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X102 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X103 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X104 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X105 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X106 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X107 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X108 a_42329_15279# a_5500_20404# IFQP VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X109 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X110 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X111 a_41860_15279# a_8860_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X112 VSS NB.t126 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X113 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X114 a_12929_15279# a_4549_16329# IFIP.t1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X115 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X116 a_27961_20220# NB.t53 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X117 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X118 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X119 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X120 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X121 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X122 IFIP.t9 VSS cap_mim_2f0_m4m5_noshield c_width=46.98u c_length=46.98u
+X123 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X124 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X125 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X126 VSS NB.t32 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X127 a_13069_20459# a_8440_20404# a_22405_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X128 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X129 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X130 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X131 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X132 a_27961_20220# NB.t49 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X133 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X134 a_1720_20404# VSS cap_mim_2f0_m4m5_noshield c_width=70u c_length=70u
+X135 a_42005_15279# a_9700_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X136 a_27961_20220# NB.t3 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X137 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X138 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X139 a_22729_15279# a_1749_16189# IFIP.t7 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X140 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X141 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X142 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X143 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X144 VSS a_5500_20404# VSS VSS nfet_03v3 ad=1.76665p pd=8.83u as=0 ps=0 w=3.97u l=2u
+X145 a_22729_15279# a_7180_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X146 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X147 a_68640_22406# a_68220_20404# VSS ppolyf_u_1k r_width=1u r_length=9.4u
+X148 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X149 a_41860_15279# a_9700_20404# a_42005_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X150 a_7600_22526# a_6340_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X151 a_72420_22383# a_6340_20404# VSS ppolyf_u_1k r_width=1u r_length=9.285u
+X152 a_12929_15279# a_4549_16329# IFIP.t2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X153 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X154 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X155 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X156 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X157 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X158 VSS NB.t18 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X159 a_27961_20220# NB.t23 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X160 VDD a_74520_20404# VSS ppolyf_u_1k r_width=1u r_length=9.285u
+X161 VSS NB.t118 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X162 a_13069_20459# a_7180_20404# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X163 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X164 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X165 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X166 a_12600_20459# NB.t77 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X167 a_32205_15279# a_5500_20404# IFQP VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X168 a_22729_15279# a_4549_16329# IFIN.t2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X169 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X170 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X171 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X172 a_68640_22406# a_69060_20404# VSS ppolyf_u_1k r_width=1u r_length=9.4u
+X173 a_22405_15279# a_8440_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X174 a_8020_22526# a_6340_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X175 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X176 VSS NB.t68 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X177 a_12600_20459# NB.t73 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X178 IFIP.t7 a_1749_16189# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X179 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X180 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X181 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X182 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X183 a_12600_20459# NB.t85 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X184 VSS NB.t38 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X185 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X186 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X187 VSS NB.t92 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X188 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X189 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X190 a_75360_22376# VSS VSS ppolyf_u_1k r_width=1u r_length=9.25u
+X191 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X192 a_22729_15279# a_7180_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X193 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X194 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X195 a_27961_20220# NB.t109 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X196 a_13069_20459# a_8440_20404# a_22405_15279# VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X197 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X198 a_41860_15279# a_8860_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X199 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X200 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X201 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X202 VSS NB.t88 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X203 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X204 a_27961_20220# NB.t15 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X205 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X206 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X207 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X208 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X209 a_27961_20220# NB.t105 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X210 a_42005_15279# a_9700_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X211 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X212 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X213 a_12600_20459# RFP a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X214 VSS NB.t124 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X215 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X216 a_27961_20220# NB.t11 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X217 a_10120_21826# VSS VSS ppolyf_u_1k r_width=1u r_length=6.5u
+X218 a_22729_15279# a_7180_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X219 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X220 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X221 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X222 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X223 IFQN a_6760_20404# a_32205_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X224 VSS NB.t30 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X225 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X226 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X227 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X228 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X229 a_12600_20459# NB.t47 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X230 a_13069_20459# a_8440_20404# a_22405_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X231 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X232 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X233 IFQN VSS cap_mim_2f0_m4m5_noshield c_width=46.98u c_length=46.98u
+X234 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X235 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X236 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X237 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X238 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X239 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X240 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X241 VSS NB.t26 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X242 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X243 VSS NB.t80 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X244 a_4660_22526# a_5500_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X245 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X246 a_69900_22393# a_70320_20404# VSS ppolyf_u_1k r_width=1u r_length=9.335u
+X247 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X248 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X249 a_13069_20459# a_8440_20404# a_22405_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X250 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X251 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X252 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X253 a_22405_15279# a_8440_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X254 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X255 VSS NB.t62 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X256 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X257 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X258 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X259 a_72420_22383# a_72840_20404# VSS ppolyf_u_1k r_width=1u r_length=9.285u
+X260 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X261 IFQN a_6760_20404# a_32205_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X262 VSS NB.t116 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X263 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X264 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X265 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X266 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X267 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X268 IFQP a_5500_20404# a_32205_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X269 VDD IFQN VSS ppolyf_u_1k r_width=4u r_length=5u
+X270 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X271 VSS NB.t66 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X272 a_12460_15279# RFP a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X273 a_27961_20220# NB.t71 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X274 a_22729_15279# a_1749_16189# IFIP.t8 VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X275 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X276 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X277 VDD a_69060_20404# VSS ppolyf_u_1k r_width=1u r_length=9.4u
+X278 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X279 a_27961_20220# NB.t83 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X280 a_13069_20459# a_7180_20404# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X281 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X282 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X283 a_7600_22526# a_8440_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X284 a_73260_22383# a_72840_20404# VSS ppolyf_u_1k r_width=1u r_length=9.285u
+X285 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X286 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X287 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X288 a_12600_20459# NB.t107 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X289 a_22405_15279# a_8440_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X290 a_75360_22376# a_75780_20404# VSS ppolyf_u_1k r_width=1u r_length=9.25u
+X291 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X292 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X293 VSS NB.t54 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X294 a_22405_15279# a_8440_20404# a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X295 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X296 VSS NB.t86 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X297 a_32529_15279# a_8860_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X298 a_12600_20459# NB.t13 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X299 VSS a_6760_20404# VSS VSS nfet_03v3 ad=1.89125p pd=9.39u as=0 ps=0 w=4.25u l=2u
+X300 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X301 a_12600_20459# NB.t103 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X302 VSS a_8440_20404# VSS VSS nfet_03v3 ad=0.356p pd=2.49u as=0 ps=0 w=0.8u l=2u
+X303 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X304 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X305 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X306 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X307 IFIN.t0 a_4549_16329# a_12605_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X308 IFQP a_6760_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X309 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X310 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X311 VSS NB.t122 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X312 a_32205_15279# a_6760_20404# IFQN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X313 VSS NB.t4 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X314 a_12600_20459# NB.t9 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X315 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X316 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X317 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X318 a_12600_20459# NB.t21 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X319 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X320 VSS NB.t28 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X321 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X322 a_10120_21826# a_1720_20404# VSS ppolyf_u_1k r_width=1u r_length=6.5u
+X323 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X324 a_12605_15279# a_1749_16189# IFIP.t6 VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X325 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X326 a_27961_20220# NB.t45 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X327 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X328 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X329 a_32205_15279# a_5500_20404# IFQP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X330 a_12600_20459# NB.t99 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X331 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X332 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X333 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X334 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X335 VSS NB.t24 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X336 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X337 IFQP a_6760_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X338 IFIN.t1 a_4549_16329# a_12605_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X339 VSS NB.t78 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X340 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X341 a_2560_22526# VDD VSS ppolyf_u_1k r_width=1u r_length=10u
+X342 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X343 a_27961_20220# NB.t41 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X344 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X345 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X346 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X347 a_27961_20220# NB.t95 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X348 VSS NB.t60 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X349 a_5920_22526# a_2980_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X350 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X351 a_70740_22393# a_70320_20404# VSS ppolyf_u_1k r_width=1u r_length=9.335u
+X352 VSS NB.t114 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X353 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X354 a_12600_20459# NB.t119 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X355 a_13069_20459# a_7180_20404# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X356 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X357 a_32060_15279# a_8860_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X358 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X359 a_32205_15279# a_6760_20404# IFQN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X360 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X361 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X362 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X363 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X364 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X365 a_6340_20404# VSS cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+X366 VSS NB.t110 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X367 VSS NB.t64 a_12600_20459# VSS nfet_03v3 ad=4.45p pd=20.89u as=2.65p ps=10.53u w=10u l=2u
+X368 a_12600_20459# NB.t69 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X369 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X370 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X371 IFQP a_5500_20404# a_32205_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X372 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X373 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X374 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X375 a_12600_20459# NB.t81 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X376 a_6340_22526# a_6340_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X377 VSS NB.t16 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X378 a_70740_22393# a_71160_20404# VSS ppolyf_u_1k r_width=1u r_length=9.335u
+X379 IFIP.t8 a_1749_16189# a_22729_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X380 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X381 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X382 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X383 VSS a_8860_20404# VSS VSS nfet_03v3 ad=0.5785p pd=3.49u as=0 ps=0 w=1.3u l=2u
+X384 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X385 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X386 a_8020_22526# a_8860_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X387 a_73260_22383# a_73680_20404# VSS ppolyf_u_1k r_width=1u r_length=9.285u
+X388 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X389 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X390 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X391 VSS NB.t52 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X392 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X393 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X394 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X395 VSS NB.t2 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X396 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X397 a_32529_15279# a_5500_20404# IFQN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X398 VDD IFIN.t3 VSS ppolyf_u_1k r_width=4u r_length=5u
+X399 a_27961_20220# NB.t7 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X400 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X401 a_9280_22526# a_6340_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X402 a_27961_20220# NB.t19 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X403 a_32529_15279# a_8860_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X404 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X405 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X406 a_22729_15279# a_4549_16329# IFIN.t2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X407 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X408 a_12600_20459# NB.t43 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X409 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X410 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X411 a_27961_20220# NB.t97 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X412 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X413 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X414 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X415 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X416 IFIP.t6 a_1749_16189# a_12605_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X417 VSS NB.t22 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X418 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X419 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X420 a_32060_15279# a_8860_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X421 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X422 VSS NB.t76 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X423 a_42005_15279# a_5500_20404# IFQN VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X424 a_12600_20459# NB.t39 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X425 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X426 a_32529_15279# a_6760_20404# IFQP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X427 a_12600_20459# NB.t93 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X428 a_12605_15279# a_4549_16329# IFIN.t0 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X429 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X430 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X431 VSS NB.t58 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X432 a_2980_22526# a_1749_16189# VSS ppolyf_u_1k r_width=1u r_length=10u
+X433 a_32205_15279# a_9700_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X434 VSS NB.t112 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X435 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X436 IFQN a_5500_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X437 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X438 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X439 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X440 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X441 a_12929_15279# a_7180_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X442 a_32529_15279# a_8860_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X443 VSS NB.t108 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X444 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X445 a_32060_15279# a_9700_20404# a_32205_15279# VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X446 a_12600_20459# NB.t35 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X447 IFIP.t1 a_4549_16329# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X448 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X449 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X450 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X451 a_27961_20220# NB.t125 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X452 a_32529_15279# a_6760_20404# IFQP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X453 a_12605_15279# a_4549_16329# IFIN.t1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X454 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X455 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X456 a_4240_22526# a_2980_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X457 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X458 VSS NB.t14 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X459 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X460 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X461 a_27961_20220# NB.t31 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X462 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X463 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X464 a_32060_15279# a_9700_20404# a_32205_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X465 a_5920_22526# a_6760_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X466 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X467 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X468 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X469 a_71580_22393# a_71160_20404# VSS ppolyf_u_1k r_width=1u r_length=9.335u
+X470 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X471 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X472 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X473 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X474 VSS NB.t50 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X475 a_12600_20459# NB.t55 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X476 a_12605_15279# a_1749_16189# IFIP.t5 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X477 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X478 a_32529_15279# a_8860_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X479 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X480 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X481 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X482 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X483 IFQP a_6760_20404# a_42005_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X484 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X485 VSS NB.t46 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X486 VSS NB.t0 a_12600_20459# VSS nfet_03v3 ad=4.45p pd=20.89u as=2.65p ps=10.53u w=10u l=2u
+X487 a_12600_20459# NB.t5 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X488 VSS NB.t100 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X489 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X490 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X491 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X492 a_6340_22526# a_7180_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X493 a_12600_20459# NB.t17 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X494 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X495 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X496 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X497 a_12460_15279# a_7180_20404# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X498 a_32060_15279# a_9700_20404# a_32205_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X499 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X500 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X501 a_32205_15279# a_9700_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X502 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X503 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X504 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X505 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X506 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X507 IFQP a_6760_20404# a_42005_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X508 a_12605_15279# a_8440_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X509 VSS NB.t120 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X510 VSS NB.t74 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X511 IFIP.t5 a_1749_16189# a_12605_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X512 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X513 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X514 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X515 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X516 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X517 a_27961_20220# NB.t91 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X518 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X519 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X520 IFQN a_5500_20404# a_42005_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X521 RFP a_1720_20404# VSS ppolyf_u_1k r_width=1u r_length=5u
+X522 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X523 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X524 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X525 VSS NB.t70 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X526 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X527 a_32529_15279# a_5500_20404# IFQN VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X528 a_32060_15279# a_8860_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X529 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X530 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X531 a_12600_20459# NB.t127 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=4.45p ps=20.89u w=10u l=2u
+X532 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X533 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X534 a_76200_22376# a_75780_20404# VSS ppolyf_u_1k r_width=1u r_length=9.25u
+X535 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X536 VSS NB.t106 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X537 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X538 a_27961_20220# NB.t33 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X539 a_32205_15279# a_9700_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X540 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X541 a_12460_15279# a_8440_20404# a_12605_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X542 a_12600_20459# NB.t123 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X543 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X544 RFN a_1720_20404# VSS ppolyf_u_1k r_width=1u r_length=5u
+X545 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X546 a_32205_15279# a_9700_20404# a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X547 a_12929_15279# a_1749_16189# IFIN.t4 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X548 VSS NB.t12 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X549 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X550 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X551 IFQP VSS cap_mim_2f0_m4m5_noshield c_width=46.98u c_length=46.98u
+X552 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X553 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X554 a_12600_20459# NB.t29 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X555 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X556 a_12929_15279# a_7180_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X557 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X558 IFQN a_6760_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X559 a_4660_22526# a_2980_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X560 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X561 a_32060_15279# a_9700_20404# a_32205_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X562 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X563 VSS NB.t48 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X564 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X565 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X566 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X567 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X568 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X569 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X570 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X571 a_12460_15279# a_7180_20404# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X572 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X573 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X574 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X575 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X576 VSS NB.t44 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X577 a_22405_15279# a_1749_16189# IFIN.t6 VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X578 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X579 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X580 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X581 a_42005_15279# a_5500_20404# IFQN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X582 VSS NB.t98 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X583 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X584 a_4240_22526# a_4549_16329# VSS ppolyf_u_1k r_width=1u r_length=10u
+X585 a_27961_20220# NB.t61 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X586 a_12605_15279# a_8440_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X587 a_12600_20459# NB.t115 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X588 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X589 IFIP.t4 a_4549_16329# a_22405_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X590 IFQN a_6760_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X591 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X592 VDD IFIP.t0 VSS ppolyf_u_1k r_width=4u r_length=5u
+X593 IFIN.t4 a_1749_16189# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X594 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X595 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X596 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X597 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X598 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X599 a_12929_15279# a_7180_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X600 a_69900_22393# VSS VSS ppolyf_u_1k r_width=1u r_length=9.335u
+X601 a_12600_20459# NB.t65 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X602 a_12460_15279# a_8440_20404# a_12605_15279# VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X603 a_32060_15279# a_8860_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X604 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X605 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X606 VSS NB.t72 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X607 VSS a_1749_16189# VSS VSS nfet_03v3 ad=2.2072p pd=10.81u as=0 ps=0 w=4.96u l=2u
+X608 a_41860_15279# a_8860_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X609 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X610 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X611 a_42005_15279# a_6760_20404# IFQP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X612 VSS NB.t84 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X613 a_12600_20459# NB.t89 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X614 a_12460_15279# a_7180_20404# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X615 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X616 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X617 a_2980_20404# VSS cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+X618 a_27961_20220# NB.t101 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X619 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X620 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X621 VSS NB.t36 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X622 IFQN a_5500_20404# a_42005_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X623 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X624 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X625 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X626 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X627 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X628 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X629 a_42329_15279# a_8860_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X630 a_12600_20459# RFN a_13069_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X631 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X632 IFQN a_5500_20404# a_32529_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X633 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X634 a_74100_22383# a_73680_20404# VSS ppolyf_u_1k r_width=1u r_length=9.285u
+X635 a_12929_15279# a_7180_20404# a_12460_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X636 VSS NB.t104 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X637 IFIP.t3 a_4549_16329# a_22405_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X638 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X639 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X640 a_27961_20220# NB.t121 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X641 a_42005_15279# a_6760_20404# IFQP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X642 a_27961_20220# RFN a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X643 a_76200_22376# a_6340_20404# VSS ppolyf_u_1k r_width=1u r_length=9.25u
+X644 a_12460_15279# a_8440_20404# a_12605_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X645 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X646 VSS NB.t56 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X647 VSS NB.t10 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X648 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X649 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X650 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X651 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X652 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X653 a_27961_20220# NB.t27 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X654 a_2560_22526# a_1720_20404# VSS ppolyf_u_1k r_width=1u r_length=10u
+X655 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X656 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X657 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X658 IFIN.t7 VSS cap_mim_2f0_m4m5_noshield c_width=46.98u c_length=46.98u
+X659 a_9700_20404# L4N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X660 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X661 a_42329_15279# a_5500_20404# IFQP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X662 VSS NB.t6 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X663 a_32060_15279# RFP a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X664 a_12460_15279# a_8440_20404# a_12605_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X665 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X666 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X667 a_12600_20459# NB.t63 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=4.45p ps=20.89u w=10u l=2u
+X668 a_42329_15279# a_8860_20404# a_41860_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X669 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X670 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X671 a_27961_20220# NB.t117 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X672 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X673 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X674 VDD IFQP VSS ppolyf_u_1k r_width=4u r_length=5u
+X675 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X676 VSS NB.t42 a_12600_20459# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X677 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X678 a_7180_20404# L3P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X679 a_5500_20404# L2P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X680 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X681 VSS NB.t96 a_27961_20220# VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X682 a_8440_20404# L3N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X683 IFQP a_5500_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X684 a_12600_20459# NB.t59 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X685 a_27961_20220# RFP a_32060_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X686 IFIN.t6 a_1749_16189# a_22405_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X687 a_27961_20220# NB.t113 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X688 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X689 a_1749_16189# L1P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X690 a_41860_15279# a_8860_20404# a_42329_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X691 a_27961_20220# NB.t67 VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X692 VSS a_4549_16329# VSS VSS nfet_03v3 ad=2.7056p pd=13.05u as=0 ps=0 w=6.08u l=2u
+X693 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X694 a_13069_20459# RFN a_12600_20459# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X695 a_12460_15279# a_7180_20404# a_12929_15279# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X696 a_12929_15279# a_1749_16189# IFIN.t5 VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X697 a_6760_20404# L2N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X698 a_4549_16329# L1N cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X699 a_41860_15279# RFN a_27961_20220# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X700 a_8860_20404# L4P cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X701 a_42329_15279# a_6760_20404# IFQN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X702 a_22405_15279# a_4549_16329# IFIP.t3 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+C0 a_19300_20404# IFIN 0.07316f
+C1 a_38944_15219# a_32529_15279# 0.0514f
+C2 a_42329_15279# a_6760_20404# 0.76468f
+C3 a_32060_15279# a_6760_20404# 0.15705f
+C4 IFQP IFQN 5.10399f
+C5 a_5500_20404# a_2980_20404# 0.1786f
+C6 RFP a_41860_15279# 0.26537f
+C7 a_5500_20404# a_32205_15279# 0.22597f
+C8 IFQP a_42005_15279# 1.36624f
+C9 a_12605_15279# a_12929_15279# 1.82281f
+C10 VDD a_7600_22526# 0.03614f
+C11 a_2980_20404# IFIN 0.38942f
+C12 a_51620_14980# a_8440_20404# 0.01257f
+C13 a_8440_20404# a_7180_20404# 0.39995f
+C14 a_19344_15219# IFIN 0.0152f
+C15 IFQP a_42329_15279# 1.90258f
+C16 IFQP a_32060_15279# 0.75506f
+C17 a_22729_15279# IFQN 0.04762f
+C18 a_10940_20404# a_1720_20404# 0.0568f
+C19 VDD a_8440_20404# 2.65098f
+C20 RFP a_27961_20220# 5.18709f
+C21 VDD a_6340_22526# 0.08948f
+C22 a_12605_15279# a_1749_16189# 0.25564f
+C23 a_9700_20404# a_6760_20404# 0.08393f
+C24 a_12605_15279# a_12460_15279# 3.36057f
+C25 a_41860_15279# a_8440_20404# 0.21586f
+C26 RFP a_2980_20404# 0.15272f
+C27 a_74520_20404# a_73680_20404# 0.01686f
+C28 a_2980_22526# a_2560_22526# 0.1684f
+C29 IFQP a_30688_15219# 0.01118f
+C30 RFP a_10120_21826# 0.06585f
+C31 a_69900_22393# VDD 0.07416f
+C32 a_7180_20404# a_6340_20404# 0.11602f
+C33 a_7180_20404# RFN 0.01129f
+C34 a_4549_16329# a_1720_20404# 0.06863f
+C35 a_66076_20399# a_27961_20220# 0.0514f
+C36 a_8860_20404# a_4549_16329# 4.16572f
+C37 a_70320_20404# a_2980_20404# 0.01392f
+C38 VDD a_6340_20404# 0.85807f
+C39 IFQP a_9700_20404# 1.82637f
+C40 a_4549_16329# a_12929_15279# 0.72973f
+C41 VDD RFN 0.26197f
+C42 IFIP a_1720_20404# 1.44684f
+C43 a_22729_15279# a_30688_15219# 0.0514f
+C44 IFIP a_8860_20404# 0.02345f
+C45 IFIP a_12929_15279# 1.95328f
+C46 a_9700_20404# a_13069_20459# 0.08817f
+C47 IFQP a_6760_20404# 1.06727f
+C48 VDD a_73260_22383# 0.02979f
+C49 a_41860_15279# RFN 4.90976f
+C50 IFQN a_47488_15219# 0.01028f
+C51 L3P a_7180_20404# 14.7053f
+C52 a_12605_15279# IFIN 1.11663f
+C53 a_1720_20404# NB 0.03812f
+C54 a_54420_14980# IFIP 0.02562f
+C55 a_6760_20404# a_13069_20459# 0.11315f
+C56 a_8440_20404# a_32205_15279# 0.80826f
+C57 a_42005_15279# a_47488_15219# 0.0514f
+C58 a_4549_16329# a_1749_16189# 0.25292f
+C59 a_12460_15279# a_4549_16329# 0.12938f
+C60 a_41860_15279# a_41744_15219# 0.0514f
+C61 IFIP a_1749_16189# 0.71928f
+C62 a_19300_20404# RFN 0.04956f
+C63 IFIP a_12460_15279# 0.15886f
+C64 a_27961_20220# RFN 5.94133f
+C65 a_69060_20404# a_68220_20404# 0.01686f
+C66 IFQP a_13069_20459# 0.85801f
+C67 a_42329_15279# a_48744_15219# 0.0514f
+C68 L4N a_9700_20404# 14.7054f
+C69 IFQN a_8860_20404# 0.01615f
+C70 a_2980_20404# a_6340_20404# 10.6177f
+C71 a_2980_20404# RFN 0.55483f
+C72 a_8860_20404# a_42005_15279# 0.14439f
+C73 a_22729_15279# IFQP 0.46254f
+C74 IFIP a_12600_20459# 0.52853f
+C75 IFQN a_40488_15219# 0.01463f
+C76 a_5500_20404# a_4549_16329# 0.03632f
+C77 a_22729_15279# a_13069_20459# 2.55258f
+C78 a_8860_20404# a_42329_15279# 0.68247f
+C79 a_32060_15279# a_8860_20404# 0.84705f
+C80 IFIP a_5500_20404# 0.7388f
+C81 a_32060_15279# a_34784_15219# 0.05921f
+C82 a_4549_16329# IFIN 0.5546f
+C83 a_26344_15219# IFQP 0.01118f
+C84 a_24984_15219# a_22405_15279# 0.01517f
+C85 IFQN a_69060_20404# 0.04145f
+C86 NB a_12600_20459# 26.9042f
+C87 a_70740_22393# VDD 0.06003f
+C88 IFIP IFIN 5.12623f
+C89 a_6340_20404# a_75780_20404# 0.07506f
+C90 IFQN a_1749_16189# 1.19748f
+C91 a_12605_15279# a_8440_20404# 0.42967f
+C92 a_5500_20404# NB 0.10701f
+C93 a_27888_15219# a_22405_15279# 0.0514f
+C94 a_12460_15279# a_15184_15219# 0.0514f
+C95 NB IFIN 0.07892f
+C96 IFQN a_12600_20459# 0.40097f
+C97 a_9700_20404# a_1720_20404# 0.048f
+C98 a_22405_15279# a_7180_20404# 0.11225f
+C99 a_9700_20404# a_8860_20404# 0.40933f
+C100 a_17916_20399# a_12600_20459# 0.05539f
+C101 RFP IFIP 1.51491f
+C102 a_6340_20404# a_73680_20404# 0.01831f
+C103 IFQP a_47488_15219# 0.01118f
+C104 IFQN a_5500_20404# 3.00431f
+C105 a_52718_14980# IFIP 0.02403f
+C106 a_7180_20404# a_32529_15279# 0.40058f
+C107 a_6760_20404# a_1720_20404# 0.08018f
+C108 a_8860_20404# a_6760_20404# 3.70048f
+C109 a_5500_20404# a_42005_15279# 0.22869f
+C110 a_1720_20404# a_1320_20404# 0.01127f
+C111 IFQP a_48744_15219# 0.02068f
+C112 IFQN IFIN 1.56819f
+C113 RFP NB 2.68232f
+C114 a_72840_20404# a_73680_20404# 0.01686f
+C115 a_42329_15279# a_5500_20404# 0.52447f
+C116 a_32060_15279# a_5500_20404# 0.15705f
+C117 VDD a_68640_22406# 0.10759f
+C118 a_4240_22526# a_2980_22526# 0.01209f
+C119 a_54420_14980# a_6760_20404# 0.03456f
+C120 a_9700_20404# a_1749_16189# 3.86396f
+C121 a_8440_20404# a_4549_16329# 0.2529f
+C122 VDD a_4660_22526# 0.08948f
+C123 a_12460_15279# a_9700_20404# 0.09373f
+C124 a_1749_16189# a_2318_14980# 0.02599f
+C125 IFQP a_8860_20404# 0.10728f
+C126 a_32060_15279# IFIN 0.26613f
+C127 IFQP a_34784_15219# 0.01118f
+C128 a_10940_20404# RFN 0.02272f
+C129 a_12605_15279# a_16544_15219# 0.0587f
+C130 IFIP a_8440_20404# 8.45335f
+C131 a_72420_22383# a_6340_20404# 0.02075f
+C132 a_20888_15219# a_12929_15279# 0.0514f
+C133 a_12460_15279# a_6760_20404# 0.11789f
+C134 a_12605_15279# a_18088_15219# 0.0514f
+C135 IFQP a_40488_15219# 0.01118f
+C136 VDD a_7180_20404# 0.83966f
+C137 a_22729_15279# a_8860_20404# 0.1766f
+C138 a_72420_22383# a_73260_22383# 0.01686f
+C139 a_7600_22526# a_8020_22526# 0.1684f
+C140 L1N a_4549_16329# 14.7054f
+C141 RFP a_32060_15279# 0.85157f
+C142 a_9700_20404# a_5500_20404# 2.5239f
+C143 IFQP a_1749_16189# 0.88731f
+C144 a_6760_20404# a_12600_20459# 0.42876f
+C145 a_4549_16329# RFN 0.02104f
+C146 IFIP a_6340_20404# 0.053f
+C147 a_9700_20404# IFIN 0.16065f
+C148 IFIP RFN 1.19238f
+C149 a_1749_16189# a_13069_20459# 0.12771f
+C150 a_32529_15279# a_32205_15279# 0.97658f
+C151 a_6760_20404# a_5500_20404# 6.60208f
+C152 a_12460_15279# a_13069_20459# 2.10349f
+C153 VDD a_41860_15279# 0.75925f
+C154 IFQN a_8440_20404# 0.38229f
+C155 a_22729_15279# a_1749_16189# 0.22606f
+C156 a_6760_20404# IFIN 0.3379f
+C157 a_9280_22526# a_6340_20404# 0.02059f
+C158 a_8440_20404# a_42005_15279# 0.81342f
+C159 IFQP a_12600_20459# 0.7247f
+C160 a_6340_20404# NB 3.15276f
+C161 NB RFN 1.28538f
+C162 a_38944_15219# IFQN 0.01819f
+C163 a_13069_20459# a_12600_20459# 6.45375f
+C164 a_8440_20404# a_42329_15279# 0.21382f
+C165 IFQP a_5500_20404# 2.95315f
+C166 a_32060_15279# a_8440_20404# 0.21237f
+C167 VDD a_27961_20220# 0.57035f
+C168 IFIP a_18088_15219# 0.01599f
+C169 IFQP IFIN 0.82274f
+C170 a_5500_20404# a_13069_20459# 0.12588f
+C171 a_20888_15219# IFIN 0.03167f
+C172 IFQN a_6340_20404# 0.0814f
+C173 a_26000_20160# a_26000_22511# 0.01004f
+C174 VDD a_2980_20404# 0.90698f
+C175 IFIN a_13069_20459# 0.55706f
+C176 a_41860_15279# a_27961_20220# 5.51715f
+C177 IFQN RFN 0.16728f
+C178 a_4549_16329# a_5118_14980# 0.05088f
+C179 RFP a_1320_20404# 0.04586f
+C180 a_52718_14980# a_6760_20404# 0.013f
+C181 a_22729_15279# IFIN 1.40949f
+C182 a_68640_22406# a_67800_22406# 0.01686f
+C183 a_6340_22526# a_5920_22526# 0.1684f
+C184 VDD a_58976_22511# 0.03212f
+C185 IFIP a_55518_14980# 0.02589f
+C186 a_42329_15279# a_50288_15219# 0.0514f
+C187 VDD a_2560_22526# 0.02119f
+C188 a_8860_20404# a_1720_20404# 0.048f
+C189 a_32060_15279# RFN 0.70922f
+C190 IFQP RFP 0.26283f
+C191 a_9700_20404# a_8440_20404# 3.17858f
+C192 a_70320_20404# a_71160_20404# 0.02429f
+C193 a_26344_15219# IFIN 0.01819f
+C194 VDD a_75360_22376# 0.02849f
+C195 RFP a_13069_20459# 0.26675f
+C196 a_8440_20404# a_6760_20404# 1.34027f
+C197 a_36144_15219# a_32205_15279# 0.05607f
+C198 VDD a_67800_22406# 0.03244f
+C199 a_1749_16189# a_1720_20404# 0.2196f
+C200 a_8860_20404# a_1749_16189# 0.04403f
+C201 a_37688_15219# a_32205_15279# 0.0514f
+C202 a_9700_20404# a_6340_20404# 0.02702f
+C203 a_1749_16189# a_12929_15279# 0.26237f
+C204 IFQP a_8440_20404# 0.97645f
+C205 a_12605_15279# a_7180_20404# 0.10451f
+C206 a_9700_20404# RFN 0.01814f
+C207 a_12460_15279# a_12929_15279# 2.72073f
+C208 a_22405_15279# a_4549_16329# 0.93388f
+C209 a_8440_20404# a_13069_20459# 0.77478f
+C210 a_6760_20404# a_6340_20404# 0.58121f
+C211 a_5500_20404# a_48744_15219# 0.01244f
+C212 a_22405_15279# IFIP 1.48484f
+C213 a_6760_20404# RFN 3.39553f
+C214 a_38944_15219# IFQP 0.01118f
+C215 a_1320_20404# RFN 0.06242f
+C216 a_22729_15279# a_8440_20404# 0.22226f
+C217 IFIP a_32529_15279# 0.30356f
+C218 a_26000_20160# a_6760_20404# 0.01557f
+C219 a_5500_20404# a_1720_20404# 0.06361f
+C220 RFP a_58976_20160# 0.0497f
+C221 a_12460_15279# a_1749_16189# 0.14505f
+C222 a_8860_20404# a_5500_20404# 0.0796f
+C223 IFQP a_6340_20404# 0.50896f
+C224 VDD a_72420_22383# 0.02624f
+C225 IFQP RFN 0.39612f
+C226 a_1720_20404# IFIN 0.89445f
+C227 a_12929_15279# IFIN 1.76429f
+C228 RFN a_13069_20459# 1.63064f
+C229 IFQP a_41744_15219# 0.01118f
+C230 a_4549_16329# a_7180_20404# 0.45096f
+C231 a_12460_15279# a_12600_20459# 6.36816f
+C232 a_51620_14980# IFIP 0.02403f
+C233 a_22405_15279# IFQN 0.01403f
+C234 a_75360_22376# a_76200_22376# 0.02429f
+C235 VDD a_4549_16329# 0.83966f
+C236 a_12460_15279# a_5500_20404# 0.1404f
+C237 a_29144_15219# IFIP 0.01594f
+C238 RFP a_1720_20404# 0.14869f
+C239 IFQN a_32529_15279# 1.64287f
+C240 VDD IFIP 1.68512f
+C241 a_1749_16189# IFIN 1.29118f
+C242 RFP a_24260_20404# 0.01429f
+C243 a_4240_22526# a_4660_22526# 0.1684f
+C244 VDD a_9280_22526# 0.03122f
+C245 IFIP a_41860_15279# 0.25569f
+C246 a_5500_20404# a_12600_20459# 0.60655f
+C247 a_10940_20404# a_10120_21826# 0.0115f
+C248 VDD NB 3.76515f
+C249 a_32060_15279# a_32529_15279# 2.53453f
+C250 IFIN a_12600_20459# 0.38044f
+C251 VDD a_26000_22511# 0.03194f
+C252 a_41860_15279# NB 0.74903f
+C253 RFP a_12460_15279# 0.85576f
+C254 a_8440_20404# a_1720_20404# 0.048f
+C255 a_41860_15279# a_44584_15219# 0.05921f
+C256 a_58976_20160# RFN 0.02327f
+C257 IFIP a_19300_20404# 0.04767f
+C258 a_5500_20404# IFIN 0.3096f
+C259 a_8860_20404# a_8440_20404# 0.44893f
+C260 VDD a_8020_22526# 0.08948f
+C261 a_8440_20404# a_12929_15279# 0.1139f
+C262 a_70740_22393# a_71580_22393# 0.02429f
+C263 IFQN VDD 2.28005f
+C264 a_4549_16329# a_2980_20404# 0.12243f
+C265 VDD a_4240_22526# 0.03614f
+C266 L4P a_8860_20404# 14.7052f
+C267 a_5920_22526# a_4660_22526# 0.01209f
+C268 a_42329_15279# a_7180_20404# 0.39403f
+C269 IFIP a_2980_20404# 0.06999f
+C270 IFQN a_45944_15219# 0.01876f
+C271 a_54420_14980# a_8440_20404# 0.01249f
+C272 RFP a_12600_20459# 1.82167f
+C273 a_27961_20220# NB 29.4717f
+C274 a_9700_20404# a_32529_15279# 0.36608f
+C275 IFIP a_32205_15279# 0.33364f
+C276 a_42005_15279# a_45944_15219# 0.05607f
+C277 IFQN a_41860_15279# 0.29454f
+C278 a_68220_20404# a_2980_20404# 0.02312f
+C279 VDD a_32060_15279# 0.75925f
+C280 a_41860_15279# a_42005_15279# 3.59193f
+C281 a_1720_20404# a_6340_20404# 0.27371f
+C282 a_8440_20404# a_1749_16189# 0.42863f
+C283 a_6760_20404# a_32529_15279# 0.56235f
+C284 a_2980_20404# NB 0.33575f
+C285 a_8860_20404# a_6340_20404# 0.06481f
+C286 a_12460_15279# a_8440_20404# 0.75447f
+C287 a_1720_20404# RFN 0.94496f
+C288 a_8860_20404# RFN 0.01129f
+C289 RFP IFIN 0.29192f
+C290 a_41860_15279# a_42329_15279# 2.54488f
+C291 a_41860_15279# a_32060_15279# 2.89721f
+C292 VDD a_5920_22526# 0.03253f
+C293 a_22405_15279# IFQP 0.22433f
+C294 a_1749_16189# L1P 14.7053f
+C295 a_24260_20404# RFN 0.0516f
+C296 a_7918_14980# a_7180_20404# 0.01271f
+C297 a_22405_15279# a_13069_20459# 3.40707f
+C298 IFQP a_32529_15279# 1.58471f
+C299 a_9700_20404# a_7180_20404# 0.03605f
+C300 L2N a_6760_20404# 14.7053f
+C301 IFQN a_2980_20404# 0.10103f
+C302 a_24984_15219# IFQP 0.01118f
+C303 a_51620_14980# a_6760_20404# 0.013f
+C304 a_32060_15279# a_27961_20220# 6.4852f
+C305 a_22729_15279# a_22405_15279# 0.96075f
+C306 VDD a_9700_20404# 3.67496f
+C307 IFQN a_32205_15279# 1.14284f
+C308 a_8440_20404# a_5500_20404# 0.1083f
+C309 a_1749_16189# RFN 0.03426f
+C310 a_6760_20404# a_7180_20404# 0.20817f
+C311 a_12460_15279# RFN 1.37708f
+C312 a_24984_15219# a_13069_20459# 0.0514f
+C313 a_8440_20404# IFIN 0.24043f
+C314 VDD a_6760_20404# 0.81337f
+C315 a_12605_15279# a_4549_16329# 0.62363f
+C316 a_27888_15219# IFQP 0.01118f
+C317 a_74520_20404# a_6340_20404# 0.01741f
+C318 a_41860_15279# a_9700_20404# 0.70712f
+C319 a_26344_15219# a_22405_15279# 0.05607f
+C320 a_12605_15279# IFIP 1.54161f
+C321 a_32060_15279# a_32205_15279# 3.59193f
+C322 IFQP a_7180_20404# 0.04822f
+C323 RFN a_12600_20459# 4.31766f
+C324 a_41860_15279# a_6760_20404# 0.0817f
+C325 a_8860_20404# a_55518_14980# 0.01191f
+C326 a_5920_22526# a_2980_20404# 0.01808f
+C327 a_12344_15219# a_12460_15279# 0.0514f
+C328 a_29144_15219# IFQP 0.01118f
+C329 a_5500_20404# a_6340_20404# 0.06015f
+C330 a_7180_20404# a_13069_20459# 0.80824f
+C331 IFQP VDD 2.15684f
+C332 VDD a_71580_22393# 0.06005f
+C333 a_5500_20404# RFN 0.13981f
+C334 IFIP a_10940_20404# 0.09073f
+C335 a_6340_20404# IFIN 0.06443f
+C336 IFQP a_45944_15219# 0.01118f
+C337 VDD a_13069_20459# 0.67436f
+C338 a_52718_14980# a_8440_20404# 0.01257f
+C339 IFIN RFN 0.40626f
+C340 a_22729_15279# a_7180_20404# 0.97797f
+C341 IFQP a_41860_15279# 0.72442f
+C342 a_27961_20220# a_6760_20404# 0.03209f
+C343 a_29144_15219# a_22729_15279# 0.0514f
+C344 a_9700_20404# a_32205_15279# 0.51421f
+C345 a_74100_22383# a_73260_22383# 0.01686f
+C346 a_6760_20404# a_32205_15279# 0.5332f
+C347 IFIP a_4549_16329# 0.53514f
+C348 IFQP a_27961_20220# 0.85655f
+C349 a_7600_22526# a_6340_22526# 0.01209f
+C350 RFP a_6340_20404# 0.15272f
+C351 a_12605_15279# a_15184_15219# 0.01667f
+C352 RFP RFN 1.58711f
+C353 IFQP a_36144_15219# 0.02437f
+C354 a_2980_20404# a_71160_20404# 0.05581f
+C355 a_22144_15219# a_13069_20459# 0.06035f
+C356 a_22405_15279# a_8860_20404# 0.01145f
+C357 IFQP a_37688_15219# 0.01989f
+C358 a_5500_20404# L2P 14.7052f
+C359 RFP a_26000_20160# 0.05508f
+C360 IFQP a_2980_20404# 3.41744f
+C361 IFQP a_32205_15279# 1.7886f
+C362 a_8860_20404# a_32529_15279# 0.70419f
+C363 IFIP NB 0.06999f
+C364 a_67400_20404# a_2980_20404# 0.07115f
+C365 a_60644_20399# a_27961_20220# 0.07129f
+C366 a_40488_15219# a_32529_15279# 0.0514f
+C367 a_8440_20404# a_6340_20404# 0.06427f
+C368 a_12484_20399# a_12600_20459# 0.0514f
+C369 a_8440_20404# RFN 0.01129f
+C370 a_8440_20404# L3N 14.7053f
+C371 a_22405_15279# a_1749_16189# 0.22657f
+C372 a_41860_15279# a_58976_20160# 0.03378f
+C373 IFQN IFIP 4.6893f
+C374 a_32060_15279# a_31944_15219# 0.0514f
+C375 a_26000_22511# NB 0.05402f
+C376 IFIP a_42005_15279# 0.337f
+C377 a_1720_20404# a_7180_20404# 0.06738f
+C378 a_9280_22526# a_8020_22526# 0.01209f
+C379 a_8860_20404# a_7180_20404# 9.64924f
+C380 a_7180_20404# a_12929_15279# 0.44761f
+C381 VDD a_1720_20404# 0.99199f
+C382 IFIP a_42329_15279# 0.25226f
+C383 a_58976_20160# a_27961_20220# 0.0551f
+C384 VDD a_8860_20404# 0.83351f
+C385 IFIP a_32060_15279# 0.30533f
+C386 a_6340_20404# RFN 0.77001f
+C387 a_42005_15279# a_44584_15219# 0.01338f
+C388 a_41860_15279# a_8860_20404# 0.81667f
+C389 a_22405_15279# IFIN 1.5926f
+C390 a_26000_20160# RFN 0.0374f
+C391 a_5500_20404# a_32529_15279# 0.22625f
+C392 a_72840_20404# a_6340_20404# 0.0324f
+C393 a_1749_16189# a_7180_20404# 0.05303f
+C394 IFIP a_30688_15219# 0.01544f
+C395 a_12460_15279# a_7180_20404# 0.83487f
+C396 a_8440_20404# a_55518_14980# 0.01373f
+C397 a_58976_20160# a_58976_22511# 0.01004f
+C398 VDD a_1749_16189# 0.92592f
+C399 IFQN a_42005_15279# 1.5971f
+C400 VDD a_12460_15279# 0.74855f
+C401 a_8860_20404# a_57220_14980# 0.02392f
+C402 IFIP a_9700_20404# 0.26491f
+C403 a_72420_22383# a_71580_22393# 0.01218f
+C404 IFQN a_42329_15279# 1.40967f
+C405 IFQN a_32060_15279# 0.289f
+C406 a_42329_15279# a_42005_15279# 0.98553f
+C407 a_2980_20404# a_1720_20404# 0.29911f
+C408 IFIP a_6760_20404# 0.46305f
+C409 a_27888_15219# IFIN 0.01463f
+C410 VDD a_12600_20459# 0.54768f
+C411 IFQP a_31944_15219# 0.01118f
+C412 a_5500_20404# a_7180_20404# 0.08153f
+C413 a_8860_20404# a_32205_15279# 0.51403f
+C414 a_19344_15219# a_12929_15279# 0.0587f
+C415 a_34784_15219# a_32205_15279# 0.01338f
+C416 a_7180_20404# IFIN 0.01064f
+C417 VDD a_5500_20404# 0.81337f
+C418 IFQP a_4549_16329# 0.05851f
+C419 a_69900_22393# a_70740_22393# 0.02429f
+C420 a_6760_20404# NB 0.25578f
+C421 a_41860_15279# a_12600_20459# 0.13529f
+C422 VDD a_74100_22383# 0.0447f
+C423 VDD IFIN 11.5685f
+C424 IFQP IFIP 0.89812f
+C425 a_4549_16329# a_13069_20459# 0.11309f
+C426 a_41860_15279# a_5500_20404# 0.13538f
+C427 IFIP a_13069_20459# 1.15664f
+C428 IFQN a_9700_20404# 2.54464f
+C429 a_1749_16189# a_2980_20404# 0.17834f
+C430 a_22405_15279# a_8440_20404# 1.10498f
+C431 VDD a_2980_22526# 0.0929f
+C432 a_22729_15279# a_4549_16329# 0.54813f
+C433 a_41860_15279# IFIN 0.26613f
+C434 a_9700_20404# a_42005_15279# 0.41367f
+C435 a_27961_20220# a_12600_20459# 20.4455f
+C436 IFQP a_44584_15219# 0.01118f
+C437 IFQP NB 0.56163f
+C438 a_22729_15279# IFIP 1.78563f
+C439 a_8440_20404# a_32529_15279# 0.21612f
+C440 IFQN a_6760_20404# 1.06605f
+C441 a_9700_20404# a_42329_15279# 0.07848f
+C442 a_6760_20404# a_42005_15279# 1.01033f
+C443 a_24984_15219# a_8440_20404# 0.01223f
+C444 a_32060_15279# a_9700_20404# 0.84535f
+C445 RFP VDD 3.00913f
+R0 NB NB.n126 68.7965
+R1 NB.n0 NB.t0 38.4775
+R2 NB.n31 NB.t63 38.4775
+R3 NB.n63 NB.t64 37.0675
+R4 NB.n94 NB.t127 37.0675
+R5 NB.n126 NB.n62 27.1358
+R6 NB.n126 NB.n125 23.5898
+R7 NB.n30 NB.n29 20.2275
+R8 NB.n29 NB.n28 20.2275
+R9 NB.n28 NB.n27 20.2275
+R10 NB.n27 NB.n26 20.2275
+R11 NB.n26 NB.n25 20.2275
+R12 NB.n25 NB.n24 20.2275
+R13 NB.n24 NB.n23 20.2275
+R14 NB.n23 NB.n22 20.2275
+R15 NB.n22 NB.n21 20.2275
+R16 NB.n21 NB.n20 20.2275
+R17 NB.n20 NB.n19 20.2275
+R18 NB.n19 NB.n18 20.2275
+R19 NB.n18 NB.n17 20.2275
+R20 NB.n17 NB.n16 20.2275
+R21 NB.n16 NB.n15 20.2275
+R22 NB.n15 NB.n14 20.2275
+R23 NB.n14 NB.n13 20.2275
+R24 NB.n13 NB.n12 20.2275
+R25 NB.n12 NB.n11 20.2275
+R26 NB.n11 NB.n10 20.2275
+R27 NB.n10 NB.n9 20.2275
+R28 NB.n9 NB.n8 20.2275
+R29 NB.n8 NB.n7 20.2275
+R30 NB.n7 NB.n6 20.2275
+R31 NB.n6 NB.n5 20.2275
+R32 NB.n5 NB.n4 20.2275
+R33 NB.n4 NB.n3 20.2275
+R34 NB.n3 NB.n2 20.2275
+R35 NB.n2 NB.n1 20.2275
+R36 NB.n1 NB.n0 20.2275
+R37 NB.n61 NB.n60 20.2275
+R38 NB.n60 NB.n59 20.2275
+R39 NB.n59 NB.n58 20.2275
+R40 NB.n58 NB.n57 20.2275
+R41 NB.n57 NB.n56 20.2275
+R42 NB.n56 NB.n55 20.2275
+R43 NB.n55 NB.n54 20.2275
+R44 NB.n54 NB.n53 20.2275
+R45 NB.n53 NB.n52 20.2275
+R46 NB.n52 NB.n51 20.2275
+R47 NB.n51 NB.n50 20.2275
+R48 NB.n50 NB.n49 20.2275
+R49 NB.n49 NB.n48 20.2275
+R50 NB.n48 NB.n47 20.2275
+R51 NB.n47 NB.n46 20.2275
+R52 NB.n46 NB.n45 20.2275
+R53 NB.n45 NB.n44 20.2275
+R54 NB.n44 NB.n43 20.2275
+R55 NB.n43 NB.n42 20.2275
+R56 NB.n42 NB.n41 20.2275
+R57 NB.n41 NB.n40 20.2275
+R58 NB.n40 NB.n39 20.2275
+R59 NB.n39 NB.n38 20.2275
+R60 NB.n38 NB.n37 20.2275
+R61 NB.n37 NB.n36 20.2275
+R62 NB.n36 NB.n35 20.2275
+R63 NB.n35 NB.n34 20.2275
+R64 NB.n34 NB.n33 20.2275
+R65 NB.n33 NB.n32 20.2275
+R66 NB.n32 NB.n31 20.2275
+R67 NB.n93 NB.n92 18.8175
+R68 NB.n92 NB.n91 18.8175
+R69 NB.n91 NB.n90 18.8175
+R70 NB.n90 NB.n89 18.8175
+R71 NB.n89 NB.n88 18.8175
+R72 NB.n88 NB.n87 18.8175
+R73 NB.n87 NB.n86 18.8175
+R74 NB.n86 NB.n85 18.8175
+R75 NB.n85 NB.n84 18.8175
+R76 NB.n84 NB.n83 18.8175
+R77 NB.n83 NB.n82 18.8175
+R78 NB.n82 NB.n81 18.8175
+R79 NB.n81 NB.n80 18.8175
+R80 NB.n80 NB.n79 18.8175
+R81 NB.n79 NB.n78 18.8175
+R82 NB.n78 NB.n77 18.8175
+R83 NB.n77 NB.n76 18.8175
+R84 NB.n76 NB.n75 18.8175
+R85 NB.n75 NB.n74 18.8175
+R86 NB.n74 NB.n73 18.8175
+R87 NB.n73 NB.n72 18.8175
+R88 NB.n72 NB.n71 18.8175
+R89 NB.n71 NB.n70 18.8175
+R90 NB.n70 NB.n69 18.8175
+R91 NB.n69 NB.n68 18.8175
+R92 NB.n68 NB.n67 18.8175
+R93 NB.n67 NB.n66 18.8175
+R94 NB.n66 NB.n65 18.8175
+R95 NB.n65 NB.n64 18.8175
+R96 NB.n64 NB.n63 18.8175
+R97 NB.n124 NB.n123 18.8175
+R98 NB.n123 NB.n122 18.8175
+R99 NB.n122 NB.n121 18.8175
+R100 NB.n121 NB.n120 18.8175
+R101 NB.n120 NB.n119 18.8175
+R102 NB.n119 NB.n118 18.8175
+R103 NB.n118 NB.n117 18.8175
+R104 NB.n117 NB.n116 18.8175
+R105 NB.n116 NB.n115 18.8175
+R106 NB.n115 NB.n114 18.8175
+R107 NB.n114 NB.n113 18.8175
+R108 NB.n113 NB.n112 18.8175
+R109 NB.n112 NB.n111 18.8175
+R110 NB.n111 NB.n110 18.8175
+R111 NB.n110 NB.n109 18.8175
+R112 NB.n109 NB.n108 18.8175
+R113 NB.n108 NB.n107 18.8175
+R114 NB.n107 NB.n106 18.8175
+R115 NB.n106 NB.n105 18.8175
+R116 NB.n105 NB.n104 18.8175
+R117 NB.n104 NB.n103 18.8175
+R118 NB.n103 NB.n102 18.8175
+R119 NB.n102 NB.n101 18.8175
+R120 NB.n101 NB.n100 18.8175
+R121 NB.n100 NB.n99 18.8175
+R122 NB.n99 NB.n98 18.8175
+R123 NB.n98 NB.n97 18.8175
+R124 NB.n97 NB.n96 18.8175
+R125 NB.n96 NB.n95 18.8175
+R126 NB.n95 NB.n94 18.8175
+R127 NB.n30 NB.t31 18.2505
+R128 NB.n29 NB.t30 18.2505
+R129 NB.n28 NB.t29 18.2505
+R130 NB.n27 NB.t28 18.2505
+R131 NB.n26 NB.t27 18.2505
+R132 NB.n25 NB.t26 18.2505
+R133 NB.n24 NB.t25 18.2505
+R134 NB.n23 NB.t24 18.2505
+R135 NB.n22 NB.t23 18.2505
+R136 NB.n21 NB.t22 18.2505
+R137 NB.n20 NB.t21 18.2505
+R138 NB.n19 NB.t20 18.2505
+R139 NB.n18 NB.t19 18.2505
+R140 NB.n17 NB.t18 18.2505
+R141 NB.n16 NB.t17 18.2505
+R142 NB.n15 NB.t16 18.2505
+R143 NB.n14 NB.t15 18.2505
+R144 NB.n13 NB.t14 18.2505
+R145 NB.n12 NB.t13 18.2505
+R146 NB.n11 NB.t12 18.2505
+R147 NB.n10 NB.t11 18.2505
+R148 NB.n9 NB.t10 18.2505
+R149 NB.n8 NB.t9 18.2505
+R150 NB.n7 NB.t8 18.2505
+R151 NB.n6 NB.t7 18.2505
+R152 NB.n5 NB.t6 18.2505
+R153 NB.n4 NB.t5 18.2505
+R154 NB.n3 NB.t4 18.2505
+R155 NB.n2 NB.t3 18.2505
+R156 NB.n1 NB.t2 18.2505
+R157 NB.n0 NB.t1 18.2505
+R158 NB.n61 NB.t32 18.2505
+R159 NB.n60 NB.t33 18.2505
+R160 NB.n59 NB.t34 18.2505
+R161 NB.n58 NB.t35 18.2505
+R162 NB.n57 NB.t36 18.2505
+R163 NB.n56 NB.t37 18.2505
+R164 NB.n55 NB.t38 18.2505
+R165 NB.n54 NB.t39 18.2505
+R166 NB.n53 NB.t40 18.2505
+R167 NB.n52 NB.t41 18.2505
+R168 NB.n51 NB.t42 18.2505
+R169 NB.n50 NB.t43 18.2505
+R170 NB.n49 NB.t44 18.2505
+R171 NB.n48 NB.t45 18.2505
+R172 NB.n47 NB.t46 18.2505
+R173 NB.n46 NB.t47 18.2505
+R174 NB.n45 NB.t48 18.2505
+R175 NB.n44 NB.t49 18.2505
+R176 NB.n43 NB.t50 18.2505
+R177 NB.n42 NB.t51 18.2505
+R178 NB.n41 NB.t52 18.2505
+R179 NB.n40 NB.t53 18.2505
+R180 NB.n39 NB.t54 18.2505
+R181 NB.n38 NB.t55 18.2505
+R182 NB.n37 NB.t56 18.2505
+R183 NB.n36 NB.t57 18.2505
+R184 NB.n35 NB.t58 18.2505
+R185 NB.n34 NB.t59 18.2505
+R186 NB.n33 NB.t60 18.2505
+R187 NB.n32 NB.t61 18.2505
+R188 NB.n31 NB.t62 18.2505
+R189 NB.n93 NB.t95 18.2505
+R190 NB.n92 NB.t94 18.2505
+R191 NB.n91 NB.t93 18.2505
+R192 NB.n90 NB.t92 18.2505
+R193 NB.n89 NB.t91 18.2505
+R194 NB.n88 NB.t90 18.2505
+R195 NB.n87 NB.t89 18.2505
+R196 NB.n86 NB.t88 18.2505
+R197 NB.n85 NB.t87 18.2505
+R198 NB.n84 NB.t86 18.2505
+R199 NB.n83 NB.t85 18.2505
+R200 NB.n82 NB.t84 18.2505
+R201 NB.n81 NB.t83 18.2505
+R202 NB.n80 NB.t82 18.2505
+R203 NB.n79 NB.t81 18.2505
+R204 NB.n78 NB.t80 18.2505
+R205 NB.n77 NB.t79 18.2505
+R206 NB.n76 NB.t78 18.2505
+R207 NB.n75 NB.t77 18.2505
+R208 NB.n74 NB.t76 18.2505
+R209 NB.n73 NB.t75 18.2505
+R210 NB.n72 NB.t74 18.2505
+R211 NB.n71 NB.t73 18.2505
+R212 NB.n70 NB.t72 18.2505
+R213 NB.n69 NB.t71 18.2505
+R214 NB.n68 NB.t70 18.2505
+R215 NB.n67 NB.t69 18.2505
+R216 NB.n66 NB.t68 18.2505
+R217 NB.n65 NB.t67 18.2505
+R218 NB.n64 NB.t66 18.2505
+R219 NB.n63 NB.t65 18.2505
+R220 NB.n124 NB.t96 18.2505
+R221 NB.n123 NB.t97 18.2505
+R222 NB.n122 NB.t98 18.2505
+R223 NB.n121 NB.t99 18.2505
+R224 NB.n120 NB.t100 18.2505
+R225 NB.n119 NB.t101 18.2505
+R226 NB.n118 NB.t102 18.2505
+R227 NB.n117 NB.t103 18.2505
+R228 NB.n116 NB.t104 18.2505
+R229 NB.n115 NB.t105 18.2505
+R230 NB.n114 NB.t106 18.2505
+R231 NB.n113 NB.t107 18.2505
+R232 NB.n112 NB.t108 18.2505
+R233 NB.n111 NB.t109 18.2505
+R234 NB.n110 NB.t110 18.2505
+R235 NB.n109 NB.t111 18.2505
+R236 NB.n108 NB.t112 18.2505
+R237 NB.n107 NB.t113 18.2505
+R238 NB.n106 NB.t114 18.2505
+R239 NB.n105 NB.t115 18.2505
+R240 NB.n104 NB.t116 18.2505
+R241 NB.n103 NB.t117 18.2505
+R242 NB.n102 NB.t118 18.2505
+R243 NB.n101 NB.t119 18.2505
+R244 NB.n100 NB.t120 18.2505
+R245 NB.n99 NB.t121 18.2505
+R246 NB.n98 NB.t122 18.2505
+R247 NB.n97 NB.t123 18.2505
+R248 NB.n96 NB.t124 18.2505
+R249 NB.n95 NB.t125 18.2505
+R250 NB.n94 NB.t126 18.2505
+R251 NB.n62 NB.n30 10.114
+R252 NB.n62 NB.n61 10.114
+R253 NB.n125 NB.n93 9.40902
+R254 NB.n125 NB.n124 9.40902
+R255 IFIN IFIN.t2 27.2831
+R256 IFIN.n0 IFIN.t7 17.8949
+R257 IFIN.n3 IFIN.n1 4.7818
+R258 IFIN.t6 IFIN.n4 3.6383
+R259 IFIN.n2 IFIN.t4 3.34006
+R260 IFIN.n1 IFIN.t0 3.24777
+R261 IFIN.n1 IFIN.t1 3.17867
+R262 IFIN.n2 IFIN.t5 3.04595
+R263 IFIN.n4 IFIN.n3 2.5583
+R264 IFIN.t2 IFIN.t6 2.5043
+R265 IFIN.n0 IFIN.t3 2.43794
+R266 IFIN.n4 IFIN.n0 1.84454
+R267 IFIN.n3 IFIN.n2 1.2718
+R268 IFIP IFIP.n8 28.9931
+R269 IFIP.n1 IFIP.t9 18.4948
+R270 IFIP.n4 IFIP.n0 3.3418
+R271 IFIP.n0 IFIP.t5 3.34006
+R272 IFIP.n7 IFIP.t8 3.3272
+R273 IFIP.n5 IFIP.t4 3.23492
+R274 IFIP.n2 IFIP.t2 3.23492
+R275 IFIP.n5 IFIP.t3 3.19152
+R276 IFIP.n2 IFIP.t1 3.19152
+R277 IFIP.n6 IFIP.n4 3.1433
+R278 IFIP.n7 IFIP.t7 3.05881
+R279 IFIP.n0 IFIP.t6 3.04595
+R280 IFIP.n1 IFIP.t0 2.44367
+R281 IFIP.n6 IFIP.n5 2.33633
+R282 IFIP.n8 IFIP.n7 2.278
+R283 IFIP.n3 IFIP.n1 1.87323
+R284 IFIP.n4 IFIP.n3 1.21467
+R285 IFIP.n8 IFIP.n6 1.1273
+R286 IFIP.n3 IFIP.n2 1.1255
+C446 L3N VSS 10.7847f
+C447 L3P VSS 10.8344f
+C448 L2N VSS 10.8842f
+C449 L2P VSS 10.934f
+C450 L4N VSS 11.0336f
+C451 L4P VSS 11.0833f
+C452 L1N VSS 11.1331f
+C453 L1P VSS 11.1829f
+C454 NB VSS 0.19396p
+C455 IFQN VSS 57.3022f
+C456 IFQP VSS 71.1891f
+C457 IFIN VSS 72.00336f
+C458 IFIP VSS 55.8617f
+C459 VDD VSS 0.20014p
+C460 RFN VSS 34.2326f
+C461 RFP VSS 48.6155f
+C462 a_61118_14980# VSS 1.15708f ; **FLOATING
+C463 a_60020_14980# VSS 1.15708f ; **FLOATING
+C464 a_58318_14980# VSS 1.00803f ; **FLOATING
+C465 a_57220_14980# VSS 1.00803f
+C466 a_55518_14980# VSS 2.1915f
+C467 a_54420_14980# VSS 2.1915f
+C468 a_52718_14980# VSS 2.10409f
+C469 a_51620_14980# VSS 2.10409f
+C470 a_50288_15219# VSS 0.82088f
+C471 a_48744_15219# VSS 0.82007f
+C472 a_47488_15219# VSS 0.82007f
+C473 a_45944_15219# VSS 0.82007f
+C474 a_44584_15219# VSS 0.82007f
+C475 a_42329_15279# VSS 5.40033f ; **FLOATING
+C476 a_42005_15279# VSS 1.0905f ; **FLOATING
+C477 a_41744_15219# VSS 0.82007f
+C478 a_40488_15219# VSS 0.82007f
+C479 a_38944_15219# VSS 0.82007f
+C480 a_37688_15219# VSS 0.82007f
+C481 a_36144_15219# VSS 0.82007f
+C482 a_34784_15219# VSS 0.82007f
+C483 a_32529_15279# VSS 5.43089f ; **FLOATING
+C484 a_32205_15279# VSS 1.08641f ; **FLOATING
+C485 a_31944_15219# VSS 0.82007f
+C486 a_30688_15219# VSS 0.82007f
+C487 a_29144_15219# VSS 0.82007f
+C488 a_27888_15219# VSS 0.82007f
+C489 a_26344_15219# VSS 0.82007f
+C490 a_24984_15219# VSS 0.82007f
+C491 a_22729_15279# VSS 5.48166f ; **FLOATING
+C492 a_22405_15279# VSS 1.10239f ; **FLOATING
+C493 a_22144_15219# VSS 0.82088f
+C494 a_20888_15219# VSS 0.82088f
+C495 a_19344_15219# VSS 0.82088f
+C496 a_18088_15219# VSS 0.82088f
+C497 a_16544_15219# VSS 0.82088f
+C498 a_15184_15219# VSS 0.82088f
+C499 a_12929_15279# VSS 1.84464f ; **FLOATING
+C500 a_12605_15279# VSS 1.12559f ; **FLOATING
+C501 a_12344_15219# VSS 0.82088f
+C502 a_10718_14980# VSS 0.81471f ; **FLOATING
+C503 a_9620_14980# VSS 0.81471f ; **FLOATING
+C504 a_7918_14980# VSS 0.82804f
+C505 a_6820_14980# VSS 0.82804f ; **FLOATING
+C506 a_5118_14980# VSS 2.90051f
+C507 a_4020_14980# VSS 2.90051f ; **FLOATING
+C508 a_2318_14980# VSS 2.46382f
+C509 a_1220_14980# VSS 2.46382f ; **FLOATING
+C510 a_77020_20404# VSS 2.50217f ; **FLOATING
+C511 a_76200_22376# VSS 0.70557f ; **FLOATING
+C512 a_75780_20404# VSS 0.73593f ; **FLOATING
+C513 a_75360_22376# VSS 0.69324f ; **FLOATING
+C514 a_74520_20404# VSS 0.768f ; **FLOATING
+C515 a_74100_22383# VSS 0.67458f ; **FLOATING
+C516 a_73680_20404# VSS 0.7295f ; **FLOATING
+C517 a_73260_22383# VSS 0.66147f ; **FLOATING
+C518 a_72840_20404# VSS 0.74107f ; **FLOATING
+C519 a_72420_22383# VSS 0.67415f ; **FLOATING
+C520 a_71580_22393# VSS 0.705f ; **FLOATING
+C521 a_71160_20404# VSS 0.72192f ; **FLOATING
+C522 a_70740_22393# VSS 0.68028f ; **FLOATING
+C523 a_70320_20404# VSS 0.74696f ; **FLOATING
+C524 a_69900_22393# VSS 0.72659f ; **FLOATING
+C525 a_69060_20404# VSS 0.70704f ; **FLOATING
+C526 a_68640_22406# VSS 0.67801f ; **FLOATING
+C527 a_68220_20404# VSS 0.68351f ; **FLOATING
+C528 a_67800_22406# VSS 0.68713f ; **FLOATING
+C529 a_67400_20404# VSS 2.50194f
+C530 a_66076_20399# VSS 0.82088f
+C531 a_41860_15279# VSS 12.2179f ; **FLOATING
+C532 a_32060_15279# VSS 20.4966f ; **FLOATING
+C533 a_60644_20399# VSS 0.82088f
+C534 a_58976_20160# VSS 4.30174f
+C535 a_26000_20160# VSS 4.30159f
+C536 a_58976_22511# VSS 4.24431f
+C537 a_27961_20220# VSS 39.1968f ; **FLOATING
+C538 a_26000_22511# VSS 4.24431f
+C539 a_24260_20404# VSS 2.319f
+C540 a_19300_20404# VSS 2.319f
+C541 a_17916_20399# VSS 0.82088f
+C542 a_13069_20459# VSS 7.67407f ; **FLOATING
+C543 a_12460_15279# VSS 4.24419f ; **FLOATING
+C544 a_12600_20459# VSS 53.4464f ; **FLOATING
+C545 a_12484_20399# VSS 0.82088f
+C546 a_10940_20404# VSS 2.66784f
+C547 a_10120_21826# VSS 0.85622f ; **FLOATING
+C548 a_9700_20404# VSS 32.5639f ; **FLOATING
+C549 a_9280_22526# VSS 0.71085f ; **FLOATING
+C550 a_8860_20404# VSS 30.4157f ; **FLOATING
+C551 a_8440_20404# VSS 35.442f ; **FLOATING
+C552 a_8020_22526# VSS 0.85871f ; **FLOATING
+C553 a_7600_22526# VSS 0.85051f ; **FLOATING
+C554 a_7180_20404# VSS 38.6719f ; **FLOATING
+C555 a_6760_20404# VSS 27.6487f ; **FLOATING
+C556 a_6340_20404# VSS 84.5535f ; **FLOATING
+C557 a_6340_22526# VSS 0.85871f ; **FLOATING
+C558 a_5920_22526# VSS 0.85051f ; **FLOATING
+C559 a_5500_20404# VSS 36.0624f ; **FLOATING
+C560 a_4549_16329# VSS 28.3909f ; **FLOATING
+C561 a_4660_22526# VSS 0.85871f ; **FLOATING
+C562 a_4240_22526# VSS 0.85051f ; **FLOATING
+C563 a_1749_16189# VSS 35.7763f ; **FLOATING
+C564 a_2980_20404# VSS 83.086f ; **FLOATING
+C565 a_2980_22526# VSS 0.85871f ; **FLOATING
+C566 a_1720_20404# VSS 80.5803f ; **FLOATING
+C567 a_2560_22526# VSS 0.86553f ; **FLOATING
+C568 a_1320_20404# VSS 2.63774f
+C569 IFIP.t6 VSS 0.03089f ; **FLOATING
+C570 IFIP.t5 VSS 0.03327f ; **FLOATING
+C571 IFIP.t2 VSS 0.0309f ; **FLOATING
+C572 IFIP.t1 VSS 0.03074f ; **FLOATING
+C573 IFIP.t4 VSS 0.0309f ; **FLOATING
+C574 IFIP.t3 VSS 0.03074f ; **FLOATING
+C575 IFIP.t8 VSS 0.03311f ; **FLOATING
+C576 IFIP.t7 VSS 0.03093f ; **FLOATING
+C577 IFIP.n0 VSS 0.07779f ; **FLOATING
+C578 IFIP.t9 VSS 34.2241f ; **FLOATING
+C579 IFIP.t0 VSS 0.03093f ; **FLOATING
+C580 IFIP.n1 VSS 0.92662f ; **FLOATING
+C581 IFIP.n2 VSS 0.02379f ; **FLOATING
+C582 IFIP.n3 VSS 0.10282f ; **FLOATING
+C583 IFIP.n4 VSS 0.24052f ; **FLOATING
+C584 IFIP.n5 VSS 0.03336f ; **FLOATING
+C585 IFIP.n6 VSS 0.21029f ; **FLOATING
+C586 IFIP.n7 VSS 0.05827f ; **FLOATING
+C587 IFIP.n8 VSS 1.3953f ; **FLOATING
+C588 IFIN.t5 VSS 0.02549f ; **FLOATING
+C589 IFIN.t4 VSS 0.02746f ; **FLOATING
+C590 IFIN.t1 VSS 0.02534f ; **FLOATING
+C591 IFIN.t0 VSS 0.02556f ; **FLOATING
+C592 IFIN.t7 VSS 28.171f ; **FLOATING
+C593 IFIN.t3 VSS 0.02544f ; **FLOATING
+C594 IFIN.n0 VSS 0.642f ; **FLOATING
+C595 IFIN.n1 VSS 0.07149f ; **FLOATING
+C596 IFIN.n2 VSS 0.04393f ; **FLOATING
+C597 IFIN.n3 VSS 0.11033f ; **FLOATING
+C598 IFIN.n4 VSS 0.16255f ; **FLOATING
+C599 IFIN.t6 VSS 0.32497f ; **FLOATING
+C600 IFIN.t2 VSS 1.08006f ; **FLOATING
+C601 NB.t31 VSS 0.32954f ; **FLOATING
+C602 NB.t30 VSS 0.32954f ; **FLOATING
+C603 NB.t29 VSS 0.32954f ; **FLOATING
+C604 NB.t28 VSS 0.32954f ; **FLOATING
+C605 NB.t27 VSS 0.32954f ; **FLOATING
+C606 NB.t26 VSS 0.32954f ; **FLOATING
+C607 NB.t25 VSS 0.32954f ; **FLOATING
+C608 NB.t24 VSS 0.32954f ; **FLOATING
+C609 NB.t23 VSS 0.32954f ; **FLOATING
+C610 NB.t22 VSS 0.32954f ; **FLOATING
+C611 NB.t21 VSS 0.32954f ; **FLOATING
+C612 NB.t20 VSS 0.32954f ; **FLOATING
+C613 NB.t19 VSS 0.32954f ; **FLOATING
+C614 NB.t18 VSS 0.32954f ; **FLOATING
+C615 NB.t17 VSS 0.32954f ; **FLOATING
+C616 NB.t16 VSS 0.32954f ; **FLOATING
+C617 NB.t15 VSS 0.32954f ; **FLOATING
+C618 NB.t14 VSS 0.32954f ; **FLOATING
+C619 NB.t13 VSS 0.32954f ; **FLOATING
+C620 NB.t12 VSS 0.32954f ; **FLOATING
+C621 NB.t11 VSS 0.32954f ; **FLOATING
+C622 NB.t10 VSS 0.32954f ; **FLOATING
+C623 NB.t9 VSS 0.32954f ; **FLOATING
+C624 NB.t8 VSS 0.32954f ; **FLOATING
+C625 NB.t7 VSS 0.32954f ; **FLOATING
+C626 NB.t6 VSS 0.32954f ; **FLOATING
+C627 NB.t5 VSS 0.32954f ; **FLOATING
+C628 NB.t4 VSS 0.32954f ; **FLOATING
+C629 NB.t3 VSS 0.32954f ; **FLOATING
+C630 NB.t2 VSS 0.32954f ; **FLOATING
+C631 NB.t1 VSS 0.32954f ; **FLOATING
+C632 NB.t0 VSS 0.41278f ; **FLOATING
+C633 NB.n0 VSS 0.23523f ; **FLOATING
+C634 NB.n1 VSS 0.16013f ; **FLOATING
+C635 NB.n2 VSS 0.16013f ; **FLOATING
+C636 NB.n3 VSS 0.16013f ; **FLOATING
+C637 NB.n4 VSS 0.16013f ; **FLOATING
+C638 NB.n5 VSS 0.16013f ; **FLOATING
+C639 NB.n6 VSS 0.16013f ; **FLOATING
+C640 NB.n7 VSS 0.16013f ; **FLOATING
+C641 NB.n8 VSS 0.16013f ; **FLOATING
+C642 NB.n9 VSS 0.16013f ; **FLOATING
+C643 NB.n10 VSS 0.16013f ; **FLOATING
+C644 NB.n11 VSS 0.16013f ; **FLOATING
+C645 NB.n12 VSS 0.16013f ; **FLOATING
+C646 NB.n13 VSS 0.16013f ; **FLOATING
+C647 NB.n14 VSS 0.16013f ; **FLOATING
+C648 NB.n15 VSS 0.16013f ; **FLOATING
+C649 NB.n16 VSS 0.16013f ; **FLOATING
+C650 NB.n17 VSS 0.16013f ; **FLOATING
+C651 NB.n18 VSS 0.16013f ; **FLOATING
+C652 NB.n19 VSS 0.16013f ; **FLOATING
+C653 NB.n20 VSS 0.16013f ; **FLOATING
+C654 NB.n21 VSS 0.16013f ; **FLOATING
+C655 NB.n22 VSS 0.16013f ; **FLOATING
+C656 NB.n23 VSS 0.16013f ; **FLOATING
+C657 NB.n24 VSS 0.16013f ; **FLOATING
+C658 NB.n25 VSS 0.16013f ; **FLOATING
+C659 NB.n26 VSS 0.16013f ; **FLOATING
+C660 NB.n27 VSS 0.16013f ; **FLOATING
+C661 NB.n28 VSS 0.16013f ; **FLOATING
+C662 NB.n29 VSS 0.16013f ; **FLOATING
+C663 NB.n30 VSS 0.15018f ; **FLOATING
+C664 NB.t32 VSS 0.32954f ; **FLOATING
+C665 NB.t33 VSS 0.32954f ; **FLOATING
+C666 NB.t34 VSS 0.32954f ; **FLOATING
+C667 NB.t35 VSS 0.32954f ; **FLOATING
+C668 NB.t36 VSS 0.32954f ; **FLOATING
+C669 NB.t37 VSS 0.32954f ; **FLOATING
+C670 NB.t38 VSS 0.32954f ; **FLOATING
+C671 NB.t39 VSS 0.32954f ; **FLOATING
+C672 NB.t40 VSS 0.32954f ; **FLOATING
+C673 NB.t41 VSS 0.32954f ; **FLOATING
+C674 NB.t42 VSS 0.32954f ; **FLOATING
+C675 NB.t43 VSS 0.32954f ; **FLOATING
+C676 NB.t44 VSS 0.32954f ; **FLOATING
+C677 NB.t45 VSS 0.32954f ; **FLOATING
+C678 NB.t46 VSS 0.32954f ; **FLOATING
+C679 NB.t47 VSS 0.32954f ; **FLOATING
+C680 NB.t48 VSS 0.32954f ; **FLOATING
+C681 NB.t49 VSS 0.32954f ; **FLOATING
+C682 NB.t50 VSS 0.32954f ; **FLOATING
+C683 NB.t51 VSS 0.32954f ; **FLOATING
+C684 NB.t52 VSS 0.32954f ; **FLOATING
+C685 NB.t53 VSS 0.32954f ; **FLOATING
+C686 NB.t54 VSS 0.32954f ; **FLOATING
+C687 NB.t55 VSS 0.32954f ; **FLOATING
+C688 NB.t56 VSS 0.32954f ; **FLOATING
+C689 NB.t57 VSS 0.32954f ; **FLOATING
+C690 NB.t58 VSS 0.32954f ; **FLOATING
+C691 NB.t59 VSS 0.32954f ; **FLOATING
+C692 NB.t60 VSS 0.32954f ; **FLOATING
+C693 NB.t61 VSS 0.32954f ; **FLOATING
+C694 NB.t62 VSS 0.32954f ; **FLOATING
+C695 NB.t63 VSS 0.41278f ; **FLOATING
+C696 NB.n31 VSS 0.23523f ; **FLOATING
+C697 NB.n32 VSS 0.16013f ; **FLOATING
+C698 NB.n33 VSS 0.16013f ; **FLOATING
+C699 NB.n34 VSS 0.16013f ; **FLOATING
+C700 NB.n35 VSS 0.16013f ; **FLOATING
+C701 NB.n36 VSS 0.16013f ; **FLOATING
+C702 NB.n37 VSS 0.16013f ; **FLOATING
+C703 NB.n38 VSS 0.16013f ; **FLOATING
+C704 NB.n39 VSS 0.16013f ; **FLOATING
+C705 NB.n40 VSS 0.16013f ; **FLOATING
+C706 NB.n41 VSS 0.16013f ; **FLOATING
+C707 NB.n42 VSS 0.16013f ; **FLOATING
+C708 NB.n43 VSS 0.16013f ; **FLOATING
+C709 NB.n44 VSS 0.16013f ; **FLOATING
+C710 NB.n45 VSS 0.16013f ; **FLOATING
+C711 NB.n46 VSS 0.16013f ; **FLOATING
+C712 NB.n47 VSS 0.16013f ; **FLOATING
+C713 NB.n48 VSS 0.16013f ; **FLOATING
+C714 NB.n49 VSS 0.16013f ; **FLOATING
+C715 NB.n50 VSS 0.16013f ; **FLOATING
+C716 NB.n51 VSS 0.16013f ; **FLOATING
+C717 NB.n52 VSS 0.16013f ; **FLOATING
+C718 NB.n53 VSS 0.16013f ; **FLOATING
+C719 NB.n54 VSS 0.16013f ; **FLOATING
+C720 NB.n55 VSS 0.16013f ; **FLOATING
+C721 NB.n56 VSS 0.16013f ; **FLOATING
+C722 NB.n57 VSS 0.16013f ; **FLOATING
+C723 NB.n58 VSS 0.16013f ; **FLOATING
+C724 NB.n59 VSS 0.16013f ; **FLOATING
+C725 NB.n60 VSS 0.16013f ; **FLOATING
+C726 NB.n61 VSS 0.15018f ; **FLOATING
+C727 NB.n62 VSS 2.38685f ; **FLOATING
+C728 NB.t95 VSS 0.32954f ; **FLOATING
+C729 NB.t94 VSS 0.32954f ; **FLOATING
+C730 NB.t93 VSS 0.32954f ; **FLOATING
+C731 NB.t92 VSS 0.32954f ; **FLOATING
+C732 NB.t91 VSS 0.32954f ; **FLOATING
+C733 NB.t90 VSS 0.32954f ; **FLOATING
+C734 NB.t89 VSS 0.32954f ; **FLOATING
+C735 NB.t88 VSS 0.32954f ; **FLOATING
+C736 NB.t87 VSS 0.32954f ; **FLOATING
+C737 NB.t86 VSS 0.32954f ; **FLOATING
+C738 NB.t85 VSS 0.32954f ; **FLOATING
+C739 NB.t84 VSS 0.32954f ; **FLOATING
+C740 NB.t83 VSS 0.32954f ; **FLOATING
+C741 NB.t82 VSS 0.32954f ; **FLOATING
+C742 NB.t81 VSS 0.32954f ; **FLOATING
+C743 NB.t80 VSS 0.32954f ; **FLOATING
+C744 NB.t79 VSS 0.32954f ; **FLOATING
+C745 NB.t78 VSS 0.32954f ; **FLOATING
+C746 NB.t77 VSS 0.32954f ; **FLOATING
+C747 NB.t76 VSS 0.32954f ; **FLOATING
+C748 NB.t75 VSS 0.32954f ; **FLOATING
+C749 NB.t74 VSS 0.32954f ; **FLOATING
+C750 NB.t73 VSS 0.32954f ; **FLOATING
+C751 NB.t72 VSS 0.32954f ; **FLOATING
+C752 NB.t71 VSS 0.32954f ; **FLOATING
+C753 NB.t70 VSS 0.32954f ; **FLOATING
+C754 NB.t69 VSS 0.32954f ; **FLOATING
+C755 NB.t68 VSS 0.32954f ; **FLOATING
+C756 NB.t67 VSS 0.32954f ; **FLOATING
+C757 NB.t66 VSS 0.32954f ; **FLOATING
+C758 NB.t65 VSS 0.32954f ; **FLOATING
+C759 NB.t64 VSS 0.41303f ; **FLOATING
+C760 NB.n63 VSS 0.24723f ; **FLOATING
+C761 NB.n64 VSS 0.16625f ; **FLOATING
+C762 NB.n65 VSS 0.16625f ; **FLOATING
+C763 NB.n66 VSS 0.16625f ; **FLOATING
+C764 NB.n67 VSS 0.16625f ; **FLOATING
+C765 NB.n68 VSS 0.16625f ; **FLOATING
+C766 NB.n69 VSS 0.16625f ; **FLOATING
+C767 NB.n70 VSS 0.16625f ; **FLOATING
+C768 NB.n71 VSS 0.16625f ; **FLOATING
+C769 NB.n72 VSS 0.16625f ; **FLOATING
+C770 NB.n73 VSS 0.16625f ; **FLOATING
+C771 NB.n74 VSS 0.16625f ; **FLOATING
+C772 NB.n75 VSS 0.16625f ; **FLOATING
+C773 NB.n76 VSS 0.16625f ; **FLOATING
+C774 NB.n77 VSS 0.16625f ; **FLOATING
+C775 NB.n78 VSS 0.16625f ; **FLOATING
+C776 NB.n79 VSS 0.16625f ; **FLOATING
+C777 NB.n80 VSS 0.16625f ; **FLOATING
+C778 NB.n81 VSS 0.16625f ; **FLOATING
+C779 NB.n82 VSS 0.16625f ; **FLOATING
+C780 NB.n83 VSS 0.16625f ; **FLOATING
+C781 NB.n84 VSS 0.16625f ; **FLOATING
+C782 NB.n85 VSS 0.16625f ; **FLOATING
+C783 NB.n86 VSS 0.16625f ; **FLOATING
+C784 NB.n87 VSS 0.16625f ; **FLOATING
+C785 NB.n88 VSS 0.16625f ; **FLOATING
+C786 NB.n89 VSS 0.16625f ; **FLOATING
+C787 NB.n90 VSS 0.16625f ; **FLOATING
+C788 NB.n91 VSS 0.16625f ; **FLOATING
+C789 NB.n92 VSS 0.16625f ; **FLOATING
+C790 NB.n93 VSS 0.15578f ; **FLOATING
+C791 NB.t96 VSS 0.32954f ; **FLOATING
+C792 NB.t97 VSS 0.32954f ; **FLOATING
+C793 NB.t98 VSS 0.32954f ; **FLOATING
+C794 NB.t99 VSS 0.32954f ; **FLOATING
+C795 NB.t100 VSS 0.32954f ; **FLOATING
+C796 NB.t101 VSS 0.32954f ; **FLOATING
+C797 NB.t102 VSS 0.32954f ; **FLOATING
+C798 NB.t103 VSS 0.32954f ; **FLOATING
+C799 NB.t104 VSS 0.32954f ; **FLOATING
+C800 NB.t105 VSS 0.32954f ; **FLOATING
+C801 NB.t106 VSS 0.32954f ; **FLOATING
+C802 NB.t107 VSS 0.32954f ; **FLOATING
+C803 NB.t108 VSS 0.32954f ; **FLOATING
+C804 NB.t109 VSS 0.32954f ; **FLOATING
+C805 NB.t110 VSS 0.32954f ; **FLOATING
+C806 NB.t111 VSS 0.32954f ; **FLOATING
+C807 NB.t112 VSS 0.32954f ; **FLOATING
+C808 NB.t113 VSS 0.32954f ; **FLOATING
+C809 NB.t114 VSS 0.32954f ; **FLOATING
+C810 NB.t115 VSS 0.32954f ; **FLOATING
+C811 NB.t116 VSS 0.32954f ; **FLOATING
+C812 NB.t117 VSS 0.32954f ; **FLOATING
+C813 NB.t118 VSS 0.32954f ; **FLOATING
+C814 NB.t119 VSS 0.32954f ; **FLOATING
+C815 NB.t120 VSS 0.32954f ; **FLOATING
+C816 NB.t121 VSS 0.32954f ; **FLOATING
+C817 NB.t122 VSS 0.32954f ; **FLOATING
+C818 NB.t123 VSS 0.32954f ; **FLOATING
+C819 NB.t124 VSS 0.32954f ; **FLOATING
+C820 NB.t125 VSS 0.32954f ; **FLOATING
+C821 NB.t126 VSS 0.32954f ; **FLOATING
+C822 NB.t127 VSS 0.41303f ; **FLOATING
+C823 NB.n94 VSS 0.24723f ; **FLOATING
+C824 NB.n95 VSS 0.16625f ; **FLOATING
+C825 NB.n96 VSS 0.16625f ; **FLOATING
+C826 NB.n97 VSS 0.16625f ; **FLOATING
+C827 NB.n98 VSS 0.16625f ; **FLOATING
+C828 NB.n99 VSS 0.16625f ; **FLOATING
+C829 NB.n100 VSS 0.16625f ; **FLOATING
+C830 NB.n101 VSS 0.16625f ; **FLOATING
+C831 NB.n102 VSS 0.16625f ; **FLOATING
+C832 NB.n103 VSS 0.16625f ; **FLOATING
+C833 NB.n104 VSS 0.16625f ; **FLOATING
+C834 NB.n105 VSS 0.16625f ; **FLOATING
+C835 NB.n106 VSS 0.16625f ; **FLOATING
+C836 NB.n107 VSS 0.16625f ; **FLOATING
+C837 NB.n108 VSS 0.16625f ; **FLOATING
+C838 NB.n109 VSS 0.16625f ; **FLOATING
+C839 NB.n110 VSS 0.16625f ; **FLOATING
+C840 NB.n111 VSS 0.16625f ; **FLOATING
+C841 NB.n112 VSS 0.16625f ; **FLOATING
+C842 NB.n113 VSS 0.16625f ; **FLOATING
+C843 NB.n114 VSS 0.16625f ; **FLOATING
+C844 NB.n115 VSS 0.16625f ; **FLOATING
+C845 NB.n116 VSS 0.16625f ; **FLOATING
+C846 NB.n117 VSS 0.16625f ; **FLOATING
+C847 NB.n118 VSS 0.16625f ; **FLOATING
+C848 NB.n119 VSS 0.16625f ; **FLOATING
+C849 NB.n120 VSS 0.16625f ; **FLOATING
+C850 NB.n121 VSS 0.16625f ; **FLOATING
+C851 NB.n122 VSS 0.16625f ; **FLOATING
+C852 NB.n123 VSS 0.16625f ; **FLOATING
+C853 NB.n124 VSS 0.15578f ; **FLOATING
+C854 NB.n125 VSS 2.34798f ; **FLOATING
+C855 NB.n126 VSS 1.18837f ; **FLOATING
+.ends

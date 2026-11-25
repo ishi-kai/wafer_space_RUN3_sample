@@ -1,0 +1,5 @@
+.subckt decap_vco VDD VSS
+XMD0 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD1 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD2 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+.ends

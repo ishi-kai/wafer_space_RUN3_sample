@@ -1,0 +1,101 @@
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+Flattening unmatched subcell gmc_lpf2_G4_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MT_G2_MT_G3_MT_G4_MT in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_M1_G1_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_M1_G2_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_M1_G3_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_M1_G4_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gm_unit in circuit gmc_lpf2 (1)(4 instances)
+
+Class gmc_lpf2 (0):  Merged 92 parallel devices.
+Class gmc_lpf2 (1):  Merged 8 parallel devices.
+Subcircuit summary:
+Circuit 1: gmc_lpf2                        |Circuit 2: gmc_lpf2                        
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (64->8)                          |pfet_03v3 (16->8)                          
+nfet_03v3 (48->12)                         |nfet_03v3 (16->12)                         
+cap_mim_2f0_m4m5_noshield (4)              |cap_mim_2f0_m4m5_noshield (4)              
+Number of devices: 24                      |Number of devices: 24                      
+Number of nets: 13                         |Number of nets: 13                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gmc_lpf2                        |Circuit 2: gmc_lpf2                        
+-------------------------------------------|-------------------------------------------
+INP                                        |INP                                        
+INN                                        |INN                                        
+VTN                                        |VTN                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+OUTN                                       |OUTN                                       
+OUTP                                       |OUTP                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gmc_lpf2 and gmc_lpf2 are equivalent.
+
+Final result: Circuits match uniquely.
+.

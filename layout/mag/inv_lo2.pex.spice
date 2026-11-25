@@ -1,0 +1,25 @@
+* NGSPICE file created from inv_lo2_flat.ext - technology: gf180mcuD
+
+.subckt inv_lo2_flat VSS VDD A Y
+X0 VDD A Y VDD pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 Y A VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VDD A Y VDD pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 Y A VDD VDD pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 VSS A Y VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X5 Y A VDD VDD pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+C0 Y VDD 1.34992f
+C1 A a_1856_1400# 0.01042f
+C2 a_3104_1400# VDD 0.49981f
+C3 a_3104_1400# Y 0.01078f
+C4 a_4000_1400# VDD 0.50376f
+C5 a_1856_1400# Y 0.01048f
+C6 A VDD 1.49751f
+C7 A Y 0.45299f
+C8 Y VSS 1.68353f
+C9 A VSS 2.71525f
+C10 VDD VSS 13.0453f
+C11 a_4000_1400# VSS 0.07989f
+C12 a_3104_1400# VSS 0.07989f
+C13 a_1856_1400# VSS 0.5796f
+C14 a_1284_1400# VSS 0.58438f ; **FLOATING
+.ends

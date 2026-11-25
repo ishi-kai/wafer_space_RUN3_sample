@@ -1,0 +1,464 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1438" height="781" viewBox="0 -88 1438 781" font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="0" y="-88" width="1438" height="781" fill="white"/>
+<text x="20" y="-58" font-size="22" font-weight="bold" fill="#000000">Noise-cancelling CG-CS balun LNA (no inductor): 50 ohm SE in, differential out</text>
+<text x="20" y="-38" font-size="11" fill="#444">Supply pins: VDD, VSS (drawn as supply symbols at each device pin; ground symbol = VSS)</text>
+<text x="20" y="-24" font-size="11" fill="#444">Devices: GF180MCU PDK (nfet_03v3 / pfet_03v3 / ppolyf_u_1k / cap_mim_2f0fF); W, L in metres (u = um); bulk drawn to source where tied, otherwise tagged.</text>
+<line x1="150.0" y1="396.0" x2="150.0" y2="399.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="150.0" y1="399.0" x2="150.0" y2="411.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="150.0" y1="411.0" x2="342.0" y2="411.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="411.0" x2="342.0" y2="444.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="444.0" x2="342.0" y2="447.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="150.0" y1="396.0" x2="150.0" y2="399.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="150.0" y1="399.0" x2="150.0" y2="538.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="150.0" y1="538.0" x2="180.0" y2="538.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="180.0" y1="538.0" x2="180.0" y2="518.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="180.0" y1="518.5" x2="180.0" y2="515.5" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="150.0" cy="411.0" r="2.6" fill="#1e7b34"/>
+<line x1="480.0" y1="396.0" x2="480.0" y2="399.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="399.0" x2="480.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="420.0" x2="284.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="284.0" y1="420.0" x2="284.0" y2="480.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="284.0" y1="480.0" x2="296.0" y2="480.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="296.0" y1="480.0" x2="299.0" y2="480.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="396.0" x2="480.0" y2="399.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="399.0" x2="480.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="420.0" x2="633.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="633.0" y1="420.0" x2="633.0" y2="446.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="633.0" y1="446.5" x2="633.0" y2="449.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="396.0" x2="480.0" y2="399.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="399.0" x2="480.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="420.0" x2="575.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="575.0" y1="420.0" x2="575.0" y2="482.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="575.0" y1="482.5" x2="587.0" y2="482.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="587.0" y1="482.5" x2="590.0" y2="482.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="396.0" x2="480.0" y2="399.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="399.0" x2="480.0" y2="439.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="480.0" y1="439.0" x2="480.0" y2="442.0" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="480.0" cy="420.0" r="2.6" fill="#1e7b34"/>
+<circle cx="575.0" cy="420.0" r="2.6" fill="#1e7b34"/>
+<line x1="342.0" y1="513.0" x2="342.0" y2="516.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="516.0" x2="342.0" y2="547.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="547.0" x2="403.0" y2="547.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="403.0" y1="547.0" x2="403.0" y2="566.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="403.0" y1="566.0" x2="403.0" y2="569.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="513.0" x2="342.0" y2="516.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="516.0" x2="342.0" y2="547.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="547.0" x2="1023.0" y2="547.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1023.0" y1="547.0" x2="1023.0" y2="387.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1023.0" y1="387.0" x2="1023.0" y2="384.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="513.0" x2="342.0" y2="516.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="516.0" x2="342.0" y2="547.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="342.0" y1="547.0" x2="96.0" y2="547.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="96.0" y1="547.0" x2="96.0" y2="88.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="96.0" y1="88.0" x2="84.0" y2="88.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="84.0" y1="88.0" x2="81.0" y2="88.0" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="342.0" cy="547.0" r="2.6" fill="#1e7b34"/>
+<circle cx="403.0" cy="547.0" r="2.6" fill="#1e7b34"/>
+<line x1="1023.0" y1="318.0" x2="1023.0" y2="315.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1023.0" y1="315.0" x2="1023.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1023.0" y1="275.0" x2="1014.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1014.0" y1="275.0" x2="1014.0" y2="157.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1014.0" y1="157.0" x2="833.0" y2="157.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="157.0" x2="833.0" y2="191.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="191.0" x2="833.0" y2="194.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1023.0" y1="318.0" x2="1023.0" y2="315.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1023.0" y1="315.0" x2="1023.0" y2="212.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1023.0" y1="212.0" x2="1035.0" y2="212.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1035.0" y1="212.0" x2="1038.0" y2="212.0" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="1023.0" cy="275.0" r="2.6" fill="#1e7b34"/>
+<line x1="833.0" y1="260.0" x2="833.0" y2="263.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="263.0" x2="833.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="275.0" x2="708.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="708.0" y1="275.0" x2="708.0" y2="411.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="708.0" y1="411.0" x2="623.0" y2="411.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="623.0" y1="411.0" x2="623.0" y2="399.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="623.0" y1="399.0" x2="623.0" y2="396.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="260.0" x2="833.0" y2="263.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="263.0" x2="833.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="275.0" x2="891.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="891.0" y1="275.0" x2="891.0" y2="303.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="891.0" y1="303.0" x2="891.0" y2="306.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="260.0" x2="833.0" y2="263.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="263.0" x2="833.0" y2="339.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="339.0" x2="845.0" y2="339.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="845.0" y1="339.0" x2="848.0" y2="339.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="260.0" x2="833.0" y2="263.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="263.0" x2="833.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="833.0" y1="275.0" x2="738.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="738.0" y1="275.0" x2="738.0" y2="303.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="738.0" y1="303.0" x2="738.0" y2="306.0" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="833.0" cy="275.0" r="2.6" fill="#1e7b34"/>
+<circle cx="738.0" cy="275.0" r="2.6" fill="#1e7b34"/>
+<line x1="1308.0" y1="133.0" x2="1308.0" y2="136.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1308.0" y1="136.0" x2="1308.0" y2="148.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1308.0" y1="148.0" x2="1081.0" y2="148.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1081.0" y1="148.0" x2="1081.0" y2="176.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1081.0" y1="176.0" x2="1081.0" y2="179.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1308.0" y1="133.0" x2="1308.0" y2="136.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1308.0" y1="136.0" x2="1308.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1308.0" y1="275.0" x2="1213.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1213.0" y1="275.0" x2="1213.0" y2="255.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1213.0" y1="255.5" x2="1213.0" y2="252.5" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="1308.0" cy="148.0" r="2.6" fill="#1e7b34"/>
+<line x1="407.0" y1="88.0" x2="410.0" y2="88.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="410.0" y1="88.0" x2="422.0" y2="88.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="422.0" y1="88.0" x2="422.0" y2="363.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="422.0" y1="363.0" x2="434.0" y2="363.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="434.0" y1="363.0" x2="437.0" y2="363.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="407.0" y1="88.0" x2="410.0" y2="88.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="410.0" y1="88.0" x2="422.0" y2="88.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="422.0" y1="88.0" x2="422.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="422.0" y1="275.0" x2="565.0" y2="275.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="565.0" y1="275.0" x2="565.0" y2="363.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="565.0" y1="363.0" x2="577.0" y2="363.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="577.0" y1="363.0" x2="580.0" y2="363.0" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="422.0" cy="275.0" r="2.6" fill="#1e7b34"/>
+<line x1="633.0" y1="515.5" x2="633.0" y2="518.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="633.0" y1="518.5" x2="633.0" y2="566.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="633.0" y1="566.0" x2="633.0" y2="569.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="180.0" y1="449.5" x2="180.0" y2="446.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="180.0" y1="446.5" x2="180.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="180.0" y1="420.0" x2="275.0" y2="420.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="275.0" y1="420.0" x2="275.0" y2="609.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="275.0" y1="609.5" x2="287.0" y2="609.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="287.0" y1="609.5" x2="290.0" y2="609.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1213.0" y1="186.5" x2="1213.0" y2="183.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1213.0" y1="183.5" x2="1213.0" y2="157.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1213.0" y1="157.0" x2="1183.0" y2="157.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1183.0" y1="157.0" x2="1183.0" y2="609.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1183.0" y1="609.5" x2="1195.0" y2="609.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="1195.0" y1="609.5" x2="1198.0" y2="609.5" stroke="#1e7b34" stroke-width="1.3"/>
+<g transform="translate(322.00,480.00)">
+<line x1="7.5" y1="-22.5" x2="7.5" y2="22.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="2.5" y2="0" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="17.5" x2="20" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="2.5" y1="-15" x2="2.5" y2="15" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="-17.5" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="17.5" x2="15" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="0" x2="30" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-23" y2="0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="20" y1="30" x2="20" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<polygon points="15 15 20 17.5 15 20 15 15" fill="#1f3a93" stroke="#1f3a93" stroke-width="1.2"/>
+<text x="36" y="-18" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">M1</text>
+<text x="36" y="-7" font-size="7.5" text-anchor="start" fill="#222222">nfet_03v3</text>
+<text x="36" y="13" font-size="9" text-anchor="start" fill="#8e3b00">W=40u L=0.28u</text>
+<text x="36" y="24" font-size="9" text-anchor="start" fill="#8e3b00">nf=8 m=3</text>
+<text x="32" y="3" font-size="7" text-anchor="start" fill="#7d3c98">VSS</text>
+</g>
+<g transform="translate(403.00,602.00)">
+<line x1="0" y1="20" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="20" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="8" y1="42" x2="-8" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="5" y1="45" x2="-5" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="2" y1="48" x2="-2" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-32" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-32" y1="8" x2="-32" y2="-8" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-35" y1="5" x2="-35" y2="-5" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-38" y1="2" x2="-38" y2="-2" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="16" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">RS</text>
+<text x="16" y="-4" font-size="7.5" text-anchor="start" fill="#222222">ppolyf_u_1k</text>
+<text x="16" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=10u L=3u</text>
+<text x="16" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈300 Ω</text>
+</g>
+<g transform="translate(150.00,363.00)">
+<line x1="0" y1="20" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="20" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-8" y1="-42" x2="8" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-32" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-32" y1="8" x2="-32" y2="-8" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-35" y1="5" x2="-35" y2="-5" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-38" y1="2" x2="-38" y2="-2" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="16" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">R1</text>
+<text x="16" y="-4" font-size="7.5" text-anchor="start" fill="#222222">ppolyf_u_1k</text>
+<text x="16" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=10u L=2u</text>
+<text x="16" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈200 Ω</text>
+<text x="0" y="-51" font-size="7" text-anchor="middle" fill="#7d3c98">VDD</text>
+</g>
+<g transform="translate(1023.00,351.00)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">CC2</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=45u L=45u</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈4.05 pF</text>
+</g>
+<g transform="translate(833.00,227.00)">
+<line x1="0" y1="20" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="20" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-32" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-32" y1="8" x2="-32" y2="-8" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-35" y1="5" x2="-35" y2="-5" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-38" y1="2" x2="-38" y2="-2" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="16" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">RB2</text>
+<text x="16" y="-4" font-size="7.5" text-anchor="start" fill="#222222">ppolyf_u_1k</text>
+<text x="16" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=1u L=10u</text>
+<text x="16" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈10 kΩ</text>
+</g>
+<g transform="translate(1061.00,212.00)">
+<line x1="7.5" y1="-22.5" x2="7.5" y2="22.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="2.5" y2="0" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="17.5" x2="20" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="2.5" y1="-15" x2="2.5" y2="15" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="-17.5" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="17.5" x2="15" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="30" x2="20" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="28" y1="42" x2="12" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="25" y1="45" x2="15" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="22" y1="48" x2="18" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="20" y1="0" x2="20" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-23" y2="0" stroke="#1e7b34" stroke-width="1.3"/>
+<polygon points="15 15 20 17.5 15 20 15 15" fill="#1f3a93" stroke="#1f3a93" stroke-width="1.2"/>
+<circle cx="20" cy="0" r="2" fill="#1f3a93"/>
+<text x="36" y="-18" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">M2</text>
+<text x="36" y="-7" font-size="7.5" text-anchor="start" fill="#222222">nfet_03v3</text>
+<text x="36" y="13" font-size="9" text-anchor="start" fill="#8e3b00">W=40u L=0.28u</text>
+<text x="36" y="24" font-size="9" text-anchor="start" fill="#8e3b00">nf=8 m=8</text>
+</g>
+<g transform="translate(1308.00,100.00)">
+<line x1="0" y1="20" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="20" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-8" y1="-42" x2="8" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-32" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-32" y1="8" x2="-32" y2="-8" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-35" y1="5" x2="-35" y2="-5" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-38" y1="2" x2="-38" y2="-2" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="16" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">R2</text>
+<text x="16" y="-4" font-size="7.5" text-anchor="start" fill="#222222">ppolyf_u_1k</text>
+<text x="16" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=30u L=2.17u</text>
+<text x="16" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈72.3 Ω</text>
+<text x="0" y="-51" font-size="7" text-anchor="middle" fill="#7d3c98">VDD</text>
+</g>
+<g transform="translate(460.00,363.00)">
+<line x1="7.5" y1="-22.5" x2="7.5" y2="22.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="17.5" x2="20" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="2.5" y1="-15" x2="2.5" y2="15" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="17.5" x2="20" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="12.5" y1="-17.5" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-7.5" y2="0" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="12" y1="-42" x2="28" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="20" y1="0" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="30" x2="20" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-23" y2="0" stroke="#1e7b34" stroke-width="1.3"/>
+<polygon points="12.5 -20 7.5 -17.5 12.5 -15 12.5 -20" fill="#1f3a93" stroke="#1f3a93" stroke-width="1.2"/>
+<circle cx="-2.5" cy="0" r="5" fill="none" stroke="#1f3a93" stroke-width="1.3"/>
+<circle cx="20" cy="0" r="2" fill="#1f3a93"/>
+<text x="36" y="-18" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">MP1</text>
+<text x="36" y="-7" font-size="7.5" text-anchor="start" fill="#222222">pfet_03v3</text>
+<text x="36" y="13" font-size="9" text-anchor="start" fill="#8e3b00">W=32u L=2u</text>
+<text x="36" y="24" font-size="9" text-anchor="start" fill="#8e3b00">nf=4 m=6</text>
+<text x="20" y="-51" font-size="7" text-anchor="middle" fill="#7d3c98">VDD</text>
+</g>
+<g transform="translate(613.00,482.50)">
+<line x1="7.5" y1="-22.5" x2="7.5" y2="22.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="2.5" y2="0" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="17.5" x2="20" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="2.5" y1="-15" x2="2.5" y2="15" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="-17.5" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="17.5" x2="15" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="0" x2="30" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-23" y2="0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="20" y1="30" x2="20" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<polygon points="15 15 20 17.5 15 20 15 15" fill="#1f3a93" stroke="#1f3a93" stroke-width="1.2"/>
+<text x="36" y="-18" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">M1R</text>
+<text x="36" y="-7" font-size="7.5" text-anchor="start" fill="#222222">nfet_03v3</text>
+<text x="36" y="13" font-size="9" text-anchor="start" fill="#8e3b00">W=12u L=0.28u</text>
+<text x="36" y="24" font-size="9" text-anchor="start" fill="#8e3b00">nf=2</text>
+<text x="32" y="3" font-size="7" text-anchor="start" fill="#7d3c98">VSS</text>
+</g>
+<g transform="translate(633.00,602.00)">
+<line x1="0" y1="20" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="20" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="8" y1="42" x2="-8" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="5" y1="45" x2="-5" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="2" y1="48" x2="-2" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-32" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-32" y1="8" x2="-32" y2="-8" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-35" y1="5" x2="-35" y2="-5" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-38" y1="2" x2="-38" y2="-2" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="16" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">RSR</text>
+<text x="16" y="-4" font-size="7.5" text-anchor="start" fill="#222222">ppolyf_u_1k</text>
+<text x="16" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=1u L=3u</text>
+<text x="16" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈3 kΩ</text>
+</g>
+<g transform="translate(603.00,363.00)">
+<line x1="7.5" y1="-22.5" x2="7.5" y2="22.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="17.5" x2="20" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="2.5" y1="-15" x2="2.5" y2="15" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="17.5" x2="20" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="12.5" y1="-17.5" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-7.5" y2="0" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="12" y1="-42" x2="28" y2="-42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="20" y1="0" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="30" x2="20" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-23" y2="0" stroke="#1e7b34" stroke-width="1.3"/>
+<polygon points="12.5 -20 7.5 -17.5 12.5 -15 12.5 -20" fill="#1f3a93" stroke="#1f3a93" stroke-width="1.2"/>
+<circle cx="-2.5" cy="0" r="5" fill="none" stroke="#1f3a93" stroke-width="1.3"/>
+<circle cx="20" cy="0" r="2" fill="#1f3a93"/>
+<text x="36" y="-18" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">MP2</text>
+<text x="36" y="-7" font-size="7.5" text-anchor="start" fill="#222222">pfet_03v3</text>
+<text x="36" y="13" font-size="9" text-anchor="start" fill="#8e3b00">W=32u L=2u</text>
+<text x="36" y="24" font-size="9" text-anchor="start" fill="#8e3b00">nf=4 m=5</text>
+<text x="20" y="-51" font-size="7" text-anchor="middle" fill="#7d3c98">VDD</text>
+</g>
+<g transform="translate(871.00,339.00)">
+<line x1="7.5" y1="-22.5" x2="7.5" y2="22.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="2.5" y2="0" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="17.5" x2="20" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="2.5" y1="-15" x2="2.5" y2="15" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="-17.5" x2="20" y2="-17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="7.5" y1="17.5" x2="15" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="30" x2="20" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="28" y1="42" x2="12" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="25" y1="45" x2="15" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="22" y1="48" x2="18" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="20" y1="0" x2="20" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="20" y1="-30" x2="20" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-23" y2="0" stroke="#1e7b34" stroke-width="1.3"/>
+<polygon points="15 15 20 17.5 15 20 15 15" fill="#1f3a93" stroke="#1f3a93" stroke-width="1.2"/>
+<circle cx="20" cy="0" r="2" fill="#1f3a93"/>
+<text x="36" y="-18" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">M2R</text>
+<text x="36" y="-7" font-size="7.5" text-anchor="start" fill="#222222">nfet_03v3</text>
+<text x="36" y="13" font-size="9" text-anchor="start" fill="#8e3b00">W=8u L=0.28u</text>
+<text x="36" y="24" font-size="9" text-anchor="start" fill="#8e3b00">nf=2</text>
+</g>
+<g transform="translate(480.00,475.00)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="8" y1="42" x2="-8" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="5" y1="45" x2="-5" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="2" y1="48" x2="-2" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">CB1</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=50u L=50u</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈5 pF</text>
+</g>
+<g transform="translate(738.00,339.00)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="8" y1="42" x2="-8" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="5" y1="45" x2="-5" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="2" y1="48" x2="-2" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">CB2</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=50u L=50u</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈5 pF</text>
+</g>
+<g transform="translate(180.00,482.50)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">COP</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=45u L=45u</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈4.05 pF</text>
+</g>
+<g transform="translate(1213.00,219.50)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">CON</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=45u L=45u</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈4.05 pF</text>
+</g>
+<g transform="translate(81.00,88.00)">
+<polygon points="-38 -7 -12 -7 0 0 -12 7 -38 7" fill="white" stroke="#b03a2e" stroke-width="1.2"/>
+<text x="-34" y="3.5" font-size="10" text-anchor="start" fill="#b03a2e" font-weight="bold">RFIN</text>
+</g>
+<g transform="translate(407.00,88.00)">
+<polygon points="-26 -7 -12 -7 0 0 -12 7 -26 7" fill="white" stroke="#b03a2e" stroke-width="1.2"/>
+<text x="-22" y="3.5" font-size="10" text-anchor="start" fill="#b03a2e" font-weight="bold">PB</text>
+</g>
+<g transform="translate(290.00,609.50)">
+<polygon points="0 0 12 -7 38 -7 38 7 12 7" fill="white" stroke="#b03a2e" stroke-width="1.2"/>
+<text x="15" y="3.5" font-size="10" text-anchor="start" fill="#b03a2e" font-weight="bold">OUTP</text>
+</g>
+<g transform="translate(1198.00,609.50)">
+<polygon points="0 0 12 -7 38 -7 38 7 12 7" fill="white" stroke="#b03a2e" stroke-width="1.2"/>
+<text x="15" y="3.5" font-size="10" text-anchor="start" fill="#b03a2e" font-weight="bold">OUTN</text>
+</g>
+</svg>

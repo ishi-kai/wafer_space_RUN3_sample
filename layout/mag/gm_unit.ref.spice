@@ -1,0 +1,9 @@
+.subckt gm_unit INP INN OUTP OUTN VTN VDD VSS
+XMT t VTN VSS VSS nfet_03v3 L=2u W=32u nf=4  m=2
+XM1 OUTN INP t VSS nfet_03v3 L=1u W=6u nf=2  m=1
+XM2 OUTP INN t VSS nfet_03v3 L=1u W=6u nf=2  m=1
+XMP1A OUTN OUTN VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+XMP1B OUTN OUTP VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+XMP2A OUTP OUTP VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+XMP2B OUTP OUTN VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+.ends

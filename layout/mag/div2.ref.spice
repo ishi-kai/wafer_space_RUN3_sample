@@ -1,0 +1,27 @@
+.subckt inv_dig A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt inv_lo1 A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+.ends
+.subckt dff_st D CK Q QB VDD VSS
+XCK1 CK ckb VDD VSS inv_lo1
+XCK2 ckb cki VDD VSS inv_lo1
+XT1N D ckb m VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XT1P D cki m VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+XM1 m mb VDD VSS inv_lo1
+XM2 mb mf VDD VSS inv_dig
+XT2N mf cki m VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XT2P mf ckb m VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XT3N mb cki sl VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XT3P mb ckb sl VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+XS1 sl Q VDD VSS inv_lo1
+XS2 Q QB VDD VSS inv_lo1
+XT4N QB ckb sl VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XT4P QB cki sl VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt div2 CK Q QB VDD VSS
+XF QB CK Q QB VDD VSS dff_st
+.ends

@@ -1,0 +1,48 @@
+{
+ "gnss_bias_gen#1": {
+  "VDD": 0.000205647
+ },
+ "gnss_pll_core#1": {
+  "VDD": 0.00080
+ },
+ "gnss_lna_nc#1": {
+  "VDD": 0.0164753
+ },
+ "gnss_mixer_iq#1": {
+  "VDD": 0.0041209
+ },
+ "gnss_if_chain#1": {
+  "VDD": 0.00504
+ },
+ "gnss_if_chain#2": {
+  "VDD": 0.00504
+ },
+ "gnss_gm_master#1": {
+  "VDD": 0.00058
+ },
+ "gnss_adc2b#1": {
+  "VDD": 0.000511
+ },
+ "gnss_adc2b#2": {
+  "VDD": 0.000511
+ },
+ "gnss_inv_lo2#1": {
+  "VDD": 3.07903e-06
+ },
+ "gnss_inv_lo2#2": {
+  "VDD": 8.89444e-05
+ },
+ "gnss_afc_dac#1": {
+  "VDD": 8.63084e-05
+ },
+ "gnss_vco_ring4#1": {
+  "VDDV": 0.00360
+ },
+ "gnss_refbuf#1": {
+  "VDDV": 0.000201382
+ },
+ "gnss_vmon_buf#1": {
+  "VDDV": 0.00005
+ },
+ "_source": "rev.4 schematic/PEX TT operating currents (All-MOS VGA + auto-tuned Gm-C LPF)"
+}

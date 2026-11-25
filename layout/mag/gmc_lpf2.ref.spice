@@ -1,0 +1,19 @@
+.subckt gm_unit INP INN OUTP OUTN VTN VDD VSS
+XMT t VTN VSS VSS nfet_03v3 L=2u W=32u nf=4  m=2
+XM1 OUTN INP t VSS nfet_03v3 L=1u W=6u nf=2  m=1
+XM2 OUTP INN t VSS nfet_03v3 L=1u W=6u nf=2  m=1
+XMP1A OUTN OUTN VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+XMP1B OUTN OUTP VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+XMP2A OUTP OUTP VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+XMP2B OUTP OUTN VDD VDD pfet_03v3 L=2u W=16u nf=4  m=1
+.ends
+.subckt gmc_lpf2 INP INN VTN OUTP OUTN VDD VSS
+XG1 INP INN xp xn VTN VDD VSS gm_unit
+XG2 OUTN OUTP xp xn VTN VDD VSS gm_unit
+XC1A xp xn cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6 m=1
+XC1B xn xp cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6 m=1
+XG3 xp xn OUTP OUTN VTN VDD VSS gm_unit
+XG4 OUTN OUTP OUTP OUTN VTN VDD VSS gm_unit
+XC2A OUTP OUTN cap_mim_2f0_m4m5_noshield c_width=25.98e-6 c_length=25.98e-6 m=1
+XC2B OUTN OUTP cap_mim_2f0_m4m5_noshield c_width=25.98e-6 c_length=25.98e-6 m=1
+.ends

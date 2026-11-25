@@ -1,0 +1,133 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+Flattening unmatched subcell inv_lo1_MN in circuit inv_lo1 (0)(1 instance)
+Flattening unmatched subcell inv_lo1_MP in circuit inv_lo1 (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: inv_lo1                         |Circuit 2: inv_lo1                         
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (1)                              |nfet_03v3 (1)                              
+pfet_03v3 (1)                              |pfet_03v3 (1)                              
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: inv_lo1                         |Circuit 2: inv_lo1                         
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes inv_lo1 and inv_lo1 are equivalent.
+Flattening unmatched subcell inv_dig_MN in circuit inv_dig (0)(1 instance)
+Flattening unmatched subcell inv_dig_MP in circuit inv_dig (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: inv_dig                         |Circuit 2: inv_dig                         
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (1)                              |nfet_03v3 (1)                              
+pfet_03v3 (1)                              |pfet_03v3 (1)                              
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: inv_dig                         |Circuit 2: inv_dig                         
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes inv_dig and inv_dig are equivalent.
+Flattening unmatched subcell dff_st_T1P in circuit dff_st (0)(1 instance)
+Flattening unmatched subcell dff_st_T2P in circuit dff_st (0)(1 instance)
+Flattening unmatched subcell dff_st_T4N in circuit dff_st (0)(1 instance)
+Flattening unmatched subcell dff_st_T3N in circuit dff_st (0)(1 instance)
+Flattening unmatched subcell dff_st_T2N in circuit dff_st (0)(1 instance)
+Flattening unmatched subcell dff_st_T4P in circuit dff_st (0)(1 instance)
+Flattening unmatched subcell dff_st_T3P in circuit dff_st (0)(1 instance)
+Flattening unmatched subcell dff_st_T1N in circuit dff_st (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: dff_st                          |Circuit 2: dff_st                          
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (4)                              |pfet_03v3 (4)                              
+inv_lo1 (5)                                |inv_lo1 (5)                                
+inv_dig (1)                                |inv_dig (1)                                
+nfet_03v3 (4)                              |nfet_03v3 (4)                              
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 12                         |Number of nets: 12                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: dff_st                          |Circuit 2: dff_st                          
+-------------------------------------------|-------------------------------------------
+CK                                         |CK                                         
+QB                                         |QB                                         
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+D                                          |D                                          
+Q                                          |Q                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes dff_st and dff_st are equivalent.
+
+Subcircuit summary:
+Circuit 1: div2                            |Circuit 2: div2                            
+-------------------------------------------|-------------------------------------------
+dff_st (1)                                 |dff_st (1)                                 
+Number of devices: 1                       |Number of devices: 1                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: div2                            |Circuit 2: div2                            
+-------------------------------------------|-------------------------------------------
+QB                                         |QB                                         
+CK                                         |CK                                         
+Q                                          |Q                                          
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes div2 and div2 are equivalent.
+
+Final result: Circuits match uniquely.
+.

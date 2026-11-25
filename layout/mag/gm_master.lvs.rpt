@@ -1,0 +1,152 @@
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+Flattening unmatched subcell gm_master_GMCM_MP2B in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMCM_MP1B in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMCM_MP1A in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NB_MP1 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MABWK in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NB_MP2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMREP_MP1B_GMREP_MP2A in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MEM1_MEM2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MPB0 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NB_MN1 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CRNN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MSNP_MSNN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MPB1 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NB_MN2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MABWN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MND0 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CRNP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MEL1_MEL2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MPSC in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CINT in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMREP_MP1A_GMREP_MP2B in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_A2_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MNB0 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW1PN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_B3_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW1PP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_A2_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW1NN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MNSC in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMREP_M1_GMREP_M2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CSN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW1NP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_B3_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CSP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NA_MP1 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NA_MP2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NA_MN2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_NA_MN1 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMCM_M1 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MEM3_MEM4 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_A3_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMCM_M2 in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MSWP_MSWN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_B1_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MATHI in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_B1_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_A3_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMCM_MT_GMREP_MT in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MATLO in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW2PN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CCM in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW2PP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW2NN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MEOT in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MPGM in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_SW2NP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CREFN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_IBWK_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CREFP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_A1_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_IBWN_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MNGM in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CRWN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_B2_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_MATX in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_IBWK_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_CRWP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_C0_MN in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_A1_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_IBWN_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_B2_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_GMCM_MP2A in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell gm_master_C0_MP in circuit gm_master (0)(1 instance)
+Flattening unmatched subcell inv_dig in circuit gm_master (1)(9 instances)
+Flattening unmatched subcell nor2 in circuit gm_master (1)(2 instances)
+Flattening unmatched subcell gm_unit in circuit gm_master (1)(2 instances)
+
+Class gm_master (0):  Merged 63 parallel devices.
+Class gm_master (1):  Merged 4 parallel devices.
+Subcircuit summary:
+Circuit 1: gm_master                       |Circuit 2: gm_master                       
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (67->32)                         |pfet_03v3 (35->32)                         
+nfet_03v3 (64->36)                         |nfet_03v3 (39->36)                         
+cap_mim_2f0_m4m5_noshield (10)             |cap_mim_2f0_m4m5_noshield (10)             
+Number of devices: 78                      |Number of devices: 78                      
+Number of nets: 41                         |Number of nets: 41                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gm_master                       |Circuit 2: gm_master                       
+-------------------------------------------|-------------------------------------------
+NB                                         |NB                                         
+PB                                         |PB                                         
+VTN                                        |VTN                                        
+VSS                                        |VSS                                        
+BWK                                        |BWK                                        
+BWN                                        |BWN                                        
+REFCK                                      |REFCK                                      
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gm_master and gm_master are equivalent.
+
+Final result: Circuits match uniquely.
+.

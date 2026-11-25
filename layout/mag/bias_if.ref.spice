@@ -1,0 +1,5 @@
+.subckt bias_if NB PBV VDD VSS
+XMTR PBV NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=1
+XMPR PBV PBV VDD VDD pfet_03v3 L=0.56u W=12u nf=2  m=1
+XCPBV PBV VDD cap_mim_2f0_m4m5_noshield c_width=40e-6 c_length=40e-6 m=1
+.ends

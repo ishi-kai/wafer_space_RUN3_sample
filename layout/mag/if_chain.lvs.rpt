@@ -1,0 +1,330 @@
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+
+Circuit 1 cell ppolyf_u_1k and Circuit 2 cell ppolyf_u_1k are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k                     |Circuit 2: ppolyf_u_1k                     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k and ppolyf_u_1k are equivalent.
+Flattening unmatched subcell gmc_lpf1_G4_MP2A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G4_MP2B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G4_MP1B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G4_MP1A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G1_MT_G2_MT_G3_MT_G4_MT in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G3_MP2A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G3_MP1A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G3_MP2B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G3_MP1B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G2_MP2A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G2_MP1A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G2_MP2B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G2_MP1B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_C2A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G1_M1_G1_M2 in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_C2B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_C1A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_C1B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G2_M1_G2_M2 in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G1_MP2A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G3_M1_G3_M2 in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G1_MP2B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G1_MP1A in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G1_MP1B in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf1_G4_M1_G4_M2 in circuit gmc_lpf1 (0)(1 instance)
+Flattening unmatched subcell gm_unit in circuit gmc_lpf1 (1)(4 instances)
+
+Class gmc_lpf1 (0):  Merged 92 parallel devices.
+Class gmc_lpf1 (1):  Merged 8 parallel devices.
+Subcircuit summary:
+Circuit 1: gmc_lpf1                        |Circuit 2: gmc_lpf1                        
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (64->8)                          |pfet_03v3 (16->8)                          
+nfet_03v3 (48->12)                         |nfet_03v3 (16->12)                         
+cap_mim_2f0_m4m5_noshield (4)              |cap_mim_2f0_m4m5_noshield (4)              
+Number of devices: 24                      |Number of devices: 24                      
+Number of nets: 13                         |Number of nets: 13                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gmc_lpf1                        |Circuit 2: gmc_lpf1                        
+-------------------------------------------|-------------------------------------------
+INP                                        |INP                                        
+INN                                        |INN                                        
+VTN                                        |VTN                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+OUTN                                       |OUTN                                       
+OUTP                                       |OUTP                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gmc_lpf1 and gmc_lpf1 are equivalent.
+Flattening unmatched subcell gmc_lpf2_G4_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MT_G2_MT_G3_MT_G4_MT in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_M1_G1_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_C1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G2_M1_G2_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP2A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G3_M1_G3_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP2B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP1A in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G1_MP1B in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gmc_lpf2_G4_M1_G4_M2 in circuit gmc_lpf2 (0)(1 instance)
+Flattening unmatched subcell gm_unit in circuit gmc_lpf2 (1)(4 instances)
+
+Class gmc_lpf2 (0):  Merged 92 parallel devices.
+Class gmc_lpf2 (1):  Merged 8 parallel devices.
+Subcircuit summary:
+Circuit 1: gmc_lpf2                        |Circuit 2: gmc_lpf2                        
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (64->8)                          |pfet_03v3 (16->8)                          
+nfet_03v3 (48->12)                         |nfet_03v3 (16->12)                         
+cap_mim_2f0_m4m5_noshield (4)              |cap_mim_2f0_m4m5_noshield (4)              
+Number of devices: 24                      |Number of devices: 24                      
+Number of nets: 13                         |Number of nets: 13                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gmc_lpf2                        |Circuit 2: gmc_lpf2                        
+-------------------------------------------|-------------------------------------------
+INP                                        |INP                                        
+INN                                        |INN                                        
+VTN                                        |VTN                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+OUTN                                       |OUTN                                       
+OUTP                                       |OUTP                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gmc_lpf2 and gmc_lpf2 are equivalent.
+Flattening unmatched subcell bias_if_MPR in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_CPBV in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_MTR in circuit bias_if (0)(1 instance)
+
+Class bias_if (0):  Merged 2 parallel devices.
+Subcircuit summary:
+Circuit 1: bias_if                         |Circuit 2: bias_if                         
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (2->1)                           |pfet_03v3 (1)                              
+cap_mim_2f0_m4m5_noshield (1)              |cap_mim_2f0_m4m5_noshield (1)              
+nfet_03v3 (2->1)                           |nfet_03v3 (1)                              
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: bias_if                         |Circuit 2: bias_if                         
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+NB                                         |NB                                         
+VDD                                        |VDD                                        
+PBV                                        |PBV                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes bias_if and bias_if are equivalent.
+Flattening unmatched subcell if_chain_V3_CC2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MT_V2_MT_V3_MT_V4_MT_V5_MT in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MP0N_V1_MP0P in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_MPBN_V2_MPBP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V5_MPDN_V5_MPDP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGDP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MPBN_V1_MPBP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MGBN in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGDP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGDP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V4_MPDN_V4_MPDP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGDP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MGAN in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGDP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGDN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGDP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGDN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MGBP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGBP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGDN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_CC1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGDN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MGAP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGDN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGBP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_MPAN_V3_MPAP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGBP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_CC2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGBN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGBN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGBP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGDN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGBP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGBP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGBN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V5_CC1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_R1u_0 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_MPAN_V2_MPAP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V5_CC2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGBN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGBN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_R1u_1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_R1u_3 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGBN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_R1u_2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_R1u_4 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_MPAN_V1_MPAP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_CC1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_CC2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_M1_V1_M2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_MGBN in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_MGAN in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V4_MPCN_V4_MPCP_V5_MPCN_V5_MPCP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_MGBP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V4_CC1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_M1_V2_M2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_MGAP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_M1_V3_M2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGCP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V4_CC2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V4_M1_V4_M2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGCP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGCN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V5_M1_V5_M2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGCP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGCP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGCP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGCN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGAP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGCN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGAP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGCP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGCN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGCN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGAP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGAP1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_MP0N_V3_MP0P in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGAN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGCN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGAP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_TGAN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGAP2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGAN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_MGBN in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_MGAN in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_TGAN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGAN1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_MP0N_V2_MP0P in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V1_TGAN2 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_MPBN_V3_MPBP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_MGBP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V3_CC1 in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell if_chain_V2_MGAP in circuit if_chain (0)(1 instance)
+Flattening unmatched subcell vga in circuit if_chain (1)(3 instances)
+Flattening unmatched subcell vga_fix in circuit if_chain (1)(2 instances)
+
+Class if_chain (0):  Merged 359 parallel devices.
+Class if_chain (0):  Merged 90 series devices.
+Subcircuit summary:
+Circuit 1: if_chain                        |Circuit 2: if_chain                        
+-------------------------------------------|-------------------------------------------
+cap_mim_2f0_m4m5_noshield (10)             |cap_mim_2f0_m4m5_noshield (10)             
+nfet_03v3 (270->45)                        |nfet_03v3 (80->45)                         
+pfet_03v3 (190->56)                        |pfet_03v3 (56)                             
+ppolyf_u_1k (100->10)                      |ppolyf_u_1k (10)                           
+gmc_lpf1 (1)                               |gmc_lpf1 (1)                               
+gmc_lpf2 (1)                               |gmc_lpf2 (1)                               
+bias_if (1)                                |bias_if (1)                                
+Number of devices: 124                     |Number of devices: 124                     
+Number of nets: 60                         |Number of nets: 60                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: if_chain                        |Circuit 2: if_chain                        
+-------------------------------------------|-------------------------------------------
+INP                                        |INP                                        
+INN                                        |INN                                        
+OUTP                                       |OUTP                                       
+OUTN                                       |OUTN                                       
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+NB                                         |NB                                         
+G2A                                        |G2A                                        
+G2B                                        |G2B                                        
+G1A                                        |G1A                                        
+G1B                                        |G1B                                        
+G3A                                        |G3A                                        
+G3B                                        |G3B                                        
+VTN                                        |VTN                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes if_chain and if_chain are equivalent.
+
+Final result: Circuits match uniquely.
+.

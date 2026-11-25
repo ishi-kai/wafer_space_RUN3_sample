@@ -1,0 +1,126 @@
+* NGSPICE file created from refbuf_flat.ext - technology: gf180mcuD
+
+.subckt refbuf_flat VSS VDD IN OUT
+X0 a_1720_1644# a_6887_8769# VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X1 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 a_1720_1644# a_6887_8769# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X4 a_8440_3766# a_8020_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X5 OUT a_1720_1644# VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X6 OUT a_1720_1644# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X7 a_5080_3766# a_4660_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X8 a_3400_3766# a_3820_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X9 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 a_2560_3766# a_2980_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X11 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 a_9280_3766# a_8860_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X14 a_5080_3766# a_5500_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X15 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X16 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X17 a_1720_3766# a_2140_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X18 a_4240_3766# a_4660_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X19 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X20 a_9280_3766# a_6887_8769# VSS ppolyf_u_1k r_width=1u r_length=10u
+X21 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X22 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X23 a_5920_3766# a_6340_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X24 a_8440_3766# a_8860_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X25 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X26 a_1720_3766# a_1720_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X27 a_7600_3766# a_8020_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X28 a_6760_3766# a_7180_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X29 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X30 a_3400_3766# a_2980_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X31 a_5920_3766# a_5500_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X32 a_2560_3766# a_2140_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X33 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X34 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X35 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X36 a_7600_3766# a_7180_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X37 a_4240_3766# a_3820_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X38 a_6760_3766# a_6340_1644# VSS ppolyf_u_1k r_width=1u r_length=10u
+X39 a_6887_8769# IN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+C0 OUT a_11784_7840# 0.01351f
+C1 a_6340_1644# a_7180_1644# 0.01686f
+C2 OUT a_1720_1644# 0.28728f
+C3 OUT a_8834_7840# 0.0476f
+C4 a_6744_7840# a_6887_8769# 0.01114f
+C5 OUT VDD 0.80691f
+C6 a_2560_3766# a_3400_3766# 0.01686f
+C7 a_4240_3766# a_3400_3766# 0.01686f
+C8 a_2560_3766# a_1720_3766# 0.01686f
+C9 a_8440_3766# a_7600_3766# 0.01686f
+C10 OUT a_6887_8769# 0.11147f
+C11 a_6340_1644# a_1720_1644# 0.0758f
+C12 a_10514_7840# a_1720_1644# 0.01988f
+C13 a_10104_7840# a_1720_1644# 0.01072f
+C14 a_7154_7840# a_1720_1644# 0.04202f
+C15 a_8860_1644# a_6887_8769# 0.01217f
+C16 a_2140_1644# a_1720_1644# 0.10367f
+C17 OUT a_12194_7840# 0.02377f
+C18 a_2980_1644# a_2140_1644# 0.01686f
+C19 VDD a_7154_7840# 0.60222f
+C20 a_7600_3766# a_6760_3766# 0.01686f
+C21 a_5080_3766# a_5920_3766# 0.01686f
+C22 a_4660_1644# a_1720_1644# 0.09372f
+C23 a_5920_3766# a_6760_3766# 0.01686f
+C24 a_2980_1644# a_1720_1644# 0.09372f
+C25 a_8020_1644# a_8860_1644# 0.01686f
+C26 a_3820_1644# a_4660_1644# 0.01686f
+C27 a_3820_1644# a_1720_1644# 0.09372f
+C28 a_9280_3766# a_8440_3766# 0.01686f
+C29 VDD a_1720_1644# 1.78662f
+C30 VDD a_8834_7840# 0.60202f
+C31 a_5080_3766# a_4240_3766# 0.01686f
+C32 a_2980_1644# a_3820_1644# 0.01686f
+C33 a_8834_7840# a_8424_7840# 0.0129f
+C34 a_8020_1644# a_7180_1644# 0.01686f
+C35 a_6887_8769# a_7154_7840# 0.01403f
+C36 a_5500_1644# a_6340_1644# 0.01686f
+C37 VDD a_8424_7840# 0.63502f
+C38 a_6744_7840# a_7154_7840# 0.0129f
+C39 a_6760_3766# a_1720_1644# 0.01012f
+C40 a_6887_8769# a_1720_1644# 1.02206f
+C41 a_6744_7840# a_1720_1644# 0.02003f
+C42 VDD a_6887_8769# 1.22154f
+C43 a_5500_1644# a_4660_1644# 0.01686f
+C44 a_5500_1644# a_1720_1644# 0.09372f
+C45 a_10100_1644# a_6887_8769# 0.08425f
+C46 VDD a_6744_7840# 0.63274f
+C47 IN a_6887_8769# 6.93031f
+C48 IN VSS 6.61072f
+C49 OUT VSS 2.89359f
+C50 VDD VSS 36.653f
+C51 a_10100_1644# VSS 2.63556f
+C52 a_9280_3766# VSS 0.68713f ; **FLOATING
+C53 a_8860_1644# VSS 0.68267f ; **FLOATING
+C54 a_8440_3766# VSS 0.66956f ; **FLOATING
+C55 a_8020_1644# VSS 0.66956f ; **FLOATING
+C56 a_7600_3766# VSS 0.66956f ; **FLOATING
+C57 a_7180_1644# VSS 0.67329f ; **FLOATING
+C58 a_6760_3766# VSS 0.66956f ; **FLOATING
+C59 a_6340_1644# VSS 0.66695f ; **FLOATING
+C60 a_5920_3766# VSS 0.66956f ; **FLOATING
+C61 a_5500_1644# VSS 0.66767f ; **FLOATING
+C62 a_5080_3766# VSS 0.66956f ; **FLOATING
+C63 a_4660_1644# VSS 0.66434f ; **FLOATING
+C64 a_4240_3766# VSS 0.66956f ; **FLOATING
+C65 a_3820_1644# VSS 0.66665f ; **FLOATING
+C66 a_3400_3766# VSS 0.66956f ; **FLOATING
+C67 a_2980_1644# VSS 0.66434f ; **FLOATING
+C68 a_2560_3766# VSS 0.66956f ; **FLOATING
+C69 a_2140_1644# VSS 0.67769f ; **FLOATING
+C70 a_1720_3766# VSS 0.68713f ; **FLOATING
+C71 a_1320_1644# VSS 2.63799f ; **FLOATING
+C72 a_12194_7840# VSS 0.39439f
+C73 a_11784_7840# VSS 0.40732f
+C74 a_10514_7840# VSS 0.39439f
+C75 a_10104_7840# VSS 0.40732f
+C76 a_8834_7840# VSS 0.07326f
+C77 a_8424_7840# VSS 0.07326f
+C78 a_7154_7840# VSS 0.07326f
+C79 a_1720_1644# VSS 6.82444f ; **FLOATING
+C80 a_6744_7840# VSS 0.07326f
+C81 a_6887_8769# VSS 14.3719f ; **FLOATING
+.ends

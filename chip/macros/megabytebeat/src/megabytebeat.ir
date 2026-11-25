@@ -1,0 +1,133 @@
+package megabytebeat
+
+file_number 0 "src/bytebeat.x"
+file_number 1 "src/megabytebeat.x"
+
+fn __bytebeat__the42melody(t: bits[32] id=1, a: bits[4] id=2, b: bits[4] id=3, c: bits[4] id=4, d: bits[4] id=5) -> bits[8] {
+  concat.8: bits[8] = concat(d, c, id=8, pos=[(0,7,14)])
+  concat.6: bits[8] = concat(b, a, id=6, pos=[(0,6,14)])
+  cd: bits[32] = zero_ext(concat.8, new_bit_count=32, id=9)
+  ab: bits[32] = zero_ext(concat.6, new_bit_count=32, id=7)
+  shrl.10: bits[32] = shrl(t, cd, id=10, pos=[(0,8,22)])
+  and.11: bits[32] = and(ab, shrl.10, id=11, pos=[(0,8,17)])
+  s: bits[32] = umul(t, and.11, id=12, pos=[(0,8,12)])
+  ret bit_slice.13: bits[8] = bit_slice(s, start=0, width=8, id=13)
+}
+
+fn __bytebeat__fractaltrees(t: bits[32] id=14, a: bits[4] id=15, b: bits[4] id=16, c: bits[4] id=17, d: bits[4] id=18) -> bits[8] {
+  concat.19: bits[8] = concat(b, a, id=19, pos=[(0,13,14)])
+  ab: bits[32] = zero_ext(concat.19, new_bit_count=32, id=20)
+  literal.21: bits[32] = literal(value=0, id=21, pos=[(0,14,22)])
+  eq.22: bits[1] = eq(ab, literal.21, id=22, pos=[(0,14,16)])
+  literal.23: bits[32] = literal(value=1, id=23, pos=[(0,14,30)])
+  concat.25: bits[8] = concat(d, c, id=25, pos=[(0,15,14)])
+  ab__1: bits[32] = sel(eq.22, cases=[ab, literal.23], id=24, pos=[(0,14,13)])
+  cd: bits[32] = zero_ext(concat.25, new_bit_count=32, id=26)
+  literal.27: bits[32] = literal(value=2, id=27, pos=[(0,16,22)])
+  umod.29: bits[32] = umod(t, ab__1, id=29, pos=[(0,17,16)])
+  cd_257: bits[32] = add(cd, literal.27, id=28, pos=[(0,16,17)])
+  or.30: bits[32] = or(t, umod.29, id=30, pos=[(0,17,12)])
+  umod.31: bits[32] = umod(t, cd_257, id=31, pos=[(0,17,25)])
+  s: bits[32] = or(or.30, umod.31, id=32, pos=[(0,17,12)])
+  ret bit_slice.33: bits[8] = bit_slice(s, start=0, width=8, id=33)
+}
+
+fn __bytebeat__untitleddroid(t: bits[32] id=34, a: bits[4] id=35, b: bits[4] id=36, c: bits[4] id=37, d: bits[4] id=38) -> bits[8] {
+  zero_ext.39: bits[32] = zero_ext(a, new_bit_count=32, id=39)
+  shrl.40: bits[32] = shrl(t, zero_ext.39, id=40, pos=[(0,22,16)])
+  zero_ext.41: bits[32] = zero_ext(b, new_bit_count=32, id=41)
+  not.45: bits[32] = not(t, id=45, pos=[(0,24,15)])
+  literal.46: bits[32] = literal(value=1, id=46, pos=[(0,24,21)])
+  cond0: bits[32] = and(shrl.40, zero_ext.41, id=42, pos=[(0,22,16)])
+  literal.50: bits[32] = literal(value=0, id=50, pos=[(0,25,24)])
+  add.47: bits[32] = add(not.45, literal.46, id=47, pos=[(0,24,15)])
+  zero_ext.48: bits[32] = zero_ext(d, new_bit_count=32, id=48)
+  zero_ext.43: bits[32] = zero_ext(c, new_bit_count=32, id=43)
+  ne.51: bits[1] = ne(cond0, literal.50, id=51, pos=[(0,25,15)])
+  p1: bits[32] = shrl(add.47, zero_ext.48, id=49, pos=[(0,24,15)])
+  p0: bits[32] = shrl(t, zero_ext.43, id=44, pos=[(0,23,13)])
+  s: bits[32] = sel(ne.51, cases=[p1, p0], id=52, pos=[(0,25,12)])
+  ret bit_slice.53: bits[8] = bit_slice(s, start=0, width=8, id=53)
+}
+
+fn __bytebeat__atunetoshare(t: bits[32] id=54, a: bits[4] id=55, b: bits[4] id=56, c: bits[4] id=57, d: bits[4] id=58) -> bits[8] {
+  zero_ext.61: bits[32] = zero_ext(a, new_bit_count=32, id=61)
+  zero_ext.63: bits[32] = zero_ext(b, new_bit_count=32, id=63)
+  shrl.62: bits[32] = shrl(t, zero_ext.61, id=62, pos=[(0,31,17)])
+  shrl.64: bits[32] = shrl(t, zero_ext.63, id=64, pos=[(0,31,35)])
+  or.65: bits[32] = or(shrl.62, shrl.64, id=65, pos=[(0,31,17)])
+  concat.59: bits[8] = concat(d, c, id=59, pos=[(0,30,14)])
+  umul.66: bits[32] = umul(t, or.65, id=66, pos=[(0,31,12)])
+  cd: bits[32] = zero_ext(concat.59, new_bit_count=32, id=60)
+  s: bits[32] = and(umul.66, cd, id=67, pos=[(0,31,12)])
+  ret bit_slice.68: bits[8] = bit_slice(s, start=0, width=8, id=68)
+}
+
+fn __bytebeat__sierpinskiharmony(t: bits[32] id=69, a: bits[4] id=70, b: bits[4] id=71, c: bits[4] id=72, d: bits[4] id=73) -> bits[8] {
+  zero_ext.74: bits[32] = zero_ext(a, new_bit_count=32, id=74)
+  zero_ext.76: bits[32] = zero_ext(b, new_bit_count=32, id=76)
+  zero_ext.79: bits[32] = zero_ext(c, new_bit_count=32, id=79)
+  zero_ext.81: bits[32] = zero_ext(d, new_bit_count=32, id=81)
+  umul.75: bits[32] = umul(t, zero_ext.74, id=75, pos=[(0,36,14)])
+  shrl.77: bits[32] = shrl(t, zero_ext.76, id=77, pos=[(0,36,31)])
+  umul.80: bits[32] = umul(t, zero_ext.79, id=80, pos=[(0,36,51)])
+  shrl.82: bits[32] = shrl(t, zero_ext.81, id=82, pos=[(0,36,68)])
+  and.78: bits[32] = and(umul.75, shrl.77, id=78, pos=[(0,36,14)])
+  and.83: bits[32] = and(umul.80, shrl.82, id=83, pos=[(0,36,51)])
+  s: bits[32] = or(and.78, and.83, id=84, pos=[(0,36,14)])
+  ret bit_slice.85: bits[8] = bit_slice(s, start=0, width=8, id=85)
+}
+
+fn __megabytebeat__megabytebeat__samples(t: bits[32] id=86, packed_params: bits[16] id=87) -> bits[8][5] {
+  literal.88: bits[16] = literal(value=0, id=88, pos=[(1,20,30)])
+  literal.90: bits[16] = literal(value=4, id=90, pos=[(1,21,30)])
+  literal.92: bits[16] = literal(value=8, id=92, pos=[(1,22,30)])
+  literal.94: bits[16] = literal(value=12, id=94, pos=[(1,23,30)])
+  a: bits[4] = dynamic_bit_slice(packed_params, literal.88, width=4, id=89, pos=[(1,20,29)])
+  b: bits[4] = dynamic_bit_slice(packed_params, literal.90, width=4, id=91, pos=[(1,21,29)])
+  c: bits[4] = dynamic_bit_slice(packed_params, literal.92, width=4, id=93, pos=[(1,22,29)])
+  d: bits[4] = dynamic_bit_slice(packed_params, literal.94, width=4, id=95, pos=[(1,23,29)])
+  invoke.96: bits[8] = invoke(t, a, b, c, d, to_apply=__bytebeat__the42melody, id=96, pos=[(1,25,33)])
+  invoke.97: bits[8] = invoke(t, a, b, c, d, to_apply=__bytebeat__fractaltrees, id=97, pos=[(1,25,72)])
+  invoke.98: bits[8] = invoke(t, a, b, c, d, to_apply=__bytebeat__untitleddroid, id=98, pos=[(1,26,35)])
+  invoke.99: bits[8] = invoke(t, a, b, c, d, to_apply=__bytebeat__atunetoshare, id=99, pos=[(1,26,74)])
+  invoke.100: bits[8] = invoke(t, a, b, c, d, to_apply=__bytebeat__sierpinskiharmony, id=100, pos=[(1,27,39)])
+  ret array.101: bits[8][5] = array(invoke.96, invoke.97, invoke.98, invoke.99, invoke.100, id=101, pos=[(1,24,14)])
+}
+
+top proc __megabytebeat__megabytebeat_next<_params_r: bits[16] in, _pcm_s: bits[8][5] out>(__t: bits[32] pos=[(1,15,4)], init={0}) {
+  chan_interface _params_r(direction=receive, kind=streaming, strictness=proven_mutually_exclusive, flow_control=ready_valid, flop_kind=none)
+  chan_interface _pcm_s(direction=send, kind=streaming, strictness=proven_mutually_exclusive, flow_control=ready_valid, flop_kind=none)
+  literal.103: bits[1] = literal(value=1, id=103)
+  literal.104: bits[1] = literal(value=0, id=104)
+  after_all.114: token = after_all(id=114)
+  not.106: bits[1] = not(literal.103, id=106)
+  not.107: bits[1] = not(literal.104, id=107)
+  __t: bits[32] = state_read(state_element=__t, predicate=literal.103, id=111, pos=[(1,36,20)])
+  receive.115: (token, bits[16]) = receive(after_all.114, predicate=literal.103, channel=_params_r, id=115)
+  __token: token = literal(value=token, id=102)
+  or.108: bits[1] = or(not.106, not.107, id=108)
+  not.123: bits[1] = not(literal.103, id=123)
+  or.110: bits[1] = or(literal.104, literal.103, id=110)
+  literal.105: bits[1] = literal(value=0, id=105)
+  t: bits[32] = identity(__t, id=112, pos=[(1,36,20)])
+  params: bits[16] = tuple_index(receive.115, index=1, id=118, pos=[(1,37,18)])
+  assert.109: token = assert(__token, or.108, message="State element read after read in same activation.", id=109)
+  or.124: bits[1] = or(not.123, or.110, id=124)
+  not.126: bits[1] = not(literal.103, id=126)
+  not.127: bits[1] = not(literal.105, id=127)
+  literal.121: bits[32] = literal(value=1, id=121, pos=[(1,40,26)])
+  tok: token = tuple_index(receive.115, index=0, id=117, pos=[(1,37,13)])
+  pcm: bits[8][5] = invoke(t, params, to_apply=__megabytebeat__megabytebeat__samples, id=119, pos=[(1,38,31)])
+  assert.125: token = assert(assert.109, or.124, message="State element written before read in same activation.", id=125)
+  or.128: bits[1] = or(not.126, not.127, id=128)
+  add.122: bits[32] = add(t, literal.121, id=122, pos=[(1,40,22)])
+  or.113: bits[1] = or(literal.104, literal.103, id=113)
+  tuple_index.116: token = tuple_index(receive.115, index=0, id=116)
+  send.120: token = send(tok, pcm, predicate=literal.103, channel=_pcm_s, id=120)
+  assert.129: token = assert(assert.125, or.128, message="State element written after write in same activation.", id=129)
+  or.130: bits[1] = or(literal.105, literal.103, id=130)
+  next_value.131: () = next_value(state_element=__t, value=add.122, predicate=literal.103, id=131)
+  tuple.132: () = tuple(id=132)
+  tuple.133: () = tuple(id=133, pos=[(1,35,18)])
+}

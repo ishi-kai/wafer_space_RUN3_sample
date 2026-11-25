@@ -1,0 +1,65 @@
+* NGSPICE file created from decap_vco.ext - technology: gf180mcuD
+
+.subckt decap_vco_MD0 VDD VSS
+X0 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X1 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X2 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X3 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X4 VSS VDD VSS VSS nfet_03v3 ad=13.35p pd=60.89u as=0 ps=0 w=30u l=5u
+X5 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X6 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X7 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X8 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X9 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X10 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X11 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X12 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X13 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X14 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X15 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+.ends
+
+.subckt decap_vco_MD1 VDD VSS
+X0 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X1 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X2 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X3 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X4 VSS VDD VSS VSS nfet_03v3 ad=13.35p pd=60.89u as=0 ps=0 w=30u l=5u
+X5 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X6 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X7 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X8 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X9 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X10 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X11 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X12 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X13 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X14 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X15 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+.ends
+
+.subckt decap_vco_MD2 VDD VSS
+X0 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X1 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X2 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X3 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X4 VSS VDD VSS VSS nfet_03v3 ad=13.35p pd=60.89u as=0 ps=0 w=30u l=5u
+X5 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X6 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X7 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X8 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X9 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X10 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X11 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X12 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X13 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X14 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+X15 VSS VDD VSS VSS nfet_03v3 ad=7.95p pd=30.53u as=0 ps=0 w=30u l=5u
+.ends
+
+.subckt decap_vco VSS VDD
+XXMD0 VDD VSS decap_vco_MD0
+XXMD1 VDD VSS decap_vco_MD1
+XXMD2 VDD VSS decap_vco_MD2
+.ends
+

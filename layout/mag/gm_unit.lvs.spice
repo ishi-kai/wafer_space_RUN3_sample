@@ -1,0 +1,49 @@
+* NGSPICE file created from gm_unit.ext - technology: gf180mcuD
+
+.subckt gm_unit_MP1B_MP2A OUTN OUTP VDD
+X0 VDD OUTP OUTP VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X1 OUTN OUTP VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X2 VDD OUTP OUTP VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 OUTN OUTP VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X4 VDD OUTP OUTN VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X5 OUTP OUTP VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X6 OUTP OUTP VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X7 VDD OUTP OUTN VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_unit_MT t VTN VSS
+X0 VSS VTN t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X1 t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X2 VSS VTN t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X4 VSS VTN t VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X5 t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X6 t VTN VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X7 VSS VTN t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt gm_unit_MP1A_MP2B OUTN OUTP VDD
+X0 VDD OUTN OUTP VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X1 OUTN OUTN VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X2 VDD OUTN OUTP VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 OUTN OUTN VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X4 VDD OUTN OUTN VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X5 OUTP OUTN VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X6 OUTP OUTN VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X7 VDD OUTN OUTN VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt gm_unit_M1_M2 t OUTN OUTP INP INN VSS
+X0 t INP OUTN VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=1u
+X1 OUTN INP t VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=1u
+X2 OUTP INN t VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=1u
+X3 t INN OUTP VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=1u
+.ends
+
+.subckt gm_unit VSS VDD INP INN VTN OUTP OUTN
+XXMP1B_MP2A OUTN OUTP VDD gm_unit_MP1B_MP2A
+XXMT XMT/t VTN VSS gm_unit_MT
+XXMP1A_MP2B OUTN OUTP VDD gm_unit_MP1A_MP2B
+XXM1_M2 XMT/t OUTN OUTP INP INN VSS gm_unit_M1_M2
+.ends
+
