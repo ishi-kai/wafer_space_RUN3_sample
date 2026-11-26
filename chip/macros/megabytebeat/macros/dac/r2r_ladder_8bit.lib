@@ -1,0 +1,48 @@
+library(r2r_ladder_8bit_lib) {
+  delay_model : table_lookup;
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1mA";
+  capacitive_load_unit(1, pf);
+  pulling_resistance_unit : "1ohm";
+  leakage_power_unit : "1uW";
+  input_threshold_pct_fall : 50;
+  input_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  slew_derate_from_library : 0.5;
+  slew_lower_threshold_pct_fall : 30;
+  slew_lower_threshold_pct_rise : 30;
+  slew_upper_threshold_pct_fall : 70;
+  slew_upper_threshold_pct_rise : 70;
+  default_fanout_load : 1.0;
+
+  type(bus_in) {
+    base_type : array;
+    data_type : bit;
+    bit_width : 8;
+    bit_from : 7;
+    bit_to : 0;
+    downto : true;
+  }
+
+  cell(r2r_ladder_8bit) {
+    area : 1842.40;
+    dont_touch : true;
+    dont_use : true;
+    pin(term) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    bus(in) {
+      bus_type : bus_in;
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(out) {
+      direction : output;
+      is_analog : true;
+      capacitance : 0.0;
+    }
+  }
+}

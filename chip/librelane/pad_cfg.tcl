@@ -209,7 +209,7 @@ if { [set brk_w_inst [$block findInst brk_vdd_w]] != "NULL" } {
     place_pad -row IO_WEST -location $loc_w brk_vdd_w -master [[$brk_w_inst getMaster] getName]
 }
 if { [set e0 [$block findInst sup_vdd_e0]] != "NULL" } {
-    set ref_e0 [$block findInst {bb_uo_pads\[4\].pad}]
+    set ref_e0 [$block findInst {bb_ua_pads\[4\].pad}]
     set ref_e1 [$block findInst {dvdd_bb_pads\[1\].pad}]
     set loc_e0 [round_um_nm [expr double([[$ref_e0 getBBox] yMax]) / $units + 27.0]]
     set loc_e1 [round_um_nm [expr double([[$ref_e1 getBBox] yMin]) / $units - 57.0]]

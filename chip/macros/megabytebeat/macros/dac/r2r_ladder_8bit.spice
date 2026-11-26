@@ -1,0 +1,28 @@
+* Component-graph netlist for r2r_ladder_8bit
+.SUBCKT r2r_ladder_8bit VSS term in[7] in[6] in[5] in[4] in[3] in[2] in[1] in[0] out
+RR_r2r_0_0 in[0] n_1 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_0_1 n_1 n_2 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_0_2 n_2 n_3 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=20.0e-6
+RR_r2r_1_0 in[1] n_4 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_1_1 n_4 n_3 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_1_2 n_3 n_5 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=20.0e-6
+RR_r2r_2_0 in[2] n_6 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_2_1 n_6 n_5 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_2_2 n_5 n_7 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=20.0e-6
+RR_r2r_3_0 in[3] n_8 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_3_1 n_8 n_7 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_3_2 n_7 n_9 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=20.0e-6
+RR_r2r_4_0 in[4] n_10 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_4_1 n_10 n_9 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_4_2 n_9 n_11 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=20.0e-6
+RR_r2r_5_0 in[5] n_12 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_5_1 n_12 n_11 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_5_2 n_11 n_13 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=20.0e-6
+RR_r2r_6_0 in[6] n_14 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_6_1 n_14 n_13 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_6_2 n_13 out VSS ppolyf_u_1k_6p0 W=1.0e-6 L=20.0e-6
+RR_r2r_7_0 in[7] n_15 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_r2r_7_1 n_15 out VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_term_0 term n_16 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+RR_term_1 n_16 n_2 VSS ppolyf_u_1k_6p0 W=1.0e-6 L=19.8e-6
+.ENDS r2r_ladder_8bit

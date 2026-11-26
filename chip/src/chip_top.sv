@@ -39,7 +39,11 @@ module chip_top #(
 `ifdef HAS_MEGABYTEBEAT
     parameter NUM_DVDD_BB_PADS = `NUM_DVDD_BB_PADS,
     parameter NUM_DVSS_BB_PADS = `NUM_DVSS_BB_PADS,
+    parameter NUM_BB_UO_PADS = `NUM_BB_UO_PADS,
+    parameter NUM_BB_ANALOG_PADS = `NUM_BB_ANALOG_PADS,
+`ifdef HAS_NC_BB_PADS
     parameter NUM_NC_BB_PADS = `NUM_NC_BB_PADS,
+`endif
 `endif
 
     // Power/ground pads for core
@@ -61,17 +65,17 @@ module chip_top #(
     inout  wire DVDD,
     inout  wire DVSS,
     `ifdef HAS_MEGABYTEBEAT
-    inout  wire VDD_BB,     // isolated megabytebeat digital supply (fill10_noVDD + fill10_supplyVDD)
+    inout  wire VDD_BB,     // isolated megabytebeat supply (fill10_noVDD + fill10_supplyVDD)
     inout  wire DVDD_BB,    // megabytebeat padring supply (shorted to VDD_BB in gf180mcu_fd_io)
     `endif
     `endif
 
     inout  wire clk_PAD,
     inout  wire rst_n_PAD,
-    
+
     inout  wire [NUM_INPUT_PADS-1:0] input_PAD,
     inout  wire [NUM_BIDIR_PADS-1:0] bidir_PAD,
-    
+
     inout  wire [NUM_ANALOG_PADS-1:0] analog_PAD,
     inout  wire rf_PAD,         // GNSS RF input (50 ohm)
     inout  wire [NUM_NC_PADS-1:0] nc_PAD
@@ -82,14 +86,18 @@ module chip_top #(
     inout  wire        bb_ena_PAD,    // megabytebeat enable, internal pull-down (VDD_BB domain)
     inout  wire [7:0]  bb_ui_PAD,     // megabytebeat param {b[3:0], a[3:0]} (VDD_BB domain)
     inout  wire [7:0]  bb_uio_PAD,    // megabytebeat param {d[3:0], c[3:0]} (VDD_BB domain)
-    inout  wire [4:0]  bb_uo_PAD,     // megabytebeat PWM audio {trk7, trk3, trk2, trk1, trk0} (VDD_BB)
+    inout  wire [NUM_BB_UO_PADS-1:0]     bb_uo_PAD, // megabytebeat PWM audio {trk2, trk1, trk0}
+    inout  wire [NUM_BB_ANALOG_PADS-1:0] bb_ua_PAD  // megabytebeat 5x 8-bit R-2R DAC analog out
+`ifdef HAS_NC_BB_PADS
+    ,
     inout  wire [NUM_NC_BB_PADS-1:0] nc_bb_PAD
+`endif
 `endif
 );
 
     wire clk_PAD2CORE;
     wire rst_n_PAD2CORE;
-    
+
     wire [NUM_INPUT_PADS-1:0] input_PAD2CORE;
     wire [NUM_INPUT_PADS-1:0] input_CORE2PAD_PU;
     wire [NUM_INPUT_PADS-1:0] input_CORE2PAD_PD;
@@ -111,10 +119,9 @@ module chip_top #(
     wire        bb_ena_PAD2CORE;
     wire [7:0]  bb_ui_PAD2CORE;
     wire [7:0]  bb_uio_PAD2CORE;
-    wire [4:0]  bb_uo_CORE2PAD;
-    wire [4:0]  bb_uo_PAD2CORE_unused;
+    wire [NUM_BB_UO_PADS-1:0] bb_uo_CORE2PAD;
+    wire [NUM_BB_UO_PADS-1:0] bb_uo_PAD2CORE_unused;
     wire        bb_vdd_hi_s;
-    wire        bb_vdd_hi_e;
     wire        bb_vss_lo_s;
     wire        bb_vss_lo_w;
     wire        bb_vss_lo_e;
@@ -139,7 +146,9 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
+            `ifdef PAD_gf180mcu_ocd_io
             .VDD    (VDD),
+            `endif
             .VSS    (VSS)
             `endif
         );
@@ -150,8 +159,10 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
-            .VDD    (VDD),
-            .VSS    (VSS)
+            `ifdef PAD_gf180mcu_ocd_io
+            .VSS    (VSS),
+            `endif
+            .VDD    (VDD)
             `endif
         );
     end
@@ -161,7 +172,9 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
+            `ifdef PAD_gf180mcu_ocd_io
             .VDD    (VDD),
+            `endif
             .VSS    (VSS)
             `endif
         );
@@ -172,8 +185,10 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
-            .VDD    (VDD),
-            .VSS    (VSS)
+            `ifdef PAD_gf180mcu_ocd_io
+            .VSS    (VSS),
+            `endif
+            .VDD    (VDD)
             `endif
         );
     end
@@ -188,7 +203,9 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD_BB),
             .DVSS   (DVSS),
+            `ifdef PAD_gf180mcu_ocd_io
             .VDD    (VDD_BB),
+            `endif
             .VSS    (VSS)
             `endif
         );
@@ -199,8 +216,10 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD_BB),
             .DVSS   (DVSS),
-            .VDD    (VDD_BB),
-            .VSS    (VSS)
+            `ifdef PAD_gf180mcu_ocd_io
+            .VSS    (VSS),
+            `endif
+            .VDD    (VDD_BB)
             `endif
         );
     end
@@ -271,14 +290,14 @@ module chip_top #(
         .VDD    (VDD),
         .VSS    (VSS),
         `endif
-    
+
         .Y      (clk_PAD2CORE),
         .PAD    (clk_PAD),
-        
+
         .PU     (1'b0),
         .PD     (1'b0)
     );
-    
+
     // Schmitt trigger on RST_N (safe with external RC reset)
     `gf180mcu_xxx_io__in_s rst_n_pad (
         `ifdef USE_POWER_PINS
@@ -287,10 +306,10 @@ module chip_top #(
         .VDD    (VDD),
         .VSS    (VSS),
         `endif
-    
+
         .Y      (rst_n_PAD2CORE),
         .PAD    (rst_n_PAD),
-        
+
         .PU     (1'b0),
         .PD     (1'b0)
     );
@@ -306,10 +325,10 @@ module chip_top #(
             .VDD    (VDD),
             .VSS    (VSS),
             `endif
-        
+
             .Y      (input_PAD2CORE[i]),
             .PAD    (input_PAD[i]),
-            
+
             .PU     (input_CORE2PAD_PU[i]),
             .PD     (input_CORE2PAD_PD[i])
         );
@@ -327,12 +346,12 @@ module chip_top #(
             .VDD    (VDD),
             .VSS    (VSS),
             `endif
-        
+
             .A      (bidir_CORE2PAD[i]),
             .OE     (bidir_CORE2PAD_OE[i]),
             .Y      (bidir_PAD2CORE[i]),
             .PAD    (bidir_PAD[i]),
-            
+
             .CS     (bidir_CORE2PAD_CS[i]),
             .SL     (bidir_CORE2PAD_SL[i]),
             .IE     (bidir_CORE2PAD_IE[i]),
@@ -406,25 +425,38 @@ module chip_top #(
             .PD   (bb_vss_lo_e)
         );
     end
-    for (genvar i=0; i<5; i++) begin : bb_uo_pads
+    for (genvar i=0; i<NUM_BB_UO_PADS; i++) begin : bb_uo_pads
         (* keep *)
         `gf180mcu_xxx_io__bi_t pad (
             `ifdef USE_POWER_PINS
             .DVDD  (DVDD_BB), .DVSS (DVSS), .VDD (VDD_BB), .VSS (VSS),
             `endif
             .A     (bb_uo_CORE2PAD[i]),
-            .OE    ((i < 3) ? bb_vdd_hi_s : bb_vdd_hi_e),
+            .OE    (bb_vdd_hi_s),
             .Y     (bb_uo_PAD2CORE_unused[i]),
             .PAD   (bb_uo_PAD[i]),
-            .CS    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .SL    ((i < 3) ? bb_vdd_hi_s : bb_vdd_hi_e),
-            .IE    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PU    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PD    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PDRV0 ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PDRV1 ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e)
+            .CS    (bb_vss_lo_s),
+            .SL    (bb_vdd_hi_s),
+            .IE    (bb_vss_lo_s),
+            .PU    (bb_vss_lo_s),
+            .PD    (bb_vss_lo_s),
+            .PDRV0 (bb_vss_lo_s),
+            .PDRV1 (bb_vss_lo_s)
         );
     end
+    for (genvar i=0; i<NUM_BB_ANALOG_PADS; i++) begin : bb_ua_pads
+        (* keep *)
+        `gf180mcu_xxx_io__asig_5p0 pad (
+            `ifdef USE_POWER_PINS
+            .DVDD   (DVDD_BB),
+            .DVSS   (DVSS),
+            .VDD    (VDD_BB),
+            .VSS    (VSS),
+            `endif
+            .ASIG5V (bb_ua_PAD[i])
+        );
+    end
+`ifdef HAS_NC_BB_PADS
     for (genvar i=0; i<NUM_NC_BB_PADS; i++) begin : nc_bb
         (* keep *)
         `gf180mcu_xxx_io__asig_5p0 pad (
@@ -437,6 +469,7 @@ module chip_top #(
             .ASIG5V (nc_bb_PAD[i])
         );
     end
+`endif
     endgenerate
 `endif
 
@@ -491,6 +524,11 @@ module chip_top #(
         .NUM_INPUT_PADS  (NUM_INPUT_PADS),
         .NUM_BIDIR_PADS  (NUM_BIDIR_PADS),
         .NUM_ANALOG_PADS (NUM_ANALOG_PADS)
+`ifdef HAS_MEGABYTEBEAT
+        ,
+        .NUM_BB_UO_PADS     (NUM_BB_UO_PADS),
+        .NUM_BB_ANALOG_PADS (NUM_BB_ANALOG_PADS)
+`endif
     ) i_chip_core (
         `ifdef USE_POWER_PINS
         .VDD        (VDD),
@@ -502,10 +540,10 @@ module chip_top #(
         .VDD_BB     (VDD_BB),
         `endif
         `endif
-    
+
         .clk        (clk_PAD2CORE),
         .rst_n      (rst_n_PAD2CORE),
-    
+
         .input_in   (input_PAD2CORE),
         .input_pu   (input_CORE2PAD_PU),
         .input_pd   (input_CORE2PAD_PD),
@@ -520,7 +558,7 @@ module chip_top #(
         .bidir_pd    (bidir_CORE2PAD_PD),
         .bidir_pdrv0 (bidir_CORE2PAD_PDRV0),
         .bidir_pdrv1 (bidir_CORE2PAD_PDRV1),
-        
+
         .analog     (analog_PAD),
         .rfin       (rf_PAD)
 `ifdef HAS_MEGABYTEBEAT
@@ -531,20 +569,20 @@ module chip_top #(
         .bb_ui_in     (bb_ui_PAD2CORE),
         .bb_uio_in    (bb_uio_PAD2CORE),
         .bb_uo_out    (bb_uo_CORE2PAD),
+        .bb_ua        (bb_ua_PAD),
         .bb_vdd_hi_s  (bb_vdd_hi_s),
-        .bb_vdd_hi_e  (bb_vdd_hi_e),
         .bb_vss_lo_s  (bb_vss_lo_s),
         .bb_vss_lo_w  (bb_vss_lo_w),
         .bb_vss_lo_e  (bb_vss_lo_e)
 `endif
     );
-    
+
     // Do not remove, necessary for tapeout
     (* keep *) gf180mcu_ws_ip__qrcode_id qrcode_id ();
     (* keep *) gf180mcu_ws_ip__shuttle_id shuttle_id ();
     (* keep *) gf180mcu_ws_ip__project_id project_id ();
     (* keep *) gf180mcu_ws_ip__marker marker ();
-    
+
     // wafer.space logo - can be removed if desired
     (* keep *) gf180mcu_ws_ip__logo wafer_space_logo ();
 

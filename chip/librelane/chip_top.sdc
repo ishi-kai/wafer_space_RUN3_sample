@@ -75,6 +75,12 @@ if { [llength $bb_clk_pins] > 0 } {
     set_input_delay -max 97.6 -clock [get_clocks bb_clk] $bb_in_ports
     set_output_delay 97.6 -clock [get_clocks bb_clk] $bb_out_ports
 
+    set bb_ana_ports [get_ports -quiet {bb_ua_PAD[*]}]
+    if { [llength $bb_ana_ports] > 0 } {
+        set_false_path -from $bb_ana_ports
+        set_false_path -to $bb_ana_ports
+    }
+
     set_clock_uncertainty $::env(CLOCK_UNCERTAINTY_CONSTRAINT) [get_clocks bb_clk]
     set_clock_transition $::env(CLOCK_TRANSITION_CONSTRAINT) [get_clocks bb_clk]
 }

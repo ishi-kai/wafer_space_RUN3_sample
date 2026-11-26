@@ -23,6 +23,8 @@
 //   * megabytebeat: VDD_BB / DVDD_BB (3 pads) + shared VSS / DVSS, separated from
 //                   GNSS digital VDD via fill10_noVDD (east & west) and fed into
 //                   megabytebeat_macro via 6x fill10_supplyVDD
+//   * Mixed-signal 5x 8-bit R-2R DAC stage (#29): 5x asig_5p0 DAC outputs (bb_ua_PAD[4:0]),
+//     3x South PWM outputs (bb_uo_PAD[2:0]), and 16x parameter inputs (bb_ui_PAD, bb_uio_PAD).
 `define HAS_MEGABYTEBEAT
 
 // Power/ground pads for I/O + core (gf180mcu_fd_io shorts DVDD=VDD, DVSS=VSS)
@@ -39,9 +41,13 @@
 `define NUM_BIDIR_PADS 6
 `define NUM_ANALOG_PADS 3
 
-// Unused pad positions (asig_5p0, kept for fixed 73-pad 0p5x1 bonding frame)
+// megabytebeat signal pads inside VDD_BB ring (27 signal pads total, 0 unused)
+`define NUM_BB_UO_PADS 3
+`define NUM_BB_ANALOG_PADS 5
+`define NUM_NC_BB_PADS 0
+
+// Unused pad positions in GNSS VDD ring (asig_5p0, kept for fixed 73-pad 0p5x1 bonding frame)
 `define NUM_NC_PADS 13
-`define NUM_NC_BB_PADS 3
 
 `endif
 
