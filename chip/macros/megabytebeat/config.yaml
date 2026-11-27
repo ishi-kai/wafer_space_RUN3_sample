@@ -110,16 +110,16 @@ GRT_DESIGN_REPAIR_MAX_SLEW_PCT: 20
 LAYERS_RC:
   '*':
     Metal2:
-      res: 0.000225636
+      res: 0.225636
       cap: 0.00022
     Metal3:
-      res: 0.000225636
+      res: 0.225636
       cap: 0.00022
     Metal4:
-      res: 0.000225636
+      res: 0.225636
       cap: 0.00022
     Metal5:
-      res: 5.85545e-05
+      res: 0.0585545
       cap: 0.00022
 PL_TARGET_DENSITY_PCT: 50
 GRT_ALLOW_CONGESTION: true
