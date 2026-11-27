@@ -9,7 +9,6 @@ module megabytebeat_macro(
   input ena,
   input[7:0] ui_in,
   input[7:0] uio_in,
-  output[2:0] uo_pwm,
   inout[4:0] ua,
   output vdd_bb_hi_s,
   output vss_lo_s,

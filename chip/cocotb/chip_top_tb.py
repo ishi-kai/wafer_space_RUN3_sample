@@ -2,10 +2,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 # Full-chip cocotb testbench for slot 0p5x1 dual-VDD GNSS AFE + proppy/ttgf-megabytebeat.
-# Tests both RTL (GL=0) and Gate-Level (GL=1, powered megabytebeat_macro.pnl.v):
+# Tests both RTL (GL=0) and Gate-Level (GL=1, powered chip_top.pnl.v + megabytebeat_macro.pnl.v):
 #   1. GNSS SPI reset default (ID=10101, ctl=19'h08000), write & readback.
-#   2. megabytebeat bb_ena=0 quiet-by-default clamping (PWM == 0 and all 5 R-2R DACs == 0x00).
-#   3. megabytebeat bb_ena=1 bit-exact 3-track PWM + 5-track 8-bit R-2R DAC verification
+#   2. megabytebeat bb_ena=0 quiet-by-default clamping (all 5 R-2R DACs == 0x00 and bb_ua_PAD == 0).
+#   3. megabytebeat bb_ena=1 bit-exact 5-track 8-bit R-2R DAC verification at 32.768 kHz (/4 = 8.192 kHz)
 #      (both external bb_ua_PAD[4:0] connectivity and internal 8-bit ladder codes).
 #   4. megabytebeat bb_ena 1->0 clean disable & DAC clamping.
 
@@ -158,7 +158,7 @@ async def spi_transfer(dut, tx_word: int) -> int:
 
 @cocotb.test()
 async def test_gnss_spi_and_megabytebeat(dut):
-    """Verify GNSS SPI + megabytebeat bb_ena gating + 3-track PWM + 5-track 8-bit R-2R DACs."""
+    """Verify GNSS SPI + megabytebeat bb_ena gating + 5-track 8-bit R-2R DACs at 32.768 kHz."""
     await init_chip(dut)
 
     ladders = _find_r2r_ladders(dut)
@@ -178,29 +178,26 @@ async def test_gnss_spi_and_megabytebeat(dut):
     cocotb.log.info(f"GNSS SPI PASS: reset=0x{rd0:06X}, frame1=0x{rd1:06X}")
 
     # ------------------------------------------------------------ 2. megabytebeat bb_ena=0 test
-    bb_clk = Clock(dut.bb_clk_PAD, 488, unit="ns")  # ~2.048 MHz
+    bb_clk = Clock(dut.bb_clk_PAD, 30518, unit="ns")  # ~32.768 kHz (/4 = 8.192 kHz DAC rate)
     cocotb.start_soon(bb_clk.start())
 
     # Set active params (a=0xa, b=0x2, c=0xa, d=0x0) while bb_ena=0
     dut.bb_ui_PAD.value = 0x2A
     dut.bb_uio_PAD.value = 0x0A
     dut.bb_ena_PAD.value = 0
-    await ClockCycles(dut.bb_clk_PAD, 300)
-    for _ in range(32):
+    await ClockCycles(dut.bb_clk_PAD, 16)
+    for _ in range(16):
         await RisingEdge(dut.bb_clk_PAD)
-        await Timer(10, unit="ns")
-        assert int(dut.bb_uo_PAD.value) == 0, (
-            f"Expected PWM=0 with bb_ena=0, got {dut.bb_uo_PAD.value}"
-        )
+        await Timer(100, unit="ns")
         assert int(dut.bb_ua_PAD.value) == 0, (
             f"Expected DAC=0 with bb_ena=0, got {dut.bb_ua_PAD.value}"
         )
         assert _read_dac_codes(ladders) == [0, 0, 0, 0, 0], (
             f"Expected clamped R-2R codes [0..0] with bb_ena=0, got {_read_dac_codes(ladders)}"
         )
-    cocotb.log.info("megabytebeat bb_ena=0 quiet PWM + DAC clamping PASS")
+    cocotb.log.info("megabytebeat bb_ena=0 quiet DAC clamping PASS")
 
-    # ------------------------------------------------------------ 3. megabytebeat bb_ena=1 5-DAC + 3-PWM test
+    # ------------------------------------------------------------ 3. megabytebeat bb_ena=1 5-DAC test
     # Enable on falling edge so first posedge sees clean ena=1, rst_n=1
     await FallingEdge(dut.bb_clk_PAD)
     dut.bb_rst_n_PAD.value = 0
@@ -209,44 +206,45 @@ async def test_gnss_spi_and_megabytebeat(dut):
     await FallingEdge(dut.bb_clk_PAD)
     dut.bb_rst_n_PAD.value = 1
 
-    # Test with params a=0x5, b=0x2, c=0x3, d=0x1 (all 5 tracks produce distinct non-zero samples!)
+    # Test with params a=0x5, b=0x2, c=0x3, d=0x1 (all 5 tracks produce distinct non-zero samples)
     a, b, c, d = 0x5, 0x2, 0x3, 0x1
     dut.bb_ui_PAD.value = (b << 4) | a
     dut.bb_uio_PAD.value = (d << 4) | c
 
+    # 4 clocks per frame (32.768 kHz / 4 = 8.192 kHz): sample holds steady on cycles 0..2
+    # and advances on cycle 3 when sample_rdy = (clk_div == 2'd3).
     mismatches = 0
     for t_idx in range(12):
-        counts = [0, 0, 0]
-        dac_codes = None
-        ua_pad_val = None
-        for cyc in range(256):
-            await RisingEdge(dut.bb_clk_PAD)
-            await Timer(20, unit="ns")
-            val = int(dut.bb_uo_PAD.value)
-            for ch in range(3):
-                counts[ch] += (val >> ch) & 1
-            if cyc == 128:
-                dac_codes = _read_dac_codes(ladders)
-                ua_pad_val = int(dut.bb_ua_PAD.value)
         exp = bytebeat_golden(t_idx, a, b, c, d)
         exp_ua_msb = sum(((exp[ch] >> 7) & 1) << ch for ch in range(5))
+        dac_codes = None
+        ua_pad_val = None
+        frame_ok = True
+        for cyc in range(4):
+            await RisingEdge(dut.bb_clk_PAD)
+            await Timer(100, unit="ns")
+            if cyc < 3:
+                cur_codes = _read_dac_codes(ladders)
+                cur_ua = int(dut.bb_ua_PAD.value)
+                if cyc == 1:
+                    dac_codes = cur_codes
+                    ua_pad_val = cur_ua
+                if cur_codes != exp or cur_ua != exp_ua_msb:
+                    frame_ok = False
         cocotb.log.info(
-            f"t={t_idx}: pwm={counts} (exp={exp[:3]}), dac={dac_codes} (exp={exp}), "
+            f"t={t_idx}: dac={dac_codes} (exp={exp}), "
             f"ua_pad=0x{ua_pad_val:02x} (exp_msb=0x{exp_ua_msb:02x})"
         )
-        if counts != exp[:3] or dac_codes != exp or ua_pad_val != exp_ua_msb:
+        if not frame_ok:
             mismatches += 1
-    assert mismatches == 0, f"megabytebeat PWM/DAC mismatches: {mismatches}"
-    cocotb.log.info("megabytebeat 3-PWM + 5x 8-bit R-2R DAC bit-exact PASS (t=0..11)")
+    assert mismatches == 0, f"megabytebeat 5-DAC mismatches: {mismatches}"
+    cocotb.log.info("megabytebeat 5x 8-bit R-2R DAC bit-exact PASS (t=0..11, 32.768 kHz /4)")
 
     # ------------------------------------------------------------ 4. bb_ena 1 -> 0 disable check
     await FallingEdge(dut.bb_clk_PAD)
     dut.bb_ena_PAD.value = 0
-    await ClockCycles(dut.bb_clk_PAD, 10)
-    await Timer(20, unit="ns")
-    assert int(dut.bb_uo_PAD.value) == 0, (
-        f"Expected PWM=0 after bb_ena=0, got {dut.bb_uo_PAD.value}"
-    )
+    await ClockCycles(dut.bb_clk_PAD, 4)
+    await Timer(100, unit="ns")
     assert int(dut.bb_ua_PAD.value) == 0, (
         f"Expected DAC=0 after bb_ena=0, got {dut.bb_ua_PAD.value}"
     )
@@ -268,20 +266,22 @@ def chip_top_runner():
     defines[f"SRAM_{sram}"] = True
 
     if gl:
+        chip_pnl = proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v"
+        if not chip_pnl.is_file():
+            raise FileNotFoundError(
+                f"Gate-level netlist missing: {chip_pnl}. "
+                "Run full-chip LibreLane flow before GL=1 simulation."
+            )
+        if "bb_ua_PAD" not in chip_pnl.read_text(encoding="utf-8", errors="ignore"):
+            raise RuntimeError(
+                f"Gate-level netlist {chip_pnl} lacks bb_ua_PAD port; "
+                "re-run full-chip LibreLane flow before GL=1 simulation."
+            )
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / f"{scl}.v")
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / "primitives.v")
         sources.append(proj_path / "../macros/megabytebeat/src/r2r_ladder_8bit.v")
         sources.append(proj_path / "../macros/megabytebeat/final/pnl/megabytebeat_macro.pnl.v")
-        chip_pnl = proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v"
-        if chip_pnl.is_file() and "bb_ua_PAD" in chip_pnl.read_text(
-            encoding="utf-8", errors="ignore"
-        ):
-            sources.append(chip_pnl)
-        else:
-            sources += [
-                proj_path / "../src/chip_top.sv",
-                proj_path / "../src/chip_core.sv",
-            ]
+        sources.append(chip_pnl)
         defines.update({"FUNCTIONAL": True, "USE_POWER_PINS": True})
     else:
         sources += [
@@ -290,8 +290,6 @@ def chip_top_runner():
             proj_path / "../macros/megabytebeat/src/r2r_ladder_8bit.v",
             proj_path / "../macros/megabytebeat/src/sc_r2r_dac_8bit.v",
             proj_path / "../macros/megabytebeat/src/megabytebeat.v",
-            proj_path / "../macros/megabytebeat/src/pwm_audio.v",
-            proj_path / "../macros/megabytebeat/src/tt_um_proppy_megabytebeat.v",
             proj_path / "../macros/megabytebeat/src/megabytebeat_macro.sv",
         ]
 

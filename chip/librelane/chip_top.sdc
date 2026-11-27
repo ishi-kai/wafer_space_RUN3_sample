@@ -62,18 +62,16 @@ set clk_core_input_ports [get_ports {
 set_input_delay -min 0 -clock $clocks $clk_core_input_ports
 set_input_delay -max $input_delay_value -clock $clocks $clk_core_input_ports
 
-# megabytebeat asynchronous clock domain (2.048 MHz = 488 ns, VDD_BB domain)
+# megabytebeat asynchronous clock domain (32.768 kHz = 30517.5 ns, VDD_BB domain)
 set bb_clk_pins [get_pins -quiet bb_clk_pad/Y]
 if { [llength $bb_clk_pins] > 0 } {
-    puts "\[INFO] Constraining megabytebeat clock bb_clk (488 ns = 2.048 MHz)…"
-    create_clock $bb_clk_pins -name bb_clk -period 488.0
+    puts "\[INFO] Constraining megabytebeat clock bb_clk (30517.5 ns = 32.768 kHz)…"
+    create_clock $bb_clk_pins -name bb_clk -period 30517.5
     set_clock_groups -asynchronous -group [get_clocks $clock_port] -group [get_clocks bb_clk]
 
     set bb_in_ports [get_ports {bb_rst_n_PAD bb_ena_PAD bb_ui_PAD[*] bb_uio_PAD[*]}]
-    set bb_out_ports [get_ports {bb_uo_PAD[*]}]
     set_input_delay -min 5.0 -clock [get_clocks bb_clk] $bb_in_ports
-    set_input_delay -max 97.6 -clock [get_clocks bb_clk] $bb_in_ports
-    set_output_delay 97.6 -clock [get_clocks bb_clk] $bb_out_ports
+    set_input_delay -max 6103.5 -clock [get_clocks bb_clk] $bb_in_ports
 
     set bb_ana_ports [get_ports -quiet {bb_ua_PAD[*]}]
     if { [llength $bb_ana_ports] > 0 } {

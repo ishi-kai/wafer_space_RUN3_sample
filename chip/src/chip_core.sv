@@ -6,9 +6,9 @@
 //   * GNSS SPI control registers (standard cells, GNSS VDD domain): 24-bit frame, mode 0, MSB first.
 //   * gnss_afe_analog: analog hard macro (VDDA / VDDV / VSSA, north pad block).
 //   * megabytebeat_macro (when HAS_MEGABYTEBEAT is defined): mixed-signal 5-track bytebeat
-//     synthesizer with 5x 8-bit R-2R DAC analog outputs (bb_ua[4:0]) in a dedicated VDD_BB
-//     power domain (shared VSS), isolated at the padring by fill10_noVDD and supplied by
-//     fill10_supplyVDD. Zero signals cross between VDD and VDD_BB.
+//     synthesizer (32.768 kHz /4 = 8.192 kHz DAC-only) with 5x 8-bit R-2R DAC analog outputs
+//     (bb_ua[4:0]) in a dedicated VDD_BB power domain (shared VSS), isolated at the padring by
+//     fill10_noVDD and supplied by fill10_supplyVDD. Zero signals cross between VDD and VDD_BB.
 
 `default_nettype none
 
@@ -21,7 +21,6 @@ module chip_core #(
     parameter NUM_ANALOG_PADS
 `ifdef HAS_MEGABYTEBEAT
     ,
-    parameter NUM_BB_UO_PADS = `NUM_BB_UO_PADS,
     parameter NUM_BB_ANALOG_PADS = `NUM_BB_ANALOG_PADS
 `endif
     )(
@@ -63,7 +62,6 @@ module chip_core #(
     input  wire       bb_ena,
     input  wire [7:0] bb_ui_in,
     input  wire [7:0] bb_uio_in,
-    output wire [NUM_BB_UO_PADS-1:0]     bb_uo_out,
     inout  wire [NUM_BB_ANALOG_PADS-1:0] bb_ua,
     output wire       bb_vdd_hi_s,
     output wire       bb_vss_lo_s,
@@ -171,7 +169,6 @@ module chip_core #(
         .ena         (bb_ena),
         .ui_in       (bb_ui_in),
         .uio_in      (bb_uio_in),
-        .uo_pwm      (bb_uo_out),
         .ua          (bb_ua),
         .vdd_bb_hi_s (bb_vdd_hi_s),
         .vss_lo_s    (bb_vss_lo_s),

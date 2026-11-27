@@ -7,6 +7,7 @@
        Metal3 VSS core ring (+ Via3 4x4 arrays) and north into chip_top's nearest Metal3 VSS stripe
        (+ Via3 4x4 arrays).
 """
+import re
 import odb
 from reader import click_odb, click
 
@@ -220,6 +221,116 @@ def strap_megabytebeat(block, tech):
 
     print("  VSS: connected %d/%d south M4 straps + %d north macro M4 straps + %d north chip M4 VSS stripes (0 VDD<->VSS overlaps)" % (
         n_south_vss, len(vstripes), len(vstripes), len(north_chip_vss_m4)))
+    strap_bb_ua(block, tech, bb)
+
+
+def make_via2_3x3(block, tech):
+    """DRC-clean GF180MCU 3x3 Via2 array (Via2_GEN_HH: 0.26 um cut, 0.36 um pitch, 0.12 um enc)."""
+    v = block.findVia("gnss_bb_via2_3x3")
+    if v is not None:
+        return v
+    v = odb.dbVia_create(block, "gnss_bb_via2_3x3")
+    v.setViaGenerateRule(tech.findViaGenerateRule("Via2_GEN_HH"))
+    p = v.getViaParams()
+    dbu = block.getDbUnitsPerMicron()
+    p.setBottomLayer(tech.findLayer("Metal2"))
+    p.setCutLayer(tech.findLayer("Via2"))
+    p.setTopLayer(tech.findLayer("Metal3"))
+    p.setXCutSize(int(round(0.26 * dbu)))
+    p.setYCutSize(int(round(0.26 * dbu)))
+    p.setXCutSpacing(int(round(0.36 * dbu)))
+    p.setYCutSpacing(int(round(0.36 * dbu)))
+    p.setXBottomEnclosure(int(round(0.12 * dbu)))
+    p.setYBottomEnclosure(int(round(0.12 * dbu)))
+    p.setXTopEnclosure(int(round(0.12 * dbu)))
+    p.setYTopEnclosure(int(round(0.12 * dbu)))
+    p.setNumCutRows(3)
+    p.setNumCutCols(3)
+    v.setViaParams(p)
+    return v
+
+
+def strap_bb_ua(block, tech, bb):
+    """Strap bb_ua_pads[i].pad/ASIG5V (Metal2) -> megabytebeat_macro/ua[i] (Metal3)."""
+    dbu = block.getDbUnitsPerMicron()
+    um = lambda v: int(round(v * dbu))
+    m2, m3 = tech.findLayer("Metal2"), tech.findLayer("Metal3")
+    mbb = bb.getBBox()
+    entries = []
+    for inst in block.getInsts():
+        m = re.match(r"^bb_ua_pads\[(\d+)\]\.pad$", inst.getName().replace("\\", ""))
+        if not m:
+            continue
+        ch = int(m.group(1))
+        mpin = f"ua[{ch}]"
+        net = inst.findITerm("ASIG5V").getNet()
+        mnet = bb.findITerm(mpin).getNet()
+        if net is None or mnet is None or net.getName() != mnet.getName():
+            raise SystemExit(f"[ERROR] {inst.getName()}/ASIG5V and {BB_MACRO}/{mpin} are not on one net")
+        side = "W" if inst.getBBox().xMax() < mbb.xMin() else "E"
+        entries.append((side, ch, inst, mpin, net, boxes(inst, "ASIG5V", "Metal2"), boxes(bb, mpin, "Metal3")[0]))
+    if not entries:
+        return
+
+    via2 = make_via2_3x3(block, tech)
+    row_mids = sorted({(r.getBBox().yMin() + r.getBBox().yMax()) // 2 for r in block.getRows()})
+    bw = um(1.12)
+    hbw, bw_rem = bw // 2, bw - bw // 2
+
+    for side in ("W", "E"):
+        side_e = sorted((e for e in entries if e[0] == side), key=lambda e: e[6].yMin() + e[6].yMax())
+        for idx, (_, ch, inst, mpin, net, pb, q) in enumerate(side_e):
+            qy_c = (q.yMin() + q.yMax()) // 2
+            y_mid = min(row_mids, key=lambda y: abs(y - qy_c))
+            p = min(pb, key=lambda r: abs((r.yMin() + r.yMax()) // 2 - y_mid))
+            py_c = (p.yMin() + p.yMax()) // 2
+            w = p.yMax() - p.yMin()
+            hw, w_rem = w // 2, w - w // 2
+            pad_x = p.xMax() if side == "W" else p.xMin()
+            mac_x = mbb.xMin() if side == "W" else mbb.xMax()
+            x_trunk = pad_x + um(16.0 + 12.0 * idx) if side == "W" else pad_x - um(16.0 + 12.0 * idx)
+            x_jog = mac_x - um(4.0) if side == "W" else mac_x + um(4.0)
+
+            dy_um = abs((inst.getBBox().yMin() + inst.getBBox().yMax()) // 2 - qy_c) / dbu
+            len_um = (abs(pad_x - x_trunk) + abs(py_c - y_mid) + abs(x_trunk - mac_x) + abs(y_mid - qy_c)) / dbu
+            if dy_um > 150.0 or len_um > 300.0:
+                raise SystemExit(f"[ERROR] {net.getName()} too far from {mpin}: dy={dy_um:.1f} um, L={len_um:.1f} um")
+
+            if not net.isSpecial():
+                net.setSpecial()
+            sw = odb.dbSWire_create(net, "ROUTED")
+            tx1, tx2 = x_trunk - hw, x_trunk + w_rem
+            my1, my2 = y_mid - hw, y_mid + w_rem
+            by1, by2 = y_mid - hbw, y_mid + bw_rem
+            if side == "W":
+                odb.dbSBox_create(sw, m2, p.xMax() - um(1.4), p.yMin(), tx2, p.yMax(), "STRIPE")
+                odb.dbSBox_create(sw, m3, tx1, by1, x_jog + bw_rem, by2, "STRIPE")
+                odb.dbSBox_create(sw, m3, x_jog - hbw, q.yMin(), q.xMax(), q.yMax(), "STRIPE")
+            else:
+                odb.dbSBox_create(sw, m2, tx1, p.yMin(), p.xMin() + um(1.4), p.yMax(), "STRIPE")
+                odb.dbSBox_create(sw, m3, x_jog - hbw, by1, tx2, by2, "STRIPE")
+                odb.dbSBox_create(sw, m3, q.xMin(), q.yMin(), x_jog + bw_rem, q.yMax(), "STRIPE")
+            odb.dbSBox_create(sw, m2, tx1, min(p.yMin(), my1), tx2, max(p.yMax(), my2), "STRIPE")
+            odb.dbSBox_create(sw, via2, x_trunk, y_mid, "STRIPE")
+            odb.dbSBox_create(sw, m3, tx1, my1, tx2, my2, "STRIPE")
+            if q.yMin() < by1 or q.yMax() > by2:
+                odb.dbSBox_create(sw, m3, x_jog - hbw, min(by1, q.yMin()), x_jog + bw_rem, max(by2, q.yMax()), "STRIPE")
+            print(f"  bb_ua[{ch}] ({side}) -> {mpin}: dy={dy_um:.1f} um, L={len_um:.1f} um")
+
+
+def check_asig_straps(block):
+    """Fail if any non-NC gf180mcu_fd_io__asig_5p0 pad connected to a macro lacks an SWire strap."""
+    checked = 0
+    for inst in block.getInsts():
+        if inst.getMaster().getName() != "gf180mcu_fd_io__asig_5p0":
+            continue
+        it = inst.findITerm("ASIG5V")
+        net = it.getNet() if it else None
+        if net and any(x.getInst() != inst and x.getInst().getMaster().getType() == "BLOCK" for x in net.getITerms()):
+            if not list(net.getSWires()):
+                raise SystemExit(f"[ERROR] Non-NC analog pad {inst.getName()} ({net.getName()}) is unstrapped!")
+            checked += 1
+    print(f"[INFO] Analog pad strap check PASS ({checked} non-NC asig_5p0 pads strapped).")
 
 
 @click.command()
@@ -311,6 +422,7 @@ def main(reader):
 
     # Strap megabytebeat_macro (VDD_BB + shared VSS) when present (slot 0p5x1)
     strap_megabytebeat(block, reader.tech)
+    check_asig_straps(block)
 
 
 if __name__ == "__main__":

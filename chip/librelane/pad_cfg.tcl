@@ -222,7 +222,7 @@ if { [set e0 [$block findInst sup_vdd_e0]] != "NULL" } {
 if { [set w0 [$block findInst sup_vdd_w0]] != "NULL" } {
     set ref_w0 [$block findInst {bb_ui_pads\[1\].pad}]
     set ref_w1 [$block findInst {bb_ui_pads\[2\].pad}]
-    set ref_w2 [$block findInst {bb_ui_pads\[4\].pad}]
+    set ref_w2 [$block findInst {bb_ua_pads\[0\].pad}]
     set loc_w0 [round_um_nm [expr double([[$ref_w0 getBBox] yMax]) / $units + 13.0]]
     set loc_w1 [round_um_nm [expr double([[$ref_w1 getBBox] yMax]) / $units + 10.0]]
     set loc_w2 [round_um_nm [expr double([[$ref_w2 getBBox] yMax]) / $units + 40.0]]
