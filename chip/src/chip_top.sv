@@ -39,7 +39,10 @@ module chip_top #(
 `ifdef HAS_MEGABYTEBEAT
     parameter NUM_DVDD_BB_PADS = `NUM_DVDD_BB_PADS,
     parameter NUM_DVSS_BB_PADS = `NUM_DVSS_BB_PADS,
+    parameter NUM_BB_ANALOG_PADS = `NUM_BB_ANALOG_PADS,
+`ifdef HAS_NC_BB_PADS
     parameter NUM_NC_BB_PADS = `NUM_NC_BB_PADS,
+`endif
 `endif
 
     // Power/ground pads for core
@@ -61,7 +64,7 @@ module chip_top #(
     inout  wire DVDD,
     inout  wire DVSS,
     `ifdef HAS_MEGABYTEBEAT
-    inout  wire VDD_BB,     // isolated megabytebeat digital supply (fill10_noVDD + fill10_supplyVDD)
+    inout  wire VDD_BB,     // isolated megabytebeat supply (fill10_noVDD + fill10_supplyVDD)
     inout  wire DVDD_BB,    // megabytebeat padring supply (shorted to VDD_BB in gf180mcu_fd_io)
     `endif
     `endif
@@ -77,13 +80,16 @@ module chip_top #(
     inout  wire [NUM_NC_PADS-1:0] nc_PAD
 `ifdef HAS_MEGABYTEBEAT
     ,
-    inout  wire        bb_clk_PAD,    // megabytebeat 2.048 MHz clock (VDD_BB domain)
+    inout  wire        bb_clk_PAD,    // megabytebeat 32.768 kHz clock (VDD_BB domain)
     inout  wire        bb_rst_n_PAD,  // megabytebeat active-low reset (VDD_BB domain)
     inout  wire        bb_ena_PAD,    // megabytebeat enable, internal pull-down (VDD_BB domain)
     inout  wire [7:0]  bb_ui_PAD,     // megabytebeat param {b[3:0], a[3:0]} (VDD_BB domain)
     inout  wire [7:0]  bb_uio_PAD,    // megabytebeat param {d[3:0], c[3:0]} (VDD_BB domain)
-    inout  wire [4:0]  bb_uo_PAD,     // megabytebeat PWM audio {trk7, trk3, trk2, trk1, trk0} (VDD_BB)
+    inout  wire [NUM_BB_ANALOG_PADS-1:0] bb_ua_PAD  // megabytebeat 5x 8-bit R-2R DAC analog out
+`ifdef HAS_NC_BB_PADS
+    ,
     inout  wire [NUM_NC_BB_PADS-1:0] nc_bb_PAD
+`endif
 `endif
 );
 
@@ -111,10 +117,7 @@ module chip_top #(
     wire        bb_ena_PAD2CORE;
     wire [7:0]  bb_ui_PAD2CORE;
     wire [7:0]  bb_uio_PAD2CORE;
-    wire [4:0]  bb_uo_CORE2PAD;
-    wire [4:0]  bb_uo_PAD2CORE_unused;
     wire        bb_vdd_hi_s;
-    wire        bb_vdd_hi_e;
     wire        bb_vss_lo_s;
     wire        bb_vss_lo_w;
     wire        bb_vss_lo_e;
@@ -139,7 +142,9 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
+            `ifdef PAD_gf180mcu_ocd_io
             .VDD    (VDD),
+            `endif
             .VSS    (VSS)
             `endif
         );
@@ -150,8 +155,10 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
-            .VDD    (VDD),
-            .VSS    (VSS)
+            `ifdef PAD_gf180mcu_ocd_io
+            .VSS    (VSS),
+            `endif
+            .VDD    (VDD)
             `endif
         );
     end
@@ -161,7 +168,9 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
+            `ifdef PAD_gf180mcu_ocd_io
             .VDD    (VDD),
+            `endif
             .VSS    (VSS)
             `endif
         );
@@ -172,8 +181,10 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD),
             .DVSS   (DVSS),
-            .VDD    (VDD),
-            .VSS    (VSS)
+            `ifdef PAD_gf180mcu_ocd_io
+            .VSS    (VSS),
+            `endif
+            .VDD    (VDD)
             `endif
         );
     end
@@ -188,7 +199,9 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD_BB),
             .DVSS   (DVSS),
+            `ifdef PAD_gf180mcu_ocd_io
             .VDD    (VDD_BB),
+            `endif
             .VSS    (VSS)
             `endif
         );
@@ -199,8 +212,10 @@ module chip_top #(
             `ifdef USE_POWER_PINS
             .DVDD   (DVDD_BB),
             .DVSS   (DVSS),
-            .VDD    (VDD_BB),
-            .VSS    (VSS)
+            `ifdef PAD_gf180mcu_ocd_io
+            .VSS    (VSS),
+            `endif
+            .VDD    (VDD_BB)
             `endif
         );
     end
@@ -406,25 +421,19 @@ module chip_top #(
             .PD   (bb_vss_lo_e)
         );
     end
-    for (genvar i=0; i<5; i++) begin : bb_uo_pads
+    for (genvar i=0; i<NUM_BB_ANALOG_PADS; i++) begin : bb_ua_pads
         (* keep *)
-        `gf180mcu_xxx_io__bi_t pad (
+        `gf180mcu_xxx_io__asig_5p0 pad (
             `ifdef USE_POWER_PINS
-            .DVDD  (DVDD_BB), .DVSS (DVSS), .VDD (VDD_BB), .VSS (VSS),
+            .DVDD   (DVDD_BB),
+            .DVSS   (DVSS),
+            .VDD    (VDD_BB),
+            .VSS    (VSS),
             `endif
-            .A     (bb_uo_CORE2PAD[i]),
-            .OE    ((i < 3) ? bb_vdd_hi_s : bb_vdd_hi_e),
-            .Y     (bb_uo_PAD2CORE_unused[i]),
-            .PAD   (bb_uo_PAD[i]),
-            .CS    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .SL    ((i < 3) ? bb_vdd_hi_s : bb_vdd_hi_e),
-            .IE    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PU    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PD    ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PDRV0 ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e),
-            .PDRV1 ((i < 3) ? bb_vss_lo_s : bb_vss_lo_e)
+            .ASIG5V (bb_ua_PAD[i])
         );
     end
+`ifdef HAS_NC_BB_PADS
     for (genvar i=0; i<NUM_NC_BB_PADS; i++) begin : nc_bb
         (* keep *)
         `gf180mcu_xxx_io__asig_5p0 pad (
@@ -437,6 +446,7 @@ module chip_top #(
             .ASIG5V (nc_bb_PAD[i])
         );
     end
+`endif
     endgenerate
 `endif
 
@@ -491,6 +501,10 @@ module chip_top #(
         .NUM_INPUT_PADS  (NUM_INPUT_PADS),
         .NUM_BIDIR_PADS  (NUM_BIDIR_PADS),
         .NUM_ANALOG_PADS (NUM_ANALOG_PADS)
+`ifdef HAS_MEGABYTEBEAT
+        ,
+        .NUM_BB_ANALOG_PADS (NUM_BB_ANALOG_PADS)
+`endif
     ) i_chip_core (
         `ifdef USE_POWER_PINS
         .VDD        (VDD),
@@ -530,9 +544,8 @@ module chip_top #(
         .bb_ena       (bb_ena_PAD2CORE),
         .bb_ui_in     (bb_ui_PAD2CORE),
         .bb_uio_in    (bb_uio_PAD2CORE),
-        .bb_uo_out    (bb_uo_CORE2PAD),
+        .bb_ua        (bb_ua_PAD),
         .bb_vdd_hi_s  (bb_vdd_hi_s),
-        .bb_vdd_hi_e  (bb_vdd_hi_e),
         .bb_vss_lo_s  (bb_vss_lo_s),
         .bb_vss_lo_w  (bb_vss_lo_w),
         .bb_vss_lo_e  (bb_vss_lo_e)

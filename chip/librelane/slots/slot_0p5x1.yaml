@@ -1,5 +1,5 @@
 # Floorplanning — Wafer.Space slot 0p5x1 (1936 x 5122 um)
-# Dual-VDD GNSS AFE (north) + proppy/ttgf-megabytebeat (south)
+# Dual-VDD GNSS AFE (north) + proppy/ttgf-megabytebeat 5x 8-bit R-2R DAC (south)
 FP_SIZING: absolute
 DIE_AREA: [0, 0, 1936, 5122]
 CORE_AREA: [442, 442, 1494, 4680]
@@ -7,7 +7,7 @@ CORE_AREA: [442, 442, 1494, 4680]
 VERILOG_DEFINES: ["SLOT_0P5X1"]
 
 # South (west -> east, 8 pads — VDD_BB domain):
-# BB_CLK, BB_RST_N, BB_ENA(PD), DVSS(shared VSS), DVDD_BB, BB_UO0, BB_UO1, BB_UO2
+# BB_CLK, BB_RST_N, BB_ENA(PD), DVSS(shared VSS), DVDD_BB, nc_bb[0..2]
 PAD_SOUTH: [
     bb_clk_pad,
     bb_rst_n_pad,
@@ -16,18 +16,18 @@ PAD_SOUTH: [
     "dvss_bb_pads\\[0\\].pad",
     "dvdd_bb_pads\\[0\\].pad",
 
-    "bb_uo_pads\\[0\\].pad",
-    "bb_uo_pads\\[1\\].pad",
-    "bb_uo_pads\\[2\\].pad"
+    "nc_bb\\[0\\].pad",
+    "nc_bb\\[1\\].pad",
+    "nc_bb\\[2\\].pad"
 ]
 
 # East (south -> north, 28 pads):
-#   0..11:  VDD_BB domain (BB_UO3, BB_UO7, DVSS, DVDD_BB, BB_UIO[0..7])
+#   0..11:  VDD_BB domain (BB_UA3, BB_UA4, DVSS, DVDD_BB, BB_UIO[0..7])
 #   [brk_vdd_e = fill10_noVDD placed in gap between pad 11 and pad 12]
 #   12..27: GNSS VDD domain (I_SIGN, DVSS, DVDD, I_MAG, Q_SIGN, Q_MAG, CLKOUT, nc[0..4], DVSS, DVDD, nc[5..6])
 PAD_EAST: [
-    "bb_uo_pads\\[3\\].pad",
-    "bb_uo_pads\\[4\\].pad",
+    "bb_ua_pads\\[3\\].pad",
+    "bb_ua_pads\\[4\\].pad",
 
     "dvss_bb_pads\\[1\\].pad",
     "dvdd_bb_pads\\[1\\].pad",
@@ -77,7 +77,7 @@ PAD_NORTH: [
 ]
 
 # West (south -> north, 26 pads):
-#   0..12:  VDD_BB domain (BB_UI[0..7], nc_bb[0..2], DVSS, DVDD_BB)
+#   0..12:  VDD_BB domain (BB_UI[0..3], BB_UA[0..2], BB_UI[4..7], DVSS, DVDD_BB)
 #   [brk_vdd_w = fill10_noVDD placed in gap between pad 12 and pad 13]
 #   13..25: GNSS VDD domain (SCLK, RST_N, SDI, CS_N, SDO, nc[7..10], DVSS, DVDD, nc[11..12])
 PAD_WEST: [
@@ -85,13 +85,13 @@ PAD_WEST: [
     "bb_ui_pads\\[1\\].pad",
     "bb_ui_pads\\[2\\].pad",
     "bb_ui_pads\\[3\\].pad",
+    "bb_ua_pads\\[0\\].pad",
+    "bb_ua_pads\\[1\\].pad",
+    "bb_ua_pads\\[2\\].pad",
     "bb_ui_pads\\[4\\].pad",
     "bb_ui_pads\\[5\\].pad",
     "bb_ui_pads\\[6\\].pad",
     "bb_ui_pads\\[7\\].pad",
-    "nc_bb\\[0\\].pad",
-    "nc_bb\\[1\\].pad",
-    "nc_bb\\[2\\].pad",
 
     "dvss_bb_pads\\[2\\].pad",
     "dvdd_bb_pads\\[2\\].pad",

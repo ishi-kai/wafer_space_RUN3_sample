@@ -2,18 +2,21 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 # Full-chip cocotb testbench for slot 0p5x1 dual-VDD GNSS AFE + proppy/ttgf-megabytebeat.
-# Tests both RTL and Gate-Level (GL=1, powered netlist with separate VDD / VDD_BB / VDDA / VDDV):
+# Tests both RTL (GL=0) and Gate-Level (GL=1, powered chip_top.pnl.v + megabytebeat_macro.pnl.v):
 #   1. GNSS SPI reset default (ID=10101, ctl=19'h08000), write & readback.
-#   2. megabytebeat bb_ena=0 quiet-by-default clamping (all 5 PWM outputs == 0 while bb_clk runs).
-#   3. megabytebeat bb_ena=1 bit-exact 5-track PWM verification against upstream DSLX formulas.
-#   4. megabytebeat bb_ena 1->0->1 synchronous flush + clean restart from t=0.
+#   2. megabytebeat bb_ena=0 quiet-by-default clamping (all 5 R-2R DACs == 0x00 and bb_ua_PAD == 0).
+#   3. megabytebeat bb_ena=1 bit-exact 5-track 8-bit R-2R DAC verification at 32.768 kHz (/4 = 8.192 kHz)
+#      (both external bb_ua_PAD[4:0] connectivity and internal 8-bit ladder codes).
+#   4. megabytebeat bb_ena 1->0 clean disable & DAC clamping.
 
 import os
+import re
 from pathlib import Path
 
 import cocotb
 from cocotb.clock import Clock
-from cocotb.triggers import Timer, RisingEdge, FallingEdge, ClockCycles
+from cocotb.handle import HierarchyArrayObject, HierarchyObject
+from cocotb.triggers import ClockCycles, FallingEdge, RisingEdge, Timer
 from cocotb_tools.runner import get_runner
 
 sim = os.getenv("SIM", "icarus")
@@ -28,7 +31,7 @@ slot = os.getenv("SLOT", "0p5x1")
 hdl_toplevel = "chip_top"
 
 
-def bytebeat_golden(t: int, a: int, b: int, c: int, d: int):
+def bytebeat_golden(t: int, a: int, b: int, c: int, d: int) -> list[int]:
     """Exact golden formulas from proppy/ttgf-megabytebeat src/bytebeat.x."""
     t32 = t & 0xFFFFFFFF
     ab = ((b & 0xF) << 4) | (a & 0xF)
@@ -52,16 +55,67 @@ def bytebeat_golden(t: int, a: int, b: int, c: int, d: int):
     # Track 3: a tune to share
     s3 = (t32 * ((t32 >> a) | (t32 >> b)) & cd) & 0xFF
 
-    # Track 7 (uo_pwm[4]): sierpinski harmony
+    # Track 7 (ua[4]): sierpinski harmony
     s7 = (((t32 * a) & (t32 >> b)) | ((t32 * c) & (t32 >> d))) & 0xFF
 
     return [s0, s1, s2, s3, s7]
 
 
+def _dac_inst_sort_key(path: str) -> tuple[int, str]:
+    m = re.search(r"call(?:__(\d+))?_inst", path)
+    if m:
+        return (int(m.group(1)) if m.group(1) else 0, path)
+    return (999, path)
+
+
+def _find_r2r_ladders(root) -> list[dict]:
+    """Locate all 5 passive 8-bit `r2r_ladder_8bit` instances in RTL or GL hierarchy."""
+    found: list[tuple[str, dict]] = []
+
+    def walk(obj, prefix: str = "") -> None:
+        if isinstance(obj, HierarchyArrayObject):
+            for sub in obj:
+                walk(sub, prefix)
+            return
+        if not isinstance(obj, HierarchyObject):
+            return
+        name = obj._name.lstrip("\\").strip()
+        full = f"{prefix}.{name}" if prefix else name
+        if name == "u_r2r" or name.endswith(".u_r2r"):
+            children = {c._name.strip(): c for c in obj}
+            if "in" in children and "term" in children and len(children["in"]) == 8:
+                found.append((full, children))
+            return
+        for sub in obj:
+            if isinstance(sub, (HierarchyObject, HierarchyArrayObject)):
+                walk(sub, full)
+
+    walk(root)
+    found.sort(key=lambda item: _dac_inst_sort_key(item[0]))
+    return [pins for _, pins in found]
+
+
+def _read_dac_codes(ladders: list[dict]) -> list[int]:
+    codes = []
+    for pins in ladders:
+        assert int(pins["term"].value) == 0, f"Expected R-2R term=0, got {pins['term'].value}"
+        codes.append(int(pins["in"].value))
+    return codes
+
+
 async def init_chip(dut):
     if gl:
-        for p, v in [("VDD", 1), ("DVDD", 1), ("VDD_BB", 1), ("DVDD_BB", 1),
-                     ("VDDA", 1), ("VDDV", 1), ("VSS", 0), ("DVSS", 0), ("VSSA", 0)]:
+        for p, v in [
+            ("VDD", 1),
+            ("DVDD", 1),
+            ("VDD_BB", 1),
+            ("DVDD_BB", 1),
+            ("VDDA", 1),
+            ("VDDV", 1),
+            ("VSS", 0),
+            ("DVSS", 0),
+            ("VSSA", 0),
+        ]:
             if hasattr(dut, p):
                 getattr(dut, p).value = v
 
@@ -104,8 +158,11 @@ async def spi_transfer(dut, tx_word: int) -> int:
 
 @cocotb.test()
 async def test_gnss_spi_and_megabytebeat(dut):
-    """Verify GNSS SPI + megabytebeat bb_ena gating + 5-track bit-exact PWM."""
+    """Verify GNSS SPI + megabytebeat bb_ena gating + 5-track 8-bit R-2R DACs at 32.768 kHz."""
     await init_chip(dut)
+
+    ladders = _find_r2r_ladders(dut)
+    assert len(ladders) == 5, f"Expected 5 r2r_ladder_8bit instances, found {len(ladders)}"
 
     # ------------------------------------------------------------ 1. GNSS SPI test
     # First frame reads back reset default {ID=5'b10101, ctl=19'h08000} = 0xA88000
@@ -121,21 +178,26 @@ async def test_gnss_spi_and_megabytebeat(dut):
     cocotb.log.info(f"GNSS SPI PASS: reset=0x{rd0:06X}, frame1=0x{rd1:06X}")
 
     # ------------------------------------------------------------ 2. megabytebeat bb_ena=0 test
-    bb_clk = Clock(dut.bb_clk_PAD, 488, unit="ns")  # ~2.048 MHz
+    bb_clk = Clock(dut.bb_clk_PAD, 30518, unit="ns")  # ~32.768 kHz (/4 = 8.192 kHz DAC rate)
     cocotb.start_soon(bb_clk.start())
 
     # Set active params (a=0xa, b=0x2, c=0xa, d=0x0) while bb_ena=0
     dut.bb_ui_PAD.value = 0x2A
     dut.bb_uio_PAD.value = 0x0A
     dut.bb_ena_PAD.value = 0
-    await ClockCycles(dut.bb_clk_PAD, 300)
-    for _ in range(32):
+    await ClockCycles(dut.bb_clk_PAD, 16)
+    for _ in range(16):
         await RisingEdge(dut.bb_clk_PAD)
-        await Timer(10, unit="ns")
-        assert int(dut.bb_uo_PAD.value) == 0, f"Expected 0 with bb_ena=0, got {dut.bb_uo_PAD.value}"
-    cocotb.log.info("megabytebeat bb_ena=0 quiet clamping PASS")
+        await Timer(100, unit="ns")
+        assert int(dut.bb_ua_PAD.value) == 0, (
+            f"Expected DAC=0 with bb_ena=0, got {dut.bb_ua_PAD.value}"
+        )
+        assert _read_dac_codes(ladders) == [0, 0, 0, 0, 0], (
+            f"Expected clamped R-2R codes [0..0] with bb_ena=0, got {_read_dac_codes(ladders)}"
+        )
+    cocotb.log.info("megabytebeat bb_ena=0 quiet DAC clamping PASS")
 
-    # ------------------------------------------------------------ 3. megabytebeat bb_ena=1 5-track test
+    # ------------------------------------------------------------ 3. megabytebeat bb_ena=1 5-DAC test
     # Enable on falling edge so first posedge sees clean ena=1, rst_n=1
     await FallingEdge(dut.bb_clk_PAD)
     dut.bb_rst_n_PAD.value = 0
@@ -144,42 +206,58 @@ async def test_gnss_spi_and_megabytebeat(dut):
     await FallingEdge(dut.bb_clk_PAD)
     dut.bb_rst_n_PAD.value = 1
 
-    # Test with params a=0x5, b=0x2, c=0x3, d=0x1 (all 5 tracks produce distinct non-zero samples!)
+    # Test with params a=0x5, b=0x2, c=0x3, d=0x1 (all 5 tracks produce distinct non-zero samples)
     a, b, c, d = 0x5, 0x2, 0x3, 0x1
     dut.bb_ui_PAD.value = (b << 4) | a
     dut.bb_uio_PAD.value = (d << 4) | c
 
-    # Over each 256-cycle frame (starting immediately after reset deassertion on falling edge,
-    # sampling after each posedge when pwm updates for count=0..255), high-cycle count == sample(t)!
+    # 4 clocks per frame (32.768 kHz / 4 = 8.192 kHz): sample holds steady on cycles 0..2
+    # and advances on cycle 3 when sample_rdy = (clk_div == 2'd3).
     mismatches = 0
     for t_idx in range(12):
-        counts = [0, 0, 0, 0, 0]
-        for _ in range(256):
-            await RisingEdge(dut.bb_clk_PAD)
-            await Timer(20, unit="ns")
-            val = int(dut.bb_uo_PAD.value)
-            for ch in range(5):
-                counts[ch] += (val >> ch) & 1
         exp = bytebeat_golden(t_idx, a, b, c, d)
-        cocotb.log.info(f"t={t_idx}: got={counts}, expected={exp}")
-        if counts != exp:
+        exp_ua_msb = sum(((exp[ch] >> 7) & 1) << ch for ch in range(5))
+        dac_codes = None
+        ua_pad_val = None
+        frame_ok = True
+        for cyc in range(4):
+            await RisingEdge(dut.bb_clk_PAD)
+            await Timer(100, unit="ns")
+            if cyc < 3:
+                cur_codes = _read_dac_codes(ladders)
+                cur_ua = int(dut.bb_ua_PAD.value)
+                if cyc == 1:
+                    dac_codes = cur_codes
+                    ua_pad_val = cur_ua
+                if cur_codes != exp or cur_ua != exp_ua_msb:
+                    frame_ok = False
+        cocotb.log.info(
+            f"t={t_idx}: dac={dac_codes} (exp={exp}), "
+            f"ua_pad=0x{ua_pad_val:02x} (exp_msb=0x{exp_ua_msb:02x})"
+        )
+        if not frame_ok:
             mismatches += 1
-    assert mismatches == 0, f"megabytebeat PWM mismatches: {mismatches}"
-    cocotb.log.info("megabytebeat 5-track bit-exact PWM PASS (t=0..11)")
+    assert mismatches == 0, f"megabytebeat 5-DAC mismatches: {mismatches}"
+    cocotb.log.info("megabytebeat 5x 8-bit R-2R DAC bit-exact PASS (t=0..11, 32.768 kHz /4)")
 
     # ------------------------------------------------------------ 4. bb_ena 1 -> 0 disable check
     await FallingEdge(dut.bb_clk_PAD)
     dut.bb_ena_PAD.value = 0
-    await ClockCycles(dut.bb_clk_PAD, 10)
-    await Timer(20, unit="ns")
-    assert int(dut.bb_uo_PAD.value) == 0, f"Expected 0 after bb_ena=0, got {dut.bb_uo_PAD.value}"
-    cocotb.log.info("megabytebeat bb_ena 1->0 disable PASS")
+    await ClockCycles(dut.bb_clk_PAD, 4)
+    await Timer(100, unit="ns")
+    assert int(dut.bb_ua_PAD.value) == 0, (
+        f"Expected DAC=0 after bb_ena=0, got {dut.bb_ua_PAD.value}"
+    )
+    assert _read_dac_codes(ladders) == [0, 0, 0, 0, 0], (
+        f"Expected clamped DAC codes [0..0] after bb_ena=0, got {_read_dac_codes(ladders)}"
+    )
+    cocotb.log.info("megabytebeat bb_ena 1->0 disable + DAC clamp PASS")
 
 
 def chip_top_runner():
     proj_path = Path(__file__).resolve().parent
     sources = []
-    defines = {f"SLOT_{slot.upper()}": True}
+    defines = {f"SLOT_{slot.upper()}": True, "SIM": True}
     includes = [proj_path / "../src/"]
 
     defines[f"PDK_{pdk.replace('-', '_')}"] = True
@@ -188,18 +266,30 @@ def chip_top_runner():
     defines[f"SRAM_{sram}"] = True
 
     if gl:
+        chip_pnl = proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v"
+        if not chip_pnl.is_file():
+            raise FileNotFoundError(
+                f"Gate-level netlist missing: {chip_pnl}. "
+                "Run full-chip LibreLane flow before GL=1 simulation."
+            )
+        if "bb_ua_PAD" not in chip_pnl.read_text(encoding="utf-8", errors="ignore"):
+            raise RuntimeError(
+                f"Gate-level netlist {chip_pnl} lacks bb_ua_PAD port; "
+                "re-run full-chip LibreLane flow before GL=1 simulation."
+            )
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / f"{scl}.v")
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / "primitives.v")
+        sources.append(proj_path / "../macros/megabytebeat/src/r2r_ladder_8bit.v")
         sources.append(proj_path / "../macros/megabytebeat/final/pnl/megabytebeat_macro.pnl.v")
-        sources.append(proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v")
+        sources.append(chip_pnl)
         defines.update({"FUNCTIONAL": True, "USE_POWER_PINS": True})
     else:
         sources += [
             proj_path / "../src/chip_top.sv",
             proj_path / "../src/chip_core.sv",
+            proj_path / "../macros/megabytebeat/src/r2r_ladder_8bit.v",
+            proj_path / "../macros/megabytebeat/src/sc_r2r_dac_8bit.v",
             proj_path / "../macros/megabytebeat/src/megabytebeat.v",
-            proj_path / "../macros/megabytebeat/src/pwm_audio.v",
-            proj_path / "../macros/megabytebeat/src/tt_um_proppy_megabytebeat.v",
             proj_path / "../macros/megabytebeat/src/megabytebeat_macro.sv",
         ]
 
@@ -214,7 +304,9 @@ def chip_top_runner():
         proj_path / "../ip/gf180mcu_ws_ip__project_id/vh/gf180mcu_ws_ip__project_id.v",
     ]
 
-    build_args = ["-g2012"] if sim == "icarus" else ["--timing", "--trace", "--trace-fst", "--trace-structs"]
+    build_args = (
+        ["-g2012"] if sim == "icarus" else ["--timing", "--trace", "--trace-fst", "--trace-structs"]
+    )
     runner = get_runner(sim)
     runner.build(
         sources=sources,
